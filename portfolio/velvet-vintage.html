@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet & Vintage | Curated Fashion & Home Décor Boutique</title>
+    <meta name="description" content="Discover curated vintage and contemporary fashion, home décor, and accessories at Velvet & Vintage. Timeless style with modern sensibility.">
+    <meta name="keywords" content="vintage fashion, boutique clothing, home décor, curated goods, sustainable fashion">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Velvet & Vintage | Premium Curated Boutique">
+    <meta property="og:description" content="Discover curated vintage and contemporary fashion, home décor, and timeless accessories.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://velvet-vintage.example.com/og-image.jpg">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://velvet-vintage.example.com",
+        "name": "Velvet & Vintage",
+        "image": "https://velvet-vintage.example.com/logo.png",
+        "description": "Curated vintage and contemporary fashion, home décor, and lifestyle goods",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2847 Vintage Lane",
+            "addressLocality": "Oakland",
+            "addressRegion": "CA",
+            "postalCode": "94612"
+        },
+        "telephone": "(510) 555-0198",
+        "email": "hello@velvet-vintage.example.com",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "11:00",
+            "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "rating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.95",
+            "reviewCount": "587"
+        },
+        "sameAs": [
+            "https://instagram.com/velvetandvintage",
+            "https://pinterest.com/velvetandvintage"
+        ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #d97706;
+            --accent: #7c2d12;
+            --light-bg: #faf5f0;
+            --card-bg: #fff8f3;
+            --glass-bg: rgba(217, 119, 6, 0.05);
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: rgba(217, 119, 6, 0.15);
+        }
+
+        body {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #f5ede6 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        body > * {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            background: rgba(250, 245, 240, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .shop-btn {
+            padding: 10px 24px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .shop-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 80px 2rem;
+            background: linear-gradient(180deg, rgba(217, 119, 6, 0.06) 0%, transparent 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(124, 45, 18, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--accent);
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero .btn {
+            padding: 14px 36px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.2);
+        }
+
+        /* Collections Grid */
+        .collections {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .collections h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .collection-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .collection-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #f3e8dc 0%, #e8dcc8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .collection-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(217, 119, 6, 0.08);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .collection-card:hover .collection-image::after {
+            opacity: 1;
+        }
+
+        .collection-info {
+            padding: 2rem;
+        }
+
+        .collection-category {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .collection-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .collection-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .collection-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(217, 119, 6, 0.12);
+            transform: translateY(-8px);
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 3rem 2rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .about p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Trust Stats */
+        .trust-bar {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2.5rem;
+            background: var(--glass-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .trust-stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.08) 0%, rgba(124, 45, 18, 0.04) 100%);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-section .btn {
+            padding: 14px 36px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-section .btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: var(--light-bg);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .collections h2,
+            .about h2,
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            header {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">VELVET & VINTAGE</div>
+            <ul class="nav-links">
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#visit">Visit</a></li>
+            </ul>
+            <button class="shop-btn">Shop Now</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Timeless Style Redefined</h1>
+            <p class="tagline">Curated vintage and contemporary treasures</p>
+            <p>Discover unique fashion, home décor, and lifestyle goods carefully selected for quality, character, and lasting appeal. Where vintage charm meets modern sensibility.</p>
+            <button class="btn">Explore Collections</button>
+        </div>
+    </section>
+
+    <section class="collections" id="collections">
+        <h2>Our Collections</h2>
+        <div class="collections-grid">
+            <div class="collection-card">
+                <div class="collection-image">👗</div>
+                <div class="collection-info">
+                    <div class="collection-category">Fashion</div>
+                    <h3 class="collection-title">Vintage Fashion</h3>
+                    <p class="collection-desc">Authentic vintage clothing from the 1950s-1990s. Timeless pieces with character and history.</p>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">🏡</div>
+                <div class="collection-info">
+                    <div class="collection-category">Home</div>
+                    <h3 class="collection-title">Home Décor</h3>
+                    <p class="collection-desc">Curated furniture, art, and accessories to elevate your living space with unique style.</p>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">✨</div>
+                <div class="collection-info">
+                    <div class="collection-category">Accessories</div>
+                    <h3 class="collection-title">Jewelry & Accessories</h3>
+                    <p class="collection-desc">Vintage jewelry, handbags, scarves, and timeless accessories for every occasion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>Our Story</h2>
+        <p>Velvet & Vintage is dedicated to celebrating craftsmanship, sustainability, and timeless style. Each piece in our curated selection tells a story and brings character to your world. We believe in slow fashion, quality over quantity, and the beauty of well-loved vintage treasures.</p>
+    </section>
+
+    <div class="trust-bar">
+        <div class="trust-stat">
+            <div class="trust-stat-value">4.95★</div>
+            <div class="trust-stat-label">Customer Rating</div>
+        </div>
+        <div class="trust-stat">
+            <div class="trust-stat-value">587+</div>
+            <div class="trust-stat-label">Happy Customers</div>
+        </div>
+        <div class="trust-stat">
+            <div class="trust-stat-value">1,000+</div>
+            <div class="trust-stat-label">Unique Items</div>
+        </div>
+        <div class="trust-stat">
+            <div class="trust-stat-value">Locally</div>
+            <div class="trust-stat-label">Owned & Operated</div>
+        </div>
+    </div>
+
+    <section class="cta-section" id="visit">
+        <h2>Visit Us Today</h2>
+        <p>Experience the magic of curated vintage and contemporary style in person. We're located in Oakland's vibrant Vintage Lane district.</p>
+        <button class="btn">Get Directions</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Velvet & Vintage. Curated fashion, home décor, and lifestyle goods.<br>
+        <a href="tel:5105550198">(510) 555-0198</a> • 2847 Vintage Lane, Oakland, CA 94612</p>
+    </footer>
+</body>
+</html>
