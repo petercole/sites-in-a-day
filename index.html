@@ -429,23 +429,66 @@
         }
 
         .portfolio-image::after {
-            content: 'ð';
+            content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            opacity: 0.3;
+            top: 12%;
+            left: 8%;
+            right: 8%;
+            bottom: 8%;
+            background: rgba(255,255,255,0.15);
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .portfolio-image .preview-label {
+            position: absolute;
+            bottom: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            z-index: 2;
+            white-space: nowrap;
         }
 
         .portfolio-image::before {
             content: '';
             position: absolute;
-            inset: 10%;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 4px;
+            top: 8%;
+            left: 8%;
+            width: 50px;
+            height: 12px;
+            display: flex;
+            gap: 4px;
+            background: radial-gradient(circle at 8px 6px, rgba(255,255,255,0.5) 3px, transparent 3px),
+                        radial-gradient(circle at 20px 6px, rgba(255,255,255,0.5) 3px, transparent 3px),
+                        radial-gradient(circle at 32px 6px, rgba(255,255,255,0.5) 3px, transparent 3px);
+            z-index: 1;
+        }
+
+        .portfolio-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .portfolio-item a:hover .portfolio-image {
+            filter: brightness(1.1);
+        }
+
+        .portfolio-view-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
         }
 
         .portfolio-info {
@@ -678,23 +721,22 @@
             background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
             color: white;
             text-align: center;
-            padding: 4rem 2rem;
-            border-radius: 20px;
-            margin: 5rem 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 5rem 2rem;
+            max-width: 100%;
+            width: 100%;
         }
 
         .cta-section h2 {
             color: white;
             margin-bottom: 1rem;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
         }
 
         .cta-section p {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .cta-section .cta-button {
@@ -710,12 +752,19 @@
         /* Order Form */
         .order-section {
             background: var(--bg-pale);
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
+            max-width: 100%;
+            width: 100%;
         }
 
         .order-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
         }
 
         .form-group {
@@ -733,11 +782,12 @@
         input, select, textarea {
             width: 100%;
             padding: 0.875rem;
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
             border-radius: 8px;
             font-family: 'Inter', sans-serif;
             font-size: 0.95rem;
             color: var(--text);
+            background: #ffffff;
             transition: all 0.3s ease;
         }
 
@@ -974,7 +1024,7 @@
             }
 
             .cta-section {
-                margin: 2rem 1rem;
+                padding: 3rem 1rem;
             }
 
             .portfolio-grid {
@@ -995,7 +1045,7 @@
                 <li><a href="#faq">FAQ</a></li>
             </ul>
             <a href="#order" class="cta-button">Get Started</a>
-            <button class="mobile-menu-toggle" id="menuToggle">â°</button>
+            <button class="mobile-menu-toggle" id="menuToggle">☰</button>
         </div>
     </nav>
 
@@ -1010,7 +1060,7 @@
 
     <!-- Floating CTA (Mobile) -->
     <div class="floating-cta" id="floatingCta">
-        <a href="#order" class="cta-button">Get Started â</a>
+        <a href="#order" class="cta-button">Get Started →</a>
     </div>
 
     <!-- Hero Section -->
@@ -1026,28 +1076,28 @@
 
             <div class="trust-badges">
                 <div class="badge fade-in-up">
-                    <div class="badge-icon">â¡</div>
+                    <div class="badge-icon">⚡</div>
                     <div class="badge-text">
                         <h4>24-Hour Delivery</h4>
                         <p>Live within 24 hours</p>
                     </div>
                 </div>
                 <div class="badge fade-in-up">
-                    <div class="badge-icon">ð°</div>
+                    <div class="badge-icon">💰</div>
                     <div class="badge-text">
                         <h4>Money-Back Guarantee</h4>
                         <p>100% satisfaction assured</p>
                     </div>
                 </div>
                 <div class="badge fade-in-up">
-                    <div class="badge-icon">ð±</div>
+                    <div class="badge-icon">📱</div>
                     <div class="badge-text">
                         <h4>Mobile-Responsive</h4>
                         <p>Perfect on every device</p>
                     </div>
                 </div>
                 <div class="badge fade-in-up">
-                    <div class="badge-icon">ð</div>
+                    <div class="badge-icon">🔍</div>
                     <div class="badge-text">
                         <h4>SEO-Optimized</h4>
                         <p>Built to rank</p>
@@ -1088,52 +1138,70 @@
 
         <div class="portfolio-grid">
             <div class="portfolio-item fade-in-up">
-                <div class="portfolio-image"></div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Restaurant</div>
-                    <h3>Marina's Italian Kitchen</h3>
-                    <p>Fine dining restaurant with online reservations and menu showcase</p>
-                </div>
+                <a href="/portfolio/ritual-coffee" target="_blank">
+                    <div class="portfolio-image"><span class="preview-label">Live Demo</span></div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Restaurant</div>
+                        <h3>Ritual Coffee Roasters</h3>
+                        <p>Artisan cafe with online ordering, menu showcase, and location finder</p>
+                        <span class="portfolio-view-link">View Live Demo &rarr;</span>
+                    </div>
+                </a>
             </div>
             <div class="portfolio-item fade-in-up">
-                <div class="portfolio-image"></div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Fitness</div>
-                    <h3>Zenith CrossFit</h3>
-                    <p>Fitness studio with class schedule and membership sign-up</p>
-                </div>
+                <a href="/portfolio/apex-fitness" target="_blank">
+                    <div class="portfolio-image"><span class="preview-label">Live Demo</span></div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Fitness</div>
+                        <h3>Apex Fitness Studio</h3>
+                        <p>Fitness studio with class schedule, trainer profiles, and membership sign-up</p>
+                        <span class="portfolio-view-link">View Live Demo &rarr;</span>
+                    </div>
+                </a>
             </div>
             <div class="portfolio-item fade-in-up">
-                <div class="portfolio-image"></div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Legal</div>
-                    <h3>Sterling & Associates</h3>
-                    <p>Law firm with practice areas and consultation request form</p>
-                </div>
+                <a href="/portfolio/hartwell-law" target="_blank">
+                    <div class="portfolio-image"><span class="preview-label">Live Demo</span></div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Legal</div>
+                        <h3>Hartwell &amp; Associates</h3>
+                        <p>Law firm with practice areas, attorney bios, and consultation request form</p>
+                        <span class="portfolio-view-link">View Live Demo &rarr;</span>
+                    </div>
+                </a>
             </div>
             <div class="portfolio-item fade-in-up">
-                <div class="portfolio-image"></div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Real Estate</div>
-                    <h3>Elite Properties Co.</h3>
-                    <p>Real estate agency with property showcase and agent profiles</p>
-                </div>
+                <a href="/portfolio/aura-beauty" target="_blank">
+                    <div class="portfolio-image"><span class="preview-label">Live Demo</span></div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Beauty</div>
+                        <h3>Aura Beauty Studio</h3>
+                        <p>Salon and spa with booking system, service menu, and gallery</p>
+                        <span class="portfolio-view-link">View Live Demo &rarr;</span>
+                    </div>
+                </a>
             </div>
             <div class="portfolio-item fade-in-up">
-                <div class="portfolio-image"></div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Beauty</div>
-                    <h3>Serenity Wellness Spa</h3>
-                    <p>Spa and salon with booking system and service menu</p>
-                </div>
+                <a href="/portfolio/pristine-home" target="_blank">
+                    <div class="portfolio-image"><span class="preview-label">Live Demo</span></div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Home Services</div>
+                        <h3>Pristine Home Services</h3>
+                        <p>Cleaning company with instant quoting, service areas, and online booking</p>
+                        <span class="portfolio-view-link">View Live Demo &rarr;</span>
+                    </div>
+                </a>
             </div>
             <div class="portfolio-item fade-in-up">
-                <div class="portfolio-image"></div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Services</div>
-                    <h3>Premier Plumbing Solutions</h3>
-                    <p>Service contractor with portfolio and emergency booking</p>
-                </div>
+                <a href="/portfolio/luminous-creative" target="_blank">
+                    <div class="portfolio-image"><span class="preview-label">Live Demo</span></div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Creative</div>
+                        <h3>Luminous Creative Studio</h3>
+                        <p>Design agency with portfolio showcase, case studies, and contact form</p>
+                        <span class="portfolio-view-link">View Live Demo &rarr;</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1150,14 +1218,14 @@
                 <div class="price">$297</div>
                 <div class="price-period">one-time</div>
                 <ul class="pricing-features">
-                    <li><div class="check-icon">â</div> Single-page landing site</li>
-                    <li><div class="check-icon">â</div> Mobile-responsive design</li>
-                    <li><div class="check-icon">â</div> Contact form included</li>
-                    <li><div class="check-icon">â</div> Basic SEO setup</li>
-                    <li><div class="check-icon">â</div> Custom domain setup</li>
-                    <li><div class="check-icon">â</div> 1 revision round</li>
+                    <li><div class="check-icon">✓</div> Single-page landing site</li>
+                    <li><div class="check-icon">✓</div> Mobile-responsive design</li>
+                    <li><div class="check-icon">✓</div> Contact form included</li>
+                    <li><div class="check-icon">✓</div> Basic SEO setup</li>
+                    <li><div class="check-icon">✓</div> Custom domain setup</li>
+                    <li><div class="check-icon">✓</div> 1 revision round</li>
                 </ul>
-                <a href="#order" class="cta-button secondary">Select Plan</a>
+                <button onclick="document.getElementById('order').scrollIntoView({behavior: 'smooth'}); document.getElementById('packageSelect').value = '297';" class="cta-button secondary" style="border: none;">Select Plan</button>
             </div>
 
             <div class="pricing-card featured fade-in-up">
@@ -1167,12 +1235,12 @@
                 <div class="price">$597</div>
                 <div class="price-period">one-time</div>
                 <ul class="pricing-features">
-                    <li><div class="check-icon">â</div> 5-page website</li>
-                    <li><div class="check-icon">â</div> Full brand identity</li>
-                    <li><div class="check-icon">â</div> Google Business setup</li>
-                    <li><div class="check-icon">â</div> Advanced contact forms</li>
-                    <li><div class="check-icon">â</div> 2 revision rounds</li>
-                    <li><div class="check-icon">â</div> 30-day support</li>
+                    <li><div class="check-icon">✓</div> 5-page website</li>
+                    <li><div class="check-icon">✓</div> Full brand identity</li>
+                    <li><div class="check-icon">✓</div> Google Business setup</li>
+                    <li><div class="check-icon">✓</div> Advanced contact forms</li>
+                    <li><div class="check-icon">✓</div> 2 revision rounds</li>
+                    <li><div class="check-icon">✓</div> 30-day support</li>
                 </ul>
                 <button onclick="document.getElementById('order').scrollIntoView({behavior: 'smooth'}); document.getElementById('packageSelect').value = '597';" class="cta-button">Select Plan</button>
             </div>
@@ -1183,39 +1251,39 @@
                 <div class="price">$997</div>
                 <div class="price-period">one-time</div>
                 <ul class="pricing-features">
-                    <li><div class="check-icon">â</div> 10-page website</li>
-                    <li><div class="check-icon">â</div> Complete brand kit</li>
-                    <li><div class="check-icon">â</div> Social media templates</li>
-                    <li><div class="check-icon">â</div> Blog setup & training</li>
-                    <li><div class="check-icon">â</div> 3 revision rounds</li>
-                    <li><div class="check-icon">â</div> 60-day support</li>
+                    <li><div class="check-icon">✓</div> 10-page website</li>
+                    <li><div class="check-icon">✓</div> Complete brand kit</li>
+                    <li><div class="check-icon">✓</div> Social media templates</li>
+                    <li><div class="check-icon">✓</div> Blog setup & training</li>
+                    <li><div class="check-icon">✓</div> 3 revision rounds</li>
+                    <li><div class="check-icon">✓</div> 60-day support</li>
                 </ul>
-                <a href="#order" class="cta-button secondary">Select Plan</a>
+                <button onclick="document.getElementById('order').scrollIntoView({behavior: 'smooth'}); document.getElementById('packageSelect').value = '997';" class="cta-button secondary" style="border: none;">Select Plan</button>
             </div>
         </div>
     </section>
 
-    <!-- Results/Social Proof -->
-    <section>
-        <h2>Proven Results</h2>
-        <p>Trusted by businesses everywhere</p>
+    <!-- Our Promise -->
+    <section id="results">
+        <h2>Our Promise</h2>
+        <p>What you get when you work with us</p>
 
         <div class="stats-grid">
-            <div class="stat-box fade-in-up">
-                <div class="stat-number">200+</div>
-                <div class="stat-label">Sites Launched</div>
-            </div>
-            <div class="stat-box fade-in-up">
+            <div class="stat-box">
                 <div class="stat-number">24h</div>
-                <div class="stat-label">Average Delivery</div>
+                <div class="stat-label">Delivery Time</div>
             </div>
-            <div class="stat-box fade-in-up">
-                <div class="stat-number">4.9/5</div>
-                <div class="stat-label">Client Rating</div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Money-Back Guarantee</div>
             </div>
-            <div class="stat-box fade-in-up">
-                <div class="stat-number">$297</div>
-                <div class="stat-label">Starting Price</div>
+            <div class="stat-box">
+                <div class="stat-number">Custom</div>
+                <div class="stat-label">Every Site Unique</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">$0</div>
+                <div class="stat-label">Hidden Fees</div>
             </div>
         </div>
     </section>
@@ -1289,16 +1357,17 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" style="border-radius: 0; margin: 0;">
+    <div class="cta-section">
         <h2>Ready to Launch Your Website?</h2>
-        <p>Join 200+ businesses that got online in 24 hours</p>
-        <a href="#order" class="cta-button">Start Your Site â</a>
-    </section>
+        <p>Get a professional site live in 24 hours — guaranteed</p>
+        <a href="#order" class="cta-button">Start Your Site &rarr;</a>
+    </div>
 
     <!-- Order Form Section -->
-    <section class="order-section" id="order">
+    <div class="order-section" id="order">
         <div class="order-container">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Get Started Today</h2>
+            <h2 style="text-align: center; margin-bottom: 0.5rem; font-size: 2rem; font-weight: 800; color: var(--dark);">Get Started Today</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Fill out this quick form and we'll have your site live within 24 hours</p>
 
             <form id="orderForm">
                 <div class="form-row">
@@ -1346,18 +1415,18 @@
 
                 <button type="submit" class="form-submit">
                     <div class="spinner"></div>
-                    <span>Start My Website â</span>
+                    <span>Start My Website &rarr;</span>
                 </button>
 
                 <div class="form-message"></div>
             </form>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Sites In A Day. All rights reserved.</p>
-        <p>Questions? Email us: <a href="mailto:hello@sitezinaday.com">hello@sitezinaday.com</a></p>
+        <p>Questions? Email us: <a href="mailto:hello@sitesinaday.com">hello@sitesinaday.com</a></p>
         <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.6;">Built with AI. Refined by humans.</p>
     </footer>
 
@@ -1458,15 +1527,18 @@
             submitButton.classList.add('loading');
 
             // Prepare form data matching Supabase columns
+            const packageMap = {'297': 'Starter ($297)', '597': 'Launch ($597)', '997': 'Growth ($997)'};
+            const pkgValue = document.getElementById('packageSelect').value;
             const formData = {
                 full_name: document.getElementById('fullName').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value || null,
                 business_name: document.getElementById('businessName').value,
-                package: document.getElementById('packageSelect').value,
+                package: packageMap[pkgValue] || pkgValue,
                 description: document.getElementById('businessDescription').value,
                 status: 'new',
-                source: 'website'
+                source: 'website',
+                amount_cents: parseInt(pkgValue) * 100
             };
 
             try {
@@ -1487,7 +1559,7 @@
                 }
 
                 // Success
-                formMessage.textContent = 'Great! We received your order. We\'ll reach out within 1 hour to get started. Welcome to Sites In A Day!';
+                formMessage.innerHTML = '<strong>You\'re in!</strong> We received your request for the ' + (packageMap[pkgValue] || 'selected') + ' package. Check your email — we\'ll send next steps and a secure payment link within 1 hour.';
                 formMessage.classList.add('show', 'success');
                 form.reset();
 
@@ -1503,9 +1575,9 @@
                     `Description:\n${formData.description}`
                 );
 
-                window.location.href = `mailto:peterdcole@me.com?subject=New%20Sites%20In%20A%20Day%20Order%20from%20${encodeURIComponent(formData.full_name)}&body=${mailtoBody}`;
+                window.location.href = `mailto:hello@sitesinaday.com?subject=New%20Sites%20In%20A%20Day%20Order%20from%20${encodeURIComponent(formData.full_name)}&body=${mailtoBody}`;
 
-                formMessage.textContent = 'Opening your email client... If it doesn\'t open, please email us at peterdcole@me.com with your details.';
+                formMessage.textContent = 'Opening your email client... If it doesn\'t open, please email us at hello@sitesinaday.com with your details.';
                 formMessage.classList.add('show', 'success');
             }
 
