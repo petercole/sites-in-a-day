@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="APEX Performance Studio - Transform Your Fitness Journey. 500+ Members. 15 Classes Daily. 98% Retention Rate.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://apexperformance.studio/">
+    <meta property="og:title" content="APEX Performance Studio - High-Energy Fitness Transformed">
+    <meta property="og:description" content="Transform Your Fitness Journey. 500+ Members. 15 Classes Daily. 98% Retention Rate.">
+    <meta property="og:image" content="https://apexperformance.studio/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://apexperformance.studio/">
+    <meta property="twitter:title" content="APEX Performance Studio - High-Energy Fitness Transformed">
+    <meta property="twitter:description" content="Transform Your Fitness Journey. 500+ Members. 15 Classes Daily. 98% Retention Rate.">
+
+    <meta name="canonical" href="https://apexperformance.studio/">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "SportsActivityLocation"],
+        "name": "APEX Performance Studio",
+        "image": "https://apexperformance.studio/logo.png",
+        "description": "Premium fitness studio offering HIIT, Strength, Yoga, and Boxing classes with 500+ active members",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1000 Performance Ave",
+            "addressLocality": "Downtown",
+            "addressRegion": "CA",
+            "postalCode": "94101",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-800-APEX-FIT",
+        "email": "hello@apexperformance.studio",
+        "url": "https://apexperformance.studio",
+        "priceRange": "$99-$199",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "512"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "05:00",
+            "closes": "21:00"
+        }
+    }
+    </script>
+
+    <title>APEX Performance Studio - Transform Your Fitness</title>
+
+    <style>
+        /* CSS Variables - Theme */
+        :root {
+            --black: #0a0a0a;
+            --lime: #c5f82a;
+            --dark-gray: #2d2d2d;
+            --white: #ffffff;
+            --bg-dark: #161616;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+        }
+
+        h1 { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.1; }
+        h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(197, 248, 42, 0.2);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-mark {
+            width: 28px;
+            height: 28px;
+            background: var(--lime);
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--lime);
+            transition: width 0.3s var(--easing);
+        }
+
+        nav a:hover {
+            color: var(--lime);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 24px;
+            height: 2px;
+            background: var(--lime);
+            transition: var(--transition);
+            transform-origin: center;
+        }
+
+        .mobile-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .mobile-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(197, 248, 42, 0.1) 0%, transparent 50%);
+            animation: shift 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shift {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-headline {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .highlight {
+            color: var(--lime);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(197, 248, 42, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(197, 248, 42, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--lime);
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            animation: countUp 2s ease-out forwards;
+        }
+
+        @keyframes countUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--lime);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 6px;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--lime);
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--lime);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(197, 248, 42, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--lime);
+            border: 2px solid var(--lime);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--lime);
+            color: var(--black);
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: var(--black);
+            clip-path: polygon(0 50%, 100% 0%, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+
+        /* Classes Section */
+        #classes {
+            padding: 8rem 0;
+            background: var(--black);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .class-card {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--bg-dark) 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            height: 380px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(197, 248, 42, 0.1);
+        }
+
+        .class-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(197, 248, 42, 0.15) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .class-card:hover::before {
+            opacity: 1;
+        }
+
+        .class-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(197, 248, 42, 0.4);
+            box-shadow: 0 20px 40px rgba(197, 248, 42, 0.2);
+        }
+
+        .class-icon {
+            width: 80px;
+            height: 80px;
+            margin: 2rem auto 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .class-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--lime);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .class-name {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+            color: var(--lime);
+        }
+
+        .class-time {
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .difficulty {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .difficulty-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(197, 248, 42, 0.3);
+        }
+
+        .difficulty-dot.active {
+            background: var(--lime);
+            box-shadow: 0 0 12px rgba(197, 248, 42, 0.6);
+        }
+
+        .class-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s var(--easing);
+            border-top: 2px solid var(--lime);
+        }
+
+        .class-card:hover .class-description {
+            max-height: 150px;
+        }
+
+        .class-description p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Trainers Section */
+        #trainers {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--black) 100%);
+            position: relative;
+        }
+
+        #trainers::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(197, 248, 42, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .trainers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .trainer-card {
+            text-align: center;
+            position: relative;
+            group: 1;
+        }
+
+        .trainer-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--dark-gray) 0%, rgba(197, 248, 42, 0.1) 100%);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+            transition: var(--transition);
+            border: 2px solid rgba(197, 248, 42, 0.2);
+        }
+
+        .trainer-card:hover .trainer-image {
+            border-color: var(--lime);
+            box-shadow: 0 15px 35px rgba(197, 248, 42, 0.25);
+        }
+
+        .trainer-image-shape {
+            width: 100px;
+            height: 100px;
+            background: rgba(197, 248, 42, 0.15);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .trainer-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--lime);
+        }
+
+        .trainer-specialty {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .trainer-bio {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .trainer-card:hover .trainer-bio {
+            opacity: 1;
+            max-height: 120px;
+        }
+
+        /* Membership Section */
+        #membership {
+            padding: 8rem 0;
+            background: var(--black);
+            position: relative;
+        }
+
+        .membership-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .toggle-label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 32px;
+            background: var(--dark-gray);
+            border-radius: 16px;
+            cursor: pointer;
+            border: 2px solid rgba(197, 248, 42, 0.2);
+            transition: var(--transition);
+        }
+
+        .toggle-switch.active {
+            background: var(--lime);
+        }
+
+        .toggle-circle {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: var(--black);
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+            transition: var(--transition);
+        }
+
+        .toggle-switch.active .toggle-circle {
+            left: 31px;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .plan-card {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--bg-dark) 100%);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            border: 1px solid rgba(197, 248, 42, 0.1);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+        }
+
+        .plan-card.featured {
+            background: linear-gradient(135deg, rgba(197, 248, 42, 0.15) 0%, rgba(197, 248, 42, 0.05) 100%);
+            border: 2px solid var(--lime);
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(197, 248, 42, 0.2);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--lime);
+            color: var(--black);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            margin: 1rem 0 1.5rem;
+            color: var(--lime);
+        }
+
+        .plan-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .plan-period {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 2rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(197, 248, 42, 0.1);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--lime);
+            font-weight: bold;
+        }
+
+        .plan-card:hover {
+            border-color: var(--lime);
+        }
+
+        .plan-card:not(.featured):hover {
+            transform: translateY(-4px);
+        }
+
+        /* Results Section */
+        #results {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, var(--black) 0%, var(--bg-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #results::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(197, 248, 42, 0.06) 0%, transparent 60%);
+            animation: rotate 30s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .result-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(45, 45, 45, 0.5);
+            border-radius: 12px;
+            border: 1px solid rgba(197, 248, 42, 0.15);
+            opacity: 0;
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes slideInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-number {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            color: var(--lime);
+            margin-bottom: 0.5rem;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .result-label {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Schedule Section */
+        #schedule {
+            padding: 8rem 0;
+            background: var(--black);
+            position: relative;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--bg-dark) 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 248, 42, 0.2);
+        }
+
+        .schedule-table th {
+            background: rgba(197, 248, 42, 0.1);
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            border-bottom: 2px solid rgba(197, 248, 42, 0.3);
+            color: var(--lime);
+        }
+
+        .schedule-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(197, 248, 42, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .schedule-table tr:hover {
+            background: rgba(197, 248, 42, 0.08);
+        }
+
+        .class-time-badge {
+            display: inline-block;
+            background: var(--lime);
+            color: var(--black);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .instructor-name {
+            color: var(--lime);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        #cta {
+            padding: 6rem 0;
+            background: var(--lime);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: var(--black);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-headline {
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+
+        .cta-subtext {
+            color: rgba(10, 10, 10, 0.7);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .email-form input::placeholder {
+            color: rgba(10, 10, 10, 0.5);
+        }
+
+        .email-form input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.2);
+        }
+
+        .email-form button {
+            padding: 1rem 2rem;
+            background: var(--black);
+            color: var(--lime);
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .email-form button:hover {
+            background: var(--dark-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(10, 10, 10, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            border-top: 1px solid rgba(197, 248, 42, 0.2);
+            padding: 3rem 0 2rem;
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--lime);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--lime);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(197, 248, 42, 0.1);
+            border-radius: 50%;
+            color: var(--lime);
+            transition: var(--transition);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-icon:hover {
+            background: var(--lime);
+            color: var(--black);
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(197, 248, 42, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-legal {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-legal a {
+            color: var(--lime);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Intersection Observer - Fade In */
+        .fade-on-scroll {
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .fade-on-scroll.visible {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .mobile-menu.active ~ ul {
+                display: flex;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.95);
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem 2rem;
+                border-bottom: 1px solid rgba(197, 248, 42, 0.2);
+                z-index: 998;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .classes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trainers-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .plan-card.featured {
+                transform: scale(1);
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .schedule-table {
+                font-size: 0.85rem;
+            }
+
+            .schedule-table th,
+            .schedule-table td {
+                padding: 1rem 0.75rem;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-form input,
+            .email-form button {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus States for Accessibility */
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--lime);
+            outline-offset: 2px;
+        }
+
+        /* Loading Animation */
+        .loader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--lime), transparent);
+            animation: loading 1.5s infinite;
+            z-index: 1000;
+        }
+
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-mark" aria-label="APEX logo"></div>
+                <span>APEX</span>
+            </div>
+            <div class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#membership">Plans</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#cta">Start Free</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" role="banner">
+            <div class="hero-content">
+                <h1 class="hero-headline">PUSH BEYOND YOUR <span class="highlight">LIMITS</span></h1>
+                <p class="hero-subtext">High-energy fitness for athletes who demand more</p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Active Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Classes Daily</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">Retention Rate %</div>
+                    </div>
+                </div>
+
+                <a href="#cta" class="cta-button">Start Your Free Class</a>
+                <a href="#membership" class="cta-button secondary">View Membership</a>
+            </div>
+        </section>
+
+        <!-- Classes Section -->
+        <section id="classes">
+            <div class="container">
+                <div class="section-header fade-on-scroll">
+                    <h2>Our Classes</h2>
+                    <p class="section-subtitle">Designed to challenge. Built to transform. Perfect for every fitness level.</p>
+                </div>
+
+                <div class="classes-grid fade-on-scroll">
+                    <!-- HIIT -->
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <svg viewBox="0 0 100 100" aria-label="HIIT class icon">
+                                <circle cx="50" cy="50" r="40"/>
+                                <line x1="30" y1="50" x2="70" y2="50"/>
+                                <line x1="50" y1="30" x2="50" y2="70"/>
+                            </svg>
+                        </div>
+                        <h3 class="class-name">HIIT</h3>
+                        <p class="class-time">45 MIN • 6:00 AM & 6:00 PM</p>
+                        <div class="difficulty">
+                            <span class="difficulty-dot active"></span>
+                            <span class="difficulty-dot active"></span>
+                            <span class="difficulty-dot active"></span>
+                        </div>
+                        <div class="class-description">
+                            <p>High-intensity interval training to maximize calorie burn and build cardiovascular strength in minimal time.</p>
+                        </div>
+                    </div>
+
+                    <!-- Strength -->
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <svg viewBox="0 0 100 100" aria-label="Strength class icon">
+                                <rect x="20" y="40" width="60" height="20"/>
+                                <rect x="15" y="35" width="10" height="30"/>
+                                <rect x="75" y="35" width="10" height="30"/>
+                            </svg>
+                        </div>
+                        <h3 class="class-name">STRENGTH</h3>
+                        <p class="class-time">60 MIN • 7:00 AM & 5:30 PM</p>
+                        <div class="difficulty">
+                            <span class="difficulty-dot active"></span>
+                            <span class="difficulty-dot active"></span>
+                        </div>
+                        <div class="class-description">
+                            <p>Build lean muscle and increase power with resistance training, Olympic lifts, and progressive overload principles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Yoga -->
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <svg viewBox="0 0 100 100" aria-label="Yoga class icon">
+                                <circle cx="50" cy="25" r="12"/>
+                                <path d="M50 40 Q35 60 30 80 M50 40 Q65 60 70 80 M50 40 L50 65"/>
+                            </svg>
+                        </div>
+                        <h3 class="class-name">YOGA</h3>
+                        <p class="class-time">50 MIN • 8:00 AM & 7:00 PM</p>
+                        <div class="difficulty">
+                            <span class="difficulty-dot active"></span>
+                        </div>
+                        <div class="class-description">
+                            <p>Find balance and strength through mindful movement, improving flexibility, core stability, and mental clarity.</p>
+                        </div>
+                    </div>
+
+                    <!-- Boxing -->
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <svg viewBox="0 0 100 100" aria-label="Boxing class icon">
+                                <circle cx="35" cy="35" r="8"/>
+                                <circle cx="65" cy="35" r="8"/>
+                                <path d="M25 60 Q50 75 75 60"/>
+                            </svg>
+                        </div>
+                        <h3 class="class-name">BOXING</h3>
+                        <p class="class-time">45 MIN • 6:30 AM & 6:30 PM</p>
+                        <div class="difficulty">
+                            <span class="difficulty-dot active"></span>
+                            <span class="difficulty-dot active"></span>
+                            <span class="difficulty-dot active"></span>
+                        </div>
+                        <div class="class-description">
+                            <p>Combine cardio and strength with high-impact boxing techniques. Perfect for releasing energy and building confidence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainers Section -->
+        <section id="trainers">
+            <div class="container">
+                <div class="section-header fade-on-scroll">
+                    <h2>Meet Our Trainers</h2>
+                    <p class="section-subtitle">Certified experts passionate about your transformation</p>
+                </div>
+
+                <div class="trainers-grid fade-on-scroll">
+                    <div class="trainer-card">
+                        <div class="trainer-image">
+                            <div class="trainer-image-shape"></div>
+                        </div>
+                        <h3 class="trainer-name">Alex Rivera</h3>
+                        <p class="trainer-specialty">HIIT • Boxing</p>
+                        <p class="trainer-bio">Former D1 athlete with 8 years of coaching experience specializing in high-intensity training.</p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <div class="trainer-image">
+                            <div class="trainer-image-shape"></div>
+                        </div>
+                        <h3 class="trainer-name">Morgan Steel</h3>
+                        <p class="trainer-specialty">Strength • Power</p>
+                        <p class="trainer-bio">Strength & conditioning specialist with certifications in Olympic lifting and performance coaching.</p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <div class="trainer-image">
+                            <div class="trainer-image-shape"></div>
+                        </div>
+                        <h3 class="trainer-name">Jordan Chen</h3>
+                        <p class="trainer-specialty">Yoga • Mobility</p>
+                        <p class="trainer-bio">Holistic wellness coach blending yoga, mindfulness, and functional movement for optimal recovery.</p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <div class="trainer-image">
+                            <div class="trainer-image-shape"></div>
+                        </div>
+                        <h3 class="trainer-name">Casey Mills</h3>
+                        <p class="trainer-specialty">Nutrition • Recovery</p>
+                        <p class="trainer-bio">Registered dietitian helping members optimize nutrition and recovery for maximum performance gains.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership">
+            <div class="container">
+                <div class="section-header fade-on-scroll">
+                    <h2>Choose Your Plan</h2>
+                    <p class="section-subtitle">Flexible membership options designed for every commitment level</p>
+
+                    <div class="membership-toggle">
+                        <span class="toggle-label">Monthly</span>
+                        <div class="toggle-switch" id="billingToggle">
+                            <div class="toggle-circle"></div>
+                        </div>
+                        <span class="toggle-label">Annual <span style="color: var(--lime);">(Save 15%)</span></span>
+                    </div>
+                </div>
+
+                <div class="plans-grid fade-on-scroll">
+                    <!-- Starter -->
+                    <div class="plan-card">
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price" id="starter-price">$99</div>
+                        <p class="plan-period">/month</p>
+                        <ul class="plan-features">
+                            <li>4 Classes/Month</li>
+                            <li>Member Community</li>
+                            <li>Locker Room Access</li>
+                            <li>Mobile App</li>
+                        </ul>
+                        <a href="#cta" class="cta-button secondary">Get Started</a>
+                    </div>
+
+                    <!-- Elite (Featured) -->
+                    <div class="plan-card featured">
+                        <div class="plan-badge">Most Popular</div>
+                        <h3 class="plan-name">Elite</h3>
+                        <div class="plan-price" id="elite-price">$149</div>
+                        <p class="plan-period">/month</p>
+                        <ul class="plan-features">
+                            <li>Unlimited Classes</li>
+                            <li>Personal Training</li>
+                            <li>Nutrition Coaching</li>
+                            <li>Priority Booking</li>
+                            <li>Guest Passes (2x)</li>
+                            <li>Exclusive Events</li>
+                        </ul>
+                        <a href="#cta" class="cta-button">Start Free Trial</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="plan-card">
+                        <h3 class="plan-name">Premium</h3>
+                        <div class="plan-price" id="premium-price">$199</div>
+                        <p class="plan-period">/month</p>
+                        <ul class="plan-features">
+                            <li>Everything in Elite</li>
+                            <li>1:1 Training Sessions</li>
+                            <li>Performance Testing</li>
+                            <li>Recovery Therapies</li>
+                            <li>Unlimited Guest Passes</li>
+                            <li>VIP Event Access</li>
+                        </ul>
+                        <a href="#cta" class="cta-button secondary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results">
+            <div class="container">
+                <div class="section-header fade-on-scroll">
+                    <h2>Our Impact</h2>
+                    <p class="section-subtitle">Real results from real members</p>
+                </div>
+
+                <div class="results-grid fade-on-scroll">
+                    <div class="result-item">
+                        <div class="result-number" data-target="12000">0</div>
+                        <div class="result-label">Classes Taught</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number" data-target="500">0</div>
+                        <div class="result-label">Active Members</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number" data-target="4.9">0</div>
+                        <div class="result-label">Average Rating</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number" data-target="98">0</div>
+                        <div class="result-label">Retention Rate %</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <div class="container">
+                <div class="section-header fade-on-scroll">
+                    <h2>Weekly Schedule</h2>
+                    <p class="section-subtitle">Classes throughout the day to fit your life</p>
+                </div>
+
+                <div class="fade-on-scroll">
+                    <table class="schedule-table" role="presentation">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Wednesday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="class-time-badge">5:00 AM</span></td>
+                                <td>HIIT<br><span class="instructor-name">Alex</span></td>
+                                <td>Strength<br><span class="instructor-name">Morgan</span></td>
+                                <td>HIIT<br><span class="instructor-name">Alex</span></td>
+                                <td>Yoga<br><span class="instructor-name">Jordan</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="class-time-badge">6:30 AM</span></td>
+                                <td>Strength<br><span class="instructor-name">Morgan</span></td>
+                                <td>Boxing<br><span class="instructor-name">Alex</span></td>
+                                <td>Strength<br><span class="instructor-name">Morgan</span></td>
+                                <td>HIIT<br><span class="instructor-name">Alex</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="class-time-badge">12:00 PM</span></td>
+                                <td>Yoga<br><span class="instructor-name">Jordan</span></td>
+                                <td>HIIT<br><span class="instructor-name">Alex</span></td>
+                                <td>Yoga<br><span class="instructor-name">Jordan</span></td>
+                                <td>Strength<br><span class="instructor-name">Morgan</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="class-time-badge">5:30 PM</span></td>
+                                <td>Boxing<br><span class="instructor-name">Alex</span></td>
+                                <td>Strength<br><span class="instructor-name">Morgan</span></td>
+                                <td>Boxing<br><span class="instructor-name">Alex</span></td>
+                                <td>Boxing<br><span class="instructor-name">Alex</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="class-time-badge">7:00 PM</span></td>
+                                <td>HIIT<br><span class="instructor-name">Alex</span></td>
+                                <td>Yoga<br><span class="instructor-name">Jordan</span></td>
+                                <td>HIIT<br><span class="instructor-name">Alex</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" role="region" aria-label="Call to action">
+            <div class="container">
+                <div class="cta-content fade-on-scroll">
+                    <h2 class="cta-headline">YOUR FIRST CLASS IS FREE</h2>
+                    <p class="cta-subtext">No credit card required. No commitment. Just pure intensity.</p>
+
+                    <form class="email-form" aria-label="Email signup">
+                        <input
+                            type="email"
+                            placeholder="your@email.com"
+                            required
+                            aria-label="Email address"
+                        >
+                        <button type="submit" aria-label="Claim free class">Claim Free Class</button>
+                    </form>
+
+                    <p style="margin-top: 1.5rem; color: rgba(10, 10, 10, 0.6); font-size: 0.9rem;">
+                        ✓ We'll send you class options and member stories
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-grid fade-on-scroll">
+                <div class="footer-section">
+                    <h3>About APEX</h3>
+                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 1rem;">
+                        APEX Performance Studio is dedicated to pushing boundaries and transforming fitness journeys through high-energy, results-driven classes and expert coaching.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">f</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-icon" aria-label="TikTok">♪</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#classes">Classes</a></li>
+                        <li><a href="#trainers">Our Trainers</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="tel:+18008APEXFIT">+1 (800) 827-3934</a></li>
+                        <li><a href="mailto:hello@apexperformance.studio">hello@apexperformance.studio</a></li>
+                        <li>1000 Performance Ave<br>Downtown, CA 94101</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <ul style="font-size: 0.9rem;">
+                        <li>Mon–Fri: 5:00 AM – 9:00 PM</li>
+                        <li>Saturday: 6:00 AM – 8:00 PM</li>
+                        <li>Sunday: 8:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    &copy; 2026 APEX Performance Studio. All rights reserved. |
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-legal">
+                    Designed by <strong>Sites In A Day</strong> — Premium Web Design Service
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for Fade-In Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const steps = 60;
+            const increment = target / steps;
+            let current = 0;
+
+            const counter = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(counter);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, duration / steps);
+        }
+
+        // Trigger counter animations on scroll
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
+                    entry.target.setAttribute('data-animated', 'true');
+                    animateCounter(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-target]').forEach(el => {
+            counterObserver.observe(el);
+        });
+
+        // Billing Toggle
+        const billingToggle = document.getElementById('billingToggle');
+        let isAnnual = false;
+
+        billingToggle.addEventListener('click', () => {
+            isAnnual = !isAnnual;
+            billingToggle.classList.toggle('active');
+
+            // Update prices
+            const starterPrice = document.getElementById('starter-price');
+            const elitePrice = document.getElementById('elite-price');
+            const premiumPrice = document.getElementById('premium-price');
+
+            if (isAnnual) {
+                starterPrice.textContent = '$999';
+                elitePrice.textContent = '$1,499';
+                premiumPrice.textContent = '$1,999';
+            } else {
+                starterPrice.textContent = '$99';
+                elitePrice.textContent = '$149';
+                premiumPrice.textContent = '$199';
+            }
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Email Form Handler
+        document.querySelector('.email-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(`Thank you for signing up, ${email}! Check your inbox for your free class details.`);
+            e.target.reset();
+        });
+
+        // Page Load Animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
