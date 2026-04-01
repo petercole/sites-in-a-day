@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<h3 style="font-size:1.4rem;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Ready to Launch Your Website?</h3>CTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,7 +47,7 @@
             overflow-x: hidden;
         }
 
-        /* ───── NAVIGATION ───── */
+        /* âââââ NAVIGATION âââââ */
         nav {
             position: fixed; top: 0; left: 0; right: 0;
             background: rgba(10, 10, 26, 0.85);
@@ -77,9 +77,9 @@
             background: var(--gradient-primary); color: #ffffff; padding: 0.55rem 1.25rem;
             border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem;
             transition: all 0.3s; border: none; cursor: pointer;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5); letter-spacing: 0.3px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 15px var(--glow-purple); }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 0 20px rgba(139,92,246,0.5), 0 0 40px rgba(79,125,245,0.3); }
         .mobile-menu-toggle {
             display: none; background: none; border: none; color: var(--text-primary);
             font-size: 1.5rem; cursor: pointer;
@@ -95,7 +95,7 @@
             padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);
         }
 
-        /* ───── HERO ───── */
+        /* âââââ HERO âââââ */
         .hero {
             margin-top: 64px;
             min-height: 85vh;
@@ -137,7 +137,7 @@
         }
         .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
 
-        /* ───── TRUST BAR ───── */
+        /* âââââ TRUST BAR âââââ */
         .trust-bar {
             background: var(--bg-secondary); border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
@@ -158,14 +158,14 @@
         .trust-icon svg { width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; }
         .trust-label { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); }
 
-        /* ───── SECTIONS COMMON ───── */
+        /* âââââ SECTIONS COMMON âââââ */
         .section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
         .section-title {
             font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; text-align: center;
             margin-bottom: 3.5rem; letter-spacing: -0.5px;
         }
 
-        /* ───── HOW IT WORKS ───── */
+        /* âââââ HOW IT WORKS âââââ */
         .steps-container {
             display: flex; align-items: flex-start; justify-content: center; gap: 0;
             position: relative; max-width: 900px; margin: 0 auto;
@@ -188,7 +188,7 @@
         }
         .step:last-child .step-line { display: none; }
 
-        /* ───── PORTFOLIO ───── */
+        /* âââââ PORTFOLIO âââââ */
         .portfolio-section { background: var(--bg-secondary); padding: 5rem 2rem; }
         .portfolio-grid {
             display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
@@ -211,6 +211,16 @@
         .portfolio-thumb .gradient-placeholder {
             width: 100%; height: 100%;
         }
+        .portfolio-thumb .site-preview {
+            width: 100%; height: 100%; object-fit: cover; object-position: top;
+            transition: opacity 0.3s;
+        }
+        .portfolio-thumb .site-preview.loading {
+            opacity: 0;
+        }
+        .portfolio-thumb .gradient-placeholder {
+            width: 100%; height: 100%;
+        }
         .portfolio-info { padding: 0.85rem 1rem; }
         .portfolio-tag {
             font-size: 0.7rem; text-transform: uppercase; font-weight: 700;
@@ -224,7 +234,7 @@
         }
         .portfolio-link:hover { text-decoration: underline; }
 
-        /* ───── SITE MOCKUPS ───── */
+        /* âââââ SITE MOCKUPS âââââ */
         .site-mockup {
             width: 100%; height: 100%; background: #0d1117; display: flex;
             flex-direction: column; overflow: hidden;
@@ -255,7 +265,7 @@
         .mock-cols { display: flex; gap: 3px; }
         .mock-box { flex: 1; height: 14px; border-radius: 2px; background: rgba(255,255,255,0.06); }
 
-        /* ───── PRICING ───── */
+        /* âââââ PRICING âââââ */
         .pricing-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
             max-width: 950px; margin: 0 auto; align-items: start;
@@ -308,7 +318,7 @@
         }
         .price-btn.outline:hover { border-color: var(--accent-purple); background: rgba(139, 92, 246, 0.05); }
 
-        /* ───── PROMISE + FAQ ───── */
+        /* âââââ PROMISE + FAQ âââââ */
         .promise-section { background: var(--bg-secondary); padding: 5rem 2rem; }
         .promise-inner { max-width: 1200px; margin: 0 auto; }
         .promise-stats {
@@ -348,7 +358,7 @@
         }
         .faq-item.active .faq-answer { max-height: 300px; padding: 0 1.25rem 1.25rem; }
 
-        /* ───── ORDER FORM (right side of promise) ───── */
+        /* âââââ ORDER FORM (right side of promise) âââââ */
         .order-form-card {
             background: var(--bg-card); border: 1px solid var(--border-color);
             border-radius: 16px; padding: 2rem;
@@ -410,7 +420,7 @@
         .form-message.success { background: rgba(16, 185, 129, 0.15); color: #34d399; }
         .form-message.error { background: rgba(239, 68, 68, 0.15); color: #f87171; }
 
-        /* ───── ORDER FORM SECTION ───── */
+        /* âââââ ORDER FORM SECTION âââââ */
         .order-section {
             padding: 5rem 2rem; background: var(--bg-primary);
         }
@@ -424,7 +434,7 @@
             .form-row { grid-template-columns: 1fr; }
         }
 
-        /* ───── FINAL CTA ───── */
+        /* âââââ FINAL CTA âââââ */
         .final-cta {
             padding: 5rem 2rem; text-align: center;
             background: linear-gradient(180deg, var(--bg-primary) 0%, #1a0533 50%, var(--bg-primary) 100%);
@@ -436,7 +446,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* ───── FOOTER ───── */
+        /* âââââ FOOTER âââââ */
         footer {
             padding: 2.5rem 2rem; text-align: center; font-size: 0.85rem;
             color: var(--text-muted); border-top: 1px solid var(--border-color);
@@ -445,12 +455,12 @@
         footer a:hover { text-decoration: underline; }
         footer p { margin-bottom: 0.5rem; }
 
-        /* ───── FLOATING CTA (mobile) ───── */
+        /* âââââ FLOATING CTA (mobile) âââââ */
         .floating-cta {
             display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999;
         }
 
-        /* ───── RESPONSIVE ───── */
+        /* âââââ RESPONSIVE âââââ */
         @media (max-width: 1024px) {
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
             .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
@@ -473,7 +483,7 @@
             .trust-bar-inner { grid-template-columns: 1fr 1fr; }
         }
 
-        /* ───── ANIMATIONS ───── */
+        /* âââââ ANIMATIONS âââââ */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -549,159 +559,106 @@
     </div>
 
     <!-- HOW IT WORKS -->
-    <section class="section" id="how">
-        <h2 class="section-title">How It Works</h2>
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-num">1</div>
-                <div class="step-line"></div>
-                <h3>Tell Us About Your Business</h3>
-                <p>Fill out a quick brief about your goals, preferences, and content. Takes just 10 minutes.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <div class="step-line"></div>
-                <h3>We Build It</h3>
-                <p>Our AI accelerates the design, then our expert team refines every pixel to perfection.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <h3>You're Live</h3>
-                <p>Your site launches on your custom domain within 24 hours. Complete technical setup.</p>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- PORTFOLIO -->
     <section class="portfolio-section" id="portfolio">
         <h2 class="section-title">Our Portfolio</h2>
         <div class="portfolio-grid">
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/ritual-coffee','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#f97316,#dc2626)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#f97316"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #2d1810, #4a2c1a)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/ritual-coffee" alt="Ritual Coffee Roasters" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Restaurant</div>
-                    <div class="portfolio-name">Ritual Coffee Reserve</div>
-                    <div class="portfolio-desc">Upscale coffee brand, modern aesthetic with warm tones.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">CAFÉ & RESTAURANT</div>
+                    <div class="portfolio-name">Ritual Coffee Roasters</div>
+                    <div class="portfolio-desc">Artisanal coffee brand</div>
+                    <a href="/portfolio/ritual-coffee" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/velvet-vintage','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#ec4899,#8b5cf6)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#ec4899"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #1a0a2e, #2d1b4e)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/velvet-vintage" alt="Velvet & Vintage" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Fitness</div>
-                    <div class="portfolio-name">Apex Fitness Studio</div>
-                    <div class="portfolio-desc">High-energy brand with dynamic layouts and bold imagery.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">FASHION & RETAIL</div>
+                    <div class="portfolio-name">Velvet & Vintage</div>
+                    <div class="portfolio-desc">Curated vintage fashion</div>
+                    <a href="/portfolio/velvet-vintage" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/trusted-home-pro','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#3b82f6,#06b6d4)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#3b82f6"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a1628, #1a2d4e)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/trusted-home-pro" alt="Trusted Home Pro" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Legal</div>
-                    <div class="portfolio-name">Turnbull &amp; Associates</div>
-                    <div class="portfolio-desc">Professional law firm, trust-building design.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">HOME SERVICES</div>
+                    <div class="portfolio-name">Trusted Home Pro</div>
+                    <div class="portfolio-desc">Premium home services</div>
+                    <a href="/portfolio/trusted-home-pro" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/aura-beauty','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#a855f7,#ec4899)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#a855f7"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #2e0a1a, #4e1b2d)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/aura-beauty" alt="Aura Beauty Lounge" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Beauty</div>
-                    <div class="portfolio-name">Aure Beauty Studio</div>
-                    <div class="portfolio-desc">Premium beauty brand, elegant design.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">BEAUTY & WELLNESS</div>
+                    <div class="portfolio-name">Aura Beauty Lounge</div>
+                    <div class="portfolio-desc">Modern beauty studio</div>
+                    <a href="/portfolio/aura-beauty" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/elysium-wellness','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#14b8a6,#22c55e)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#14b8a6"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a2e1a, #1b4e2d)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/elysium-wellness" alt="Elysium Wellness" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Wellness</div>
-                    <div class="portfolio-name">Gravity Studio</div>
-                    <div class="portfolio-desc">Bold branding, clean design for a cutting-edge salon.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">HEALTH & FITNESS</div>
+                    <div class="portfolio-name">Elysium Wellness</div>
+                    <div class="portfolio-desc">Holistic wellness center</div>
+                    <a href="/portfolio/elysium-wellness" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/pristine-home','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#64748b,#1e293b)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#64748b"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #1a1a2e, #2d2d4e)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/pristine-home" alt="Pristine Home Co." style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Home Services</div>
-                    <div class="portfolio-name">Pristine Home Designs</div>
-                    <div class="portfolio-desc">Professional home renovation, trust-driven layout.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">INTERIOR DESIGN</div>
+                    <div class="portfolio-name">Pristine Home Co.</div>
+                    <div class="portfolio-desc">Interior design studio</div>
+                    <a href="/portfolio/pristine-home" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/hartwell-associates','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#f59e0b,#ef4444)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#f59e0b"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a1a2e, #1b2d4e)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/hartwell-associates" alt="Hartwell & Associates" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Creative</div>
-                    <div class="portfolio-name">Luminosa Creative Studio</div>
-                    <div class="portfolio-desc">Vibrant creative agency showcasing bold work.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">PROFESSIONAL SERVICES</div>
+                    <div class="portfolio-name">Hartwell & Associates</div>
+                    <div class="portfolio-desc">Law firm & consulting</div>
+                    <a href="/portfolio/hartwell-associates" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" onclick="window.open('/portfolio/luminous-creative','_blank')">
                 <div class="portfolio-thumb">
-                    <div class="site-mockup" style="--mock-gradient:linear-gradient(135deg,#06b6d4,#8b5cf6)">
-                        <div class="mock-chrome"><span></span><span></span><span></span></div>
-                        <div class="mock-nav"><div class="mock-nav-logo" style="background:#06b6d4"></div><div class="mock-nav-links"><span></span><span></span><span></span></div></div>
-                        <div class="mock-hero"><div class="mock-hero-title"></div><div class="mock-hero-sub"></div><div class="mock-hero-btn"></div></div>
-                        <div class="mock-body"><div class="mock-cols"><div class="mock-box"></div><div class="mock-box"></div></div></div>
-                    </div>
+                    <div class="gradient-placeholder" style="background:linear-gradient(135deg, #2e1a0a, #4e2d1b)"></div>
+                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/luminous-creative" alt="Luminous Creative Studio" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
                 </div>
                 <div class="portfolio-info">
-                    <div class="portfolio-tag">Marketing</div>
-                    <div class="portfolio-name">Assertive - Luctious</div>
-                    <div class="portfolio-desc">Data-driven marketing, modern presentation.</div>
-                    <a href="#" class="portfolio-link">View Live Demo &rarr;</a>
+                    <div class="portfolio-tag">CREATIVE AGENCY</div>
+                    <div class="portfolio-name">Luminous Creative Studio</div>
+                    <div class="portfolio-desc">Brand & design agency</div>
+                    <a href="/portfolio/luminous-creative" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
             </div>
         </div>
@@ -871,10 +828,7 @@
     </section>
 
     <!-- FINAL CTA -->
-    <section class="final-cta">
-        <h2>Ready to Launch Your Website?</h2>
-        <a href="#order" class="btn-primary">Start Your Site &rarr;</a>
-    </section>
+    
 
     <!-- FOOTER -->
     <footer>
@@ -1018,6 +972,21 @@
                 floatingCta.style.display = window.scrollY > 500 ? 'flex' : 'none';
             }
         });
+    
+    // Lazy load portfolio thumbnails
+    document.addEventListener('DOMContentLoaded', function() {
+        const imgs = document.querySelectorAll('.site-preview[data-src]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    observer.unobserve(img);
+                }
+            });
+        }, {rootMargin: '200px'});
+        imgs.forEach(img => observer.observe(img));
+    });
     </script>
 </body>
 </html>
