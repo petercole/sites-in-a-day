@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Serenity Spa & Wellness - Luxury treatments in Portland. Expert therapists, premium products. Book your transformation today.">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="keywords" content="spa, wellness, massage, facials, Portland luxury spa">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Serenity Spa & Wellness - Premium Luxury Treatments">
+    <meta property="og:description" content="Transform your body and mind. Award-winning spa with 20+ treatment types.">
+    <meta property="og:url" content="https://serenityspawellness.com/">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "BeautySalon"],
+        "name": "Serenity Spa & Wellness",
+        "image": "https://serenityspawellness.com/og-image.jpg",
+        "description": "Award-winning luxury spa offering massage, facials, body treatments, and wellness services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "445 NW 21st Ave",
+            "addressLocality": "Portland",
+            "addressRegion": "OR",
+            "postalCode": "97209",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-503-555-0123",
+        "email": "hello@serenityspawellness.com",
+        "url": "https://serenityspawellness.com",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.98",
+            "ratingCount": "847"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "09:00",
+            "closes": "20:00"
+        },
+        "priceRange": "$85-$350"
+    }
+    </script>
+
+    <title>Serenity Spa & Wellness | Luxury Treatments Portland</title>
+
+    <style>
+        :root {
+            --primary: #c9a961;
+            --dark: #1a1a1a;
+            --light: #f5f5f5;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --border-color: rgba(201, 169, 97, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);
+            color: #e8e8e8;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); letter-spacing: -1px; }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+        /* Glassmorphism Buttons */
+        .btn {
+            padding: 14px 32px;
+            border: 1.5px solid var(--primary);
+            background: var(--glass-bg);
+            color: var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--primary);
+            border-radius: 50px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            transform: scaleX(1);
+        }
+
+        .btn:hover {
+            color: var(--dark);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            color: var(--light);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            color: #d0d0d0;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.15), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(201, 169, 97, 0.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #b8b8b8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* Trust Signals */
+        .trust-section {
+            padding: 5rem 2rem;
+            background: var(--glass-bg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .trust-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-stat h3 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-stat p {
+            color: #b8b8b8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.05) 0%, transparent 100%);
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #d0d0d0;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            color: #888;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Scroll animations */
+        @supports (animation-timeline: view()) {
+            .service-card {
+                animation: cardReveal linear;
+                animation-timeline: view();
+                animation-range: entry 0% cover 30%;
+            }
+
+            @keyframes cardReveal {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .services {
+                padding: 3rem 1rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SERENITY</div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Surrender to Serenity</h1>
+                <p>Award-winning spa treatments designed to restore balance to your body and mind. Experience the luxury you deserve.</p>
+                <div class="hero-buttons">
+                    <a href="#book" class="btn">Book Appointment</a>
+                    <a href="#services" class="btn">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="section-title">
+                <h2>Signature Treatments</h2>
+                <p style="color: #999; margin-top: 1rem;">From therapeutic massages to luxurious facials, each service is crafted to elevate your wellness journey.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💆</div>
+                    <h3>Swedish Massage</h3>
+                    <p>90 minutes of therapeutic relaxation using our premium blend of organic oils to release tension and restore balance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Luxury Facial</h3>
+                    <p>Advanced skincare treatment with professional-grade serums and techniques tailored to your skin type.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Hot Stone Therapy</h3>
+                    <p>Combine heated basalt stones with expert massage to deeply relax muscles and improve circulation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💅</div>
+                    <h3>Nail Treatments</h3>
+                    <p>Manicures and pedicures using non-toxic, eco-friendly products with expert artistry.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧖</div>
+                    <h3>Body Treatments</h3>
+                    <p>Exfoliating wraps, scrubs, and treatments to renew your skin and invigorate your senses.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🕯️</div>
+                    <h3>Wellness Packages</h3>
+                    <p>Curated multi-treatment experiences designed for ultimate relaxation and restoration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-section">
+            <div class="trust-grid">
+                <div class="trust-stat">
+                    <h3>4.98★</h3>
+                    <p>847 5-star reviews</p>
+                </div>
+                <div class="trust-stat">
+                    <h3>20+</h3>
+                    <p>Treatment types</p>
+                </div>
+                <div class="trust-stat">
+                    <h3>15+ Years</h3>
+                    <p>Industry expertise</p>
+                </div>
+                <div class="trust-stat">
+                    <h3>500+</h3>
+                    <p>Monthly clients</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Transform Your Wellness?</h2>
+            <p>Start your journey to relaxation and rejuvenation. Book your first appointment today and receive a complimentary consultation.</p>
+            <a href="#book" class="btn">Book Your Appointment</a>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Serenity Spa & Wellness</strong> | 445 NW 21st Ave, Portland, OR 97209</p>
+        <p>📞 +1-503-555-0123 | 📧 hello@serenityspawellness.com</p>
+        <p style="margin-top: 2rem; font-size: 0.85rem;">© 2026 Serenity Spa & Wellness. All rights reserved. | <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
