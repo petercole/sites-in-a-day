@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Sites In A Day — Premium Web Design in 24 Hours</title>
+    <meta name="description" content="See what a $10,000-quality website looks like — delivered in 24 hours. Premium designs for restaurants, fitness studios, salons, law firms, and home services.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sitesinaday.com/portfolio/">
+    <meta property="og:title" content="Portfolio | Sites In A Day">
+    <meta property="og:description" content="Premium web design delivered in 24 hours. See our work across restaurants, fitness, salons, law firms, and home services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sitesinaday.com/portfolio/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Sites In A Day Portfolio",
+        "description": "Premium web design portfolio showcasing 24-hour website delivery for local businesses",
+        "creator": {
+            "@type": "Organization",
+            "name": "Sites In A Day",
+            "url": "https://sitesinaday.com"
+        },
+        "url": "https://sitesinaday.com/portfolio/"
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1d4ed8;
+            --accent: #F59E0B;
+            --dark: #0F172A;
+            --dark-800: #1E293B;
+            --dark-700: #334155;
+            --light: #F0EEE9;
+            --white: #FAFAF8;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --radius: 16px;
+            --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.12);
+            --shadow-xl: 0 20px 60px rgba(15, 23, 42, 0.18);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            padding: 8px 16px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 0 0 8px 8px;
+            z-index: 1000;
+            font-weight: 600;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav.scrolled {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(15, 23, 42, 0.06);
+            padding: 0.85rem 2rem;
+        }
+        .nav-logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #fff;
+            transition: color 0.4s;
+        }
+        .nav.scrolled .nav-logo { color: var(--dark); }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);
+            transition: color 0.3s;
+        }
+        .nav.scrolled .nav-links a { color: var(--gray-500); }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta {
+            padding: 0.6rem 1.4rem;
+            background: var(--primary);
+            color: #fff !important;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .nav-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-800) 50%, #1a2744 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 60%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 100px;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: 0.03em;
+        }
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent) 0%, #FBBF24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--gray-400);
+            max-width: 580px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .hero-stat-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 0.25rem;
+        }
+
+        /* Industry Filter */
+        .filter-bar {
+            max-width: 1200px;
+            margin: -2rem auto 0;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+        .filter-inner {
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .filter-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        .filter-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .filter-tag {
+            padding: 0.5rem 1.1rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-500);
+            background: var(--light);
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+        .filter-tag:hover, .filter-tag.active {
+            color: var(--primary);
+            background: rgba(37, 99, 235, 0.08);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+
+        /* Portfolio Grid */
+        .portfolio { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .portfolio-header h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+        .portfolio-header p {
+            font-size: 1.05rem;
+            color: var(--gray-500);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        .card-preview {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+        .card-preview-bg {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card:hover .card-preview-bg { transform: scale(1.05); }
+
+        /* Industry-specific gradients */
+        .card[data-industry="restaurant"] .card-preview-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b0e 50%, #b87333 100%);
+        }
+        .card[data-industry="fitness"] .card-preview-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 60%, #c5f82a 100%);
+        }
+        .card[data-industry="home-services"] .card-preview-bg {
+            background: linear-gradient(135deg, #2d3a2e 0%, #7d8c6e 50%, #c4b5a0 100%);
+        }
+        .card[data-industry="salon"] .card-preview-bg {
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #c9a96e 100%);
+        }
+        .card[data-industry="legal"] .card-preview-bg {
+            background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 50%, #c9a96e 100%);
+        }
+
+        .card-industry {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.35rem 0.9rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .card-premium {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.35rem 0.9rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #FBBF24 100%);
+            border-radius: 100px;
+            color: var(--dark);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .card-body { padding: 1.75rem; }
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+        .card-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.5rem;
+        }
+        .card-feature {
+            padding: 0.3rem 0.7rem;
+            background: var(--light);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--dark-700);
+        }
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: gap 0.3s;
+        }
+        .card-link:hover { gap: 0.75rem; }
+        .card-link svg { width: 16px; height: 16px; transition: transform 0.3s; }
+        .card:hover .card-link svg { transform: translateX(2px); }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--dark);
+            padding: 6rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .cta-content { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
+        .cta-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .cta-section p {
+            color: var(--gray-400);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37, 99, 235, 0.35); }
+
+        /* Footer */
+        footer {
+            background: #0a0f1a;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+        footer a { color: var(--primary); }
+        footer a:hover { text-decoration: underline; }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav { padding: 1rem 1.25rem; }
+            .nav-links { display: none; }
+            .hero { min-height: 70vh; padding: 7rem 1.5rem 4rem; }
+            .hero-stats { gap: 1.5rem; }
+            .hero-stat-value { font-size: 1.35rem; }
+            .filter-inner { padding: 1rem 1.25rem; }
+            .filter-label { display: none; }
+            .grid { grid-template-columns: 1fr; }
+            .portfolio-header h2 { font-size: 2rem; }
+            .cta-section h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#portfolio" class="skip-link">Skip to portfolio</a>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html" class="nav-logo">Sites In A Day</a>
+        <ul class="nav-links">
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="../index.html#pricing">Pricing</a></li>
+            <li><a href="../index.html#contact" class="nav-cta">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">5 Industries — Premium Quality</div>
+            <h1>Websites That Look Like <span>$10,000 Builds</span></h1>
+            <p>Every demo below was designed with modern UI trends, full SEO, and conversion psychology. This is the quality your business gets — delivered in 24 hours.</p>
+            <div class="hero-stats">
+                <div>
+                    <div class="hero-stat-value">5</div>
+                    <div class="hero-stat-label">Industries</div>
+                </div>
+                <div>
+                    <div class="hero-stat-value">100%</div>
+                    <div class="hero-stat-label">SEO Built In</div>
+                </div>
+                <div>
+                    <div class="hero-stat-value">24hr</div>
+                    <div class="hero-stat-label">Delivery</div>
+                </div>
+                <div>
+                    <div class="hero-stat-value">A+</div>
+                    <div class="hero-stat-label">Performance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="filter-bar">
+        <div class="filter-inner">
+            <span class="filter-label">Filter by</span>
+            <div class="filter-tags">
+                <button class="filter-tag active" data-filter="all">All Industries</button>
+                <button class="filter-tag" data-filter="restaurant">Restaurant</button>
+                <button class="filter-tag" data-filter="fitness">Fitness</button>
+                <button class="filter-tag" data-filter="home-services">Home Services</button>
+                <button class="filter-tag" data-filter="salon">Salon &amp; Spa</button>
+                <button class="filter-tag" data-filter="legal">Professional</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="portfolio" id="portfolio">
+        <div class="portfolio-header reveal">
+            <h2>Premium Portfolio</h2>
+            <p>Click any demo to see it live. Every site is fully responsive, SEO-optimized, and conversion-ready.</p>
+        </div>
+
+        <div class="grid">
+            <!-- Ritual Coffee -->
+            <article class="card reveal" data-industry="restaurant">
+                <div class="card-preview">
+                    <div class="card-preview-bg">☕</div>
+                    <span class="card-industry">Restaurant / Cafe</span>
+                    <span class="card-premium">Premium</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Ritual Coffee Roasters</h3>
+                    <p class="card-desc">Upscale specialty coffee brand with dark cinematic hero, editorial menu layout, and warm copper accents that make you crave a cup.</p>
+                    <div class="card-features">
+                        <span class="card-feature">Schema.org</span>
+                        <span class="card-feature">Menu Cards</span>
+                        <span class="card-feature">Reservation CTA</span>
+                        <span class="card-feature">Scroll Animations</span>
+                    </div>
+                    <a href="ritual-coffee.html" class="card-link" aria-label="View Ritual Coffee Roasters demo">
+                        View Live Demo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Apex Fitness -->
+            <article class="card reveal" data-industry="fitness">
+                <div class="card-preview">
+                    <div class="card-preview-bg">💪</div>
+                    <span class="card-industry">Fitness Studio</span>
+                    <span class="card-premium">Premium</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Apex Fitness</h3>
+                    <p class="card-desc">High-energy training studio with bold black + electric lime palette, counter animations, angular clip-path sections, and class schedules.</p>
+                    <div class="card-features">
+                        <span class="card-feature">Counter Animations</span>
+                        <span class="card-feature">Class Schedule</span>
+                        <span class="card-feature">Pricing Toggle</span>
+                        <span class="card-feature">Clip-Path</span>
+                    </div>
+                    <a href="apex-fitness.html" class="card-link" aria-label="View Apex Fitness demo">
+                        View Live Demo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Pristine Home -->
+            <article class="card reveal" data-industry="home-services">
+                <div class="card-preview">
+                    <div class="card-preview-bg">🏠</div>
+                    <span class="card-industry">Home Services</span>
+                    <span class="card-premium">Premium</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Pristine Home Co.</h3>
+                    <p class="card-desc">Luxury home cleaning service with sage + taupe palette, organic shapes, floating animations, trust badges, and instant quote form.</p>
+                    <div class="card-features">
+                        <span class="card-feature">Trust Badges</span>
+                        <span class="card-feature">Quote Form</span>
+                        <span class="card-feature">Before/After</span>
+                        <span class="card-feature">Service Area</span>
+                    </div>
+                    <a href="pristine-home.html" class="card-link" aria-label="View Pristine Home demo">
+                        View Live Demo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Aura Beauty -->
+            <article class="card reveal" data-industry="salon">
+                <div class="card-preview">
+                    <div class="card-preview-bg">✨</div>
+                    <span class="card-industry">Salon &amp; Spa</span>
+                    <span class="card-premium">Premium</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Aura Beauty Lounge</h3>
+                    <p class="card-desc">Dark cinematic spa with brass gold accents, stylist profiles, service pricing, gift cards, and glassmorphism booking throughout.</p>
+                    <div class="card-features">
+                        <span class="card-feature">Glassmorphism</span>
+                        <span class="card-feature">Stylist Profiles</span>
+                        <span class="card-feature">Gift Cards</span>
+                        <span class="card-feature">Booking CTAs</span>
+                    </div>
+                    <a href="aura-beauty.html" class="card-link" aria-label="View Aura Beauty Lounge demo">
+                        View Live Demo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Hartwell Law -->
+            <article class="card reveal" data-industry="legal">
+                <div class="card-preview">
+                    <div class="card-preview-bg">⚖️</div>
+                    <span class="card-industry">Professional Services</span>
+                    <span class="card-premium">Premium</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Hartwell &amp; Associates</h3>
+                    <p class="card-desc">Commanding law firm with navy + gold authority palette, case results, attorney profiles, FAQ accordion, and consultation booking.</p>
+                    <div class="card-features">
+                        <span class="card-feature">Authority Design</span>
+                        <span class="card-feature">Team Profiles</span>
+                        <span class="card-feature">Case Results</span>
+                        <span class="card-feature">FAQ Accordion</span>
+                    </div>
+                    <a href="hartwell-law.html" class="card-link" aria-label="View Hartwell & Associates demo">
+                        View Live Demo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready for Your Own?</h2>
+            <p>Pick any industry demo above — that's the quality you'll get for your business. Premium design, full SEO, delivered in 24 hours.</p>
+            <a href="../index.html#contact" class="cta-btn">
+                Get Your Website
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sites In A Day. All rights reserved. | <a href="../index.html">Home</a> | <a href="mailto:hello@sitesinaday.com">Contact</a></p>
+    </footer>
+
+    <script>
+        // Sticky nav
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Filter
+        const tags = document.querySelectorAll('.filter-tag');
+        const cards = document.querySelectorAll('.card');
+        tags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                tags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                const filter = tag.dataset.filter;
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.industry === filter) {
+                        card.style.display = '';
+                        card.classList.remove('visible');
+                        setTimeout(() => card.classList.add('visible'), 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
