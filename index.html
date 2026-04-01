@@ -18,7 +18,119 @@
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }--text-primary); padding: 0.85rem 2rem;
+        html { scroll-behavior: smooth; }
+
+        :root {
+            --bg-primary: #0a0a1a;
+            --bg-secondary: #0f0f2a;
+            --bg-card: #141432;
+            --bg-card-hover: #1a1a3e;
+            --accent-blue: #4f7df5;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --gradient-primary: linear-gradient(135deg, #4f7df5 0%, #8b5cf6 50%, #ec4899 100%);
+            --gradient-hero: linear-gradient(135deg, #1a0533 0%, #0a1628 30%, #0d0d2b 60%, #1a0533 100%);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0c0;
+            --text-muted: #6b6b8a;
+            --border-color: rgba(255,255,255,0.08);
+            --glow-blue: rgba(79, 125, 245, 0.3);
+            --glow-purple: rgba(139, 92, 246, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* âââââ NAVIGATION âââââ */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(10, 10, 26, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 0 2rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            width: 100%; max-width: 1200px; margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.15rem; font-weight: 700; color: var(--text-primary);
+            text-decoration: none; letter-spacing: -0.3px;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-secondary); font-weight: 500;
+            font-size: 0.9rem; transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-cta {
+            background: var(--gradient-primary); color: white; padding: 0.55rem 1.25rem;
+            border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem;
+            transition: opacity 0.3s, transform 0.3s; border: none; cursor: pointer;
+        }
+        .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+        .mobile-menu-toggle {
+            display: none; background: none; border: none; color: var(--text-primary);
+            font-size: 1.5rem; cursor: pointer;
+        }
+        .mobile-menu {
+            display: none; position: fixed; top: 64px; left: 0; right: 0;
+            background: var(--bg-secondary); flex-direction: column; padding: 1.5rem 2rem;
+            gap: 0.5rem; z-index: 999; border-bottom: 1px solid var(--border-color);
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a {
+            text-decoration: none; color: var(--text-secondary); font-weight: 500;
+            padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);
+        }
+
+        /* âââââ HERO âââââ */
+        .hero {
+            margin-top: 64px;
+            min-height: 85vh;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+            background: var(--gradient-hero);
+            padding: 4rem 2rem;
+        }
+        .hero-bg {
+            position: absolute; inset: 0; z-index: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 20%, rgba(100, 60, 200, 0.35) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 30% 80%, rgba(79, 125, 245, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 40% at 80% 60%, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
+        }
+        .hero-content {
+            position: relative; z-index: 2; text-align: center; max-width: 800px;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 4.2rem); font-weight: 900;
+            line-height: 1.15; letter-spacing: -1.5px; margin-bottom: 1.25rem;
+        }
+        .hero-subtitle {
+            font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 2.5rem;
+            max-width: 550px; margin-left: auto; margin-right: auto;
+        }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--gradient-primary); color: white; padding: 0.85rem 2rem;
+            border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            border: none; cursor: pointer; transition: all 0.3s;
+            box-shadow: 0 4px 20px var(--glow-purple);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--glow-purple); }
+        .btn-secondary {
+            background: transparent; color: var(--text-primary); padding: 0.85rem 2rem;
             border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.95rem;
             border: 2px solid rgba(255,255,255,0.25); cursor: pointer; transition: all 0.3s;
         }
@@ -526,7 +638,7 @@
                 <div class="price-amount">$997</div>
                 <div class="price-freq">one-time</div>
                 <ul class="price-features">
-                    <li>15 page website</li>
+                        <li>15 page website</li>
                     <li>Complete brand kit</li>
                     <li>Social media templates</li>
                     <li>On-key support</li>
@@ -608,6 +720,7 @@
                             <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
                             <div class="form-error"></div>
                         </div>
+                          </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="Email Address" required>
@@ -698,107 +811,4 @@
         // Pricing buttons auto-select package
         document.querySelectorAll('.price-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
-                const card = btn.closest('.price-card');
-                const tier = card.querySelector('.price-tier').textContent;
-                const map = { 'Starter': '297', 'Launch': '597', 'Growth': '997' };
-                setTimeout(() => {
-                    const sel = document.getElementById('packageSelect');
-                    if (sel && map[tier]) sel.value = map[tier];
-                }, 300);
-            });
-        });
-
-        // Form Handling
-        const form = document.getElementById('orderForm');
-        const formMessage = form.querySelector('.form-message');
-        const submitButton = form.querySelector('.form-submit');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            formMessage.classList.remove('show', 'success', 'error');
-
-            const requiredFields = ['fullName', 'email', 'businessName', 'packageSelect', 'businessDescription'];
-            let isValid = true;
-
-            requiredFields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                const errorDiv = field.parentElement.querySelector('.form-error');
-                if (!field.value.trim()) {
-                    field.classList.add('error');
-                    errorDiv.textContent = 'This field is required';
-                    errorDiv.classList.add('show');
-                    isValid = false;
-                } else {
-                    field.classList.remove('error');
-                    errorDiv.classList.remove('show');
-                    if (fieldId === 'email') {
-                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        if (!emailRegex.test(field.value)) {
-                            field.classList.add('error');
-                            errorDiv.textContent = 'Please enter a valid email';
-                            errorDiv.classList.add('show');
-                            isValid = false;
-                        }
-                    }
-                }
-            });
-
-            if (!isValid) return;
-
-            submitButton.disabled = true;
-            submitButton.classList.add('loading');
-
-            const packageMap = {'297': 'Starter ($297)', '597': 'Launch ($597)', '997': 'Growth ($997)'};
-            const pkgValue = document.getElementById('packageSelect').value;
-            const formData = {
-                full_name: document.getElementById('fullName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value || null,
-                business_name: document.getElementById('businessName').value,
-                package: packageMap[pkgValue] || pkgValue,
-                description: document.getElementById('businessDescription').value,
-                status: 'new',
-                source: 'website',
-                amount_cents: parseInt(pkgValue) * 100
-            };
-
-            try {
-                const response = await fetch('https://jpqeqjrrgyrkilonrhmx.supabase.co/rest/v1/orders', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpwcWVxanJyZ3lya2lsb25yaG14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUwMDkyNjQsImV4cCI6MjA5MDU4NTI2NH0.wcqomSgjwQ-LZIjDpZfrQ6c_o3NE5ofj75rIBswA8mw',
-                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpwcWVxanJyZ3lya2lsb25yaG14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUwMDkyNjQsImV4cCI6MjA5MDU4NTI2NH0.wcqomSgjwQ-LZIjDpZfrQ6c_o3NE5ofj75rIBswA8mw',
-                        'Prefer': 'return=minimal'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (!response.ok) throw new Error('API submission failed');
-
-                formMessage.innerHTML = '<strong>You\'re in!</strong> We received your request for the ' + (packageMap[pkgValue] || 'selected') + ' package. Check your email â we\'ll send next steps and a secure payment link within 1 hour.';
-                formMessage.classList.add('show', 'success');
-                form.reset();
-            } catch (error) {
-                const mailtoBody = encodeURIComponent(
-                    `New Order:\n\nName: ${formData.full_name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nBusiness: ${formData.business_name}\nPackage: ${formData.package}\n\nDescription:\n${formData.description}`
-                );
-                window.location.href = `mailto:hello@sitesinaday.com?subject=New%20Sites%20In%20A%20Day%20Order%20from%20${encodeURIComponent(formData.full_name)}&body=${mailtoBody}`;
-                formMessage.textContent = 'Opening your email client... If it doesn\'t open, please email us at hello@sitesinaday.com';
-                formMessage.classList.add('show', 'success');
-            }
-
-            submitButton.disabled = false;
-            submitButton.classList.remove('loading');
-        });
-
-        // Floating CTA on scroll (mobile)
-        window.addEventListener('scroll', () => {
-            const floatingCta = document.getElementById('floatingCta');
-            if (window.innerWidth <= 768) {
-                floatingCta.style.display = window.scrollY > 500 ? 'flex' : 'none';
-            }
-        });
-    </script>
-</body>
-</html>
+                consB6&BÒ'Fâæ6Æ÷6W7Brç&6RÖ6&Br°¢6öç7BFW"Ò6&BçVW'6VÆV7F÷"rç&6R×FW"rçFWD6öçFVçC°¢6öç7BÖÒ²u7F'FW"s¢s#rrÂtÆVæ6s¢sSrrÂtw&÷wFs¢srrÓ°¢6WEFÖV÷WBÓâ°¢6öç7B6VÂÒFö7VÖVçBævWDVÆVÖVçD'Bw6¶vU6VÆV7Br°¢b6VÂbbÖ·FW%Ò6VÂçfÇVRÒÖ·FW%Ó°¢ÒÂ3°¢Ò°¢Ò° ¢òòf÷&ÒæFÆæp¢6öç7Bf÷&ÒÒFö7VÖVçBævWDVÆVÖVçD'Bv÷&FW$f÷&Òr°¢6öç7Bf÷&ÔÖW76vRÒf÷&ÒçVW'6VÆV7F÷"ræf÷&ÒÖÖW76vRr°¢6öç7B7V&ÖD'WGFöâÒf÷&ÒçVW'6VÆV7F÷"ræf÷&Ò×7V&ÖBr° ¢f÷&ÒæFDWfVçDÆ7FVæW"w7V&ÖBrÂ7æ2RÓâ°¢Rç&WfVçDFVfVÇB°¢f÷&ÔÖW76vRæ6Æ74Æ7Bç&VÖ÷fRw6÷rrÂw7V66W72rÂvW'&÷"r° ¢6öç7B&WV&VDfVÆG2Ò²vgVÆÄæÖRrÂvVÖÂrÂv'W6æW74æÖRrÂw6¶vU6VÆV7BrÂv'W6æW74FW67&FöâuÓ°¢ÆWB5fÆBÒG'VS° ¢&WV&VDfVÆG2æf÷$V6fVÆDBÓâ°¢6öç7BfVÆBÒFö7VÖVçBævWDVÆVÖVçD'BfVÆDB°¢6öç7BW'&÷$FbÒfVÆBç&VçDVÆVÖVçBçVW'6VÆV7F÷"ræf÷&ÒÖW'&÷"r°¢bfVÆBçfÇVRçG&Ò°¢fVÆBæ6Æ74Æ7BæFBvW'&÷"r°¢W'&÷$FbçFWD6öçFVçBÒuF2fVÆB2&WV&VBs°¢W'&÷$Fbæ6Æ74Æ7BæFBw6÷rr°¢5fÆBÒfÇ6S°¢ÒVÇ6R°¢fVÆBæ6Æ74Æ7Bç&VÖ÷fRvW'&÷"r°¢W'&÷$Fbæ6Æ74Æ7Bç&VÖ÷fRw6÷rr°¢bfVÆDBÓÓÒvVÖÂr°¢6öç7BVÖÅ&VvWÒõåµåÇ4Ò´µåÇ4ÒµÂåµåÇ4Ò²Bó°¢bVÖÅ&VvWçFW7BfVÆBçfÇVR°¢fVÆBæ6Æ74Æ7BæFBvW'&÷"r°¢W'&÷$FbçFWD6öçFVçBÒuÆV6RVçFW"fÆBVÖÂs°¢W'&÷$Fbæ6Æ74Æ7BæFBw6÷rr°¢5fÆBÒfÇ6S°¢Ð¢Ð¢Ð¢Ò° ¢b5fÆB&WGW&ã° ¢7V&ÖD'WGFöâæF6&ÆVBÒG'VS°¢7V&ÖD'WGFöâæ6Æ74Æ7BæFBvÆöFærr° ¢6öç7B6¶vTÖÒ²s#rs¢u7F'FW"C#rrÂsSrs¢tÆVæ6CSrrÂsrs¢tw&÷wFCrwÓ°¢6öç7B¶ufÇVRÒFö7VÖVçBævWDVÆVÖVçD'Bw6¶vU6VÆV7BrçfÇVS°¢6öç7Bf÷&ÔFFÒ°¢gVÆÅöæÖS¢Fö7VÖVçBævWDVÆVÖVçD'BvgVÆÄæÖRrçfÇVRÀ¢VÖÃ¢Fö7VÖVçBævWDVÆVÖVçD'BvVÖÂrçfÇVRÀ¢öæS¢Fö7VÖVçBævWDVÆVÖVçD'BwöæRrçfÇVRÇÂçVÆÂÀ¢'W6æW75öæÖS¢Fö7VÖVçBævWDVÆVÖVçD'Bv'W6æW74æÖRrçfÇVRÀ¢6¶vS¢6¶vTÖ·¶ufÇVUÒÇÂ¶ufÇVRÀ¢FW67&Föã¢Fö7VÖVçBævWDVÆVÖVçD'Bv'W6æW74FW67&FöârçfÇVRÀ¢7FGW3¢væWrrÀ¢6÷W&6S¢wvV'6FRrÀ¢Ö÷VçEö6VçG3¢'6TçB¶ufÇVR¢ ¢Ó° ¢G'°¢6öç7B&W7öç6RÒvBfWF6vGG3¢òö§W§'&w&¶Æöç&×ç7W&6Ræ6ò÷&W7B÷cö÷&FW'2rÂ°¢ÖWFöC¢uõ5BrÀ¢VFW'3¢°¢t6öçFVçBÕGRs¢vÆ6Föâö§6öârÀ¢v¶Ws¢vW¦$v6ö¤W¤æ4å#V44d·d4£æW§34Öö§¦E&Ôg¥¥44ä¦Å¦d×v5ugä§£6Ç&Ç6##WsDv6Ó5¥4dÔgV##FÄ4§ö¤S4ç¥WtÔF·æ¥4ÕcF44dÖ¤TÔESDåD$äçv7öÕ6v§uÔÅ¤¤G¦g%f5öó4äSVöf£sW$'7t×rrÀ¢tWF÷&¦Föâs¢t&V&W"W¦$v6ö¤W¤æ4å#V44d·d4£æW§34Öö§¦E&Ôg¥¥44ä¦Å¦d×v5ugä§£6Ç&Ç6##WsDv6Ó5¥4dÔgV##FÄ4§ö¤S4ç¥WtÔF·æ¥4ÕcF44dÖ¤TÔESDåD$äçv7öÕ6v§uÔÅ¤¤G¦g%f5öó4äSVöf£sW$'7t×rrÀ¢u&VfW"s¢w&WGW&ãÖÖæÖÂp¢ÒÀ¢&öG¢¥4ôâç7G&ævgf÷&ÔFF¢Ò° ¢b&W7öç6Ræö²F&÷ræWrW'&÷"t7V&Ö76öâfÆVBr° ¢f÷&ÔÖW76vRæææW$DÔÂÒsÇ7G&öæså÷UÂw&RâÂ÷7G&öæsâvR&V6VfVB÷W"&WVW7Bf÷"FRr²6¶vTÖ·¶ufÇVUÒÇÂw6VÆV7FVBr²r6¶vRâ6V6²÷W"VÖÂ(	BvUÂvÆÂ6VæBæWB7FW2æB6V7W&RÖVçBÆæ²vFâ÷W"âs°¢f÷&ÔÖW76vRæ6Æ74Æ7BæFBw6÷rrÂw7V66W72r°¢f÷&Òç&W6WB°¢Ò6F6W'&÷"°¢6öç7BÖÇFô&öGÒVæ6öFUU$6ö×öæVçB¢æWr÷&FW#¥ÆåÆäæÖS¢G¶f÷&ÔFFægVÆÅöæÖWÕÆäVÖÃ¢G¶f÷&ÔFFæVÖÇÕÆåöæS¢G¶f÷&ÔFFçöæRÇÂtæ÷B&÷fFVBwÕÆä'W6æW73¢G¶f÷&ÔFFæ'W6æW75öæÖWÕÆå6¶vS¢G¶f÷&ÔFFç6¶vWÕÆåÆäFW67&Föã¥ÆâG¶f÷&ÔFFæFW67&FöçÖ ¢°¢væF÷ræÆö6Föâæ&VbÒÖÇFó¦VÆÆô6FW6æFæ6öÓ÷7V&¦V7CÔæWrS#6FW2S#âS#S#FS#÷&FW"S#g&öÒS#G¶Væ6öFUU$6ö×öæVçBf÷&ÔFFægVÆÅöæÖRÒf&öGÒG¶ÖÇFô&öGÖ°¢f÷&ÔÖW76vRçFWD6öçFVçBÒt÷Væær÷W"VÖÂ6ÆVçBâââbBFöW6åÂwB÷VâÂÆV6RVÖÂW2BVÆÆô6FW6æFæ6öÒs°¢f÷&ÔÖW76vRæ6Æ74Æ7BæFBw6÷rrÂw7V66W72r°¢Ð ¢7V&ÖD'WGFöâæF6&ÆVBÒfÇ6S°¢7V&ÖD'WGFöâæ6Æ74Æ7Bç&VÖ÷fRvÆöFærr°¢Ò° ¢òòfÆöFær5Döâ67&öÆÂÖö&ÆR¢væF÷ræFDWfVçDÆ7FVæW"w67&öÆÂrÂÓâ°¢6öç7BfÆöFæt7FÒFö7VÖVçBævWDVÆVÖVçD'BvfÆöFæt7Fr°¢bvæF÷ræææW%vGFÃÒsc°¢fÆöFæt7Fç7GÆRæF7ÆÒvæF÷rç67&öÆÅâSòvfÆWr¢væöæRs°¢Ð¢Ò°¢Â÷67&Cà£Âö&öGà£ÂöFÖÃà
