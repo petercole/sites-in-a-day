@@ -204,22 +204,21 @@
         }
         .portfolio-thumb {
             width: 100%; aspect-ratio: 16/10; position: relative; overflow: hidden;
-        }
-        .portfolio-thumb img {
-            width: 100%; height: 100%; object-fit: cover;
+            background: var(--bg-card);
         }
         .portfolio-thumb .gradient-placeholder {
-            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
+            transition: opacity 0.6s ease;
         }
-        .portfolio-thumb .site-preview {
-            width: 100%; height: 100%; object-fit: cover; object-position: top;
-            transition: opacity 0.3s;
+        .portfolio-thumb .gradient-placeholder.loaded {
+            opacity: 0; pointer-events: none;
         }
-        .portfolio-thumb .site-preview.loading {
-            opacity: 0;
-        }
-        .portfolio-thumb .gradient-placeholder {
-            width: 100%; height: 100%;
+        .portfolio-thumb iframe {
+            position: absolute; top: 0; left: 0;
+            width: 1440px; height: 900px;
+            transform-origin: top left;
+            border: none; pointer-events: none;
+            z-index: 0;
         }
         .portfolio-info { padding: 0.85rem 1rem; }
         .portfolio-tag {
@@ -568,7 +567,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/ritual-coffee','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #2d1810, #4a2c1a)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/ritual-coffee" alt="Ritual Coffee Roasters" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/ritual-coffee" loading="lazy" title="Ritual Coffee Roasters" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">CAFÉ & RESTAURANT</div>
@@ -580,7 +579,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/velvet-vintage','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #1a0a2e, #2d1b4e)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/velvet-vintage" alt="Velvet & Vintage" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/velvet-vintage" loading="lazy" title="Velvet Vintage Boutique" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">FASHION & RETAIL</div>
@@ -592,7 +591,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/trusted-home-pro','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a1628, #1a2d4e)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/trusted-home-pro" alt="Trusted Home Pro" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/trusted-home-pro" loading="lazy" title="Trusted Home Pro" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">HOME SERVICES</div>
@@ -604,7 +603,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/aura-beauty','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #2e0a1a, #4e1b2d)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/aura-beauty" alt="Aura Beauty Lounge" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/aura-beauty" loading="lazy" title="Aura Beauty Studio" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">BEAUTY & WELLNESS</div>
@@ -616,7 +615,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/elysium-wellness','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a2e1a, #1b4e2d)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/elysium-wellness" alt="Elysium Wellness" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/elysium-wellness" loading="lazy" title="Elysium Wellness Spa" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">HEALTH & FITNESS</div>
@@ -628,7 +627,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/pristine-home','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #1a1a2e, #2d2d4e)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/pristine-home" alt="Pristine Home Co." style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/pristine-home" loading="lazy" title="Pristine Home Cleaning" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">INTERIOR DESIGN</div>
@@ -640,7 +639,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/hartwell-associates','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a1a2e, #1b2d4e)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/hartwell-associates" alt="Hartwell & Associates" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/hartwell-associates" loading="lazy" title="Hartwell & Associates" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">PROFESSIONAL SERVICES</div>
@@ -652,7 +651,7 @@
             <div class="portfolio-card" onclick="window.open('/portfolio/luminous-creative','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #2e1a0a, #4e2d1b)"></div>
-                    <img class="site-preview loading" data-src="https://image.thum.io/get/width/600/crop/375/noanimate/https://sitesinaday.com/portfolio/luminous-creative" alt="Luminous Creative Studio" style="position:absolute;top:0;left:0" onload="this.classList.remove('loading')" onerror="this.style.display='none'">
+                    <iframe src="/portfolio/luminous-creative" loading="lazy" title="Luminous Creative Studio" sandbox="allow-same-origin" tabindex="-1"></iframe>
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-tag">CREATIVE AGENCY</div>
@@ -973,19 +972,26 @@
             }
         });
     
-    // Lazy load portfolio thumbnails
-    document.addEventListener('DOMContentLoaded', function() {
-        const imgs = document.querySelectorAll('.site-preview[data-src]');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    observer.unobserve(img);
-                }
-            });
-        }, {rootMargin: '200px'});
-        imgs.forEach(img => observer.observe(img));
+    // Scale iframe thumbnails to fit their containers
+    function scaleIframeThumbs() {
+        document.querySelectorAll('.portfolio-thumb').forEach(function(thumb) {
+            var iframe = thumb.querySelector('iframe');
+            if (!iframe) return;
+            var cw = thumb.offsetWidth;
+            if (cw > 0) iframe.style.transform = 'scale(' + (cw / 1440) + ')';
+        });
+    }
+    document.addEventListener('DOMContentLoaded', scaleIframeThumbs);
+    window.addEventListener('resize', scaleIframeThumbs);
+    window.addEventListener('load', scaleIframeThumbs);
+
+    document.querySelectorAll('.portfolio-thumb iframe').forEach(function(iframe) {
+        iframe.addEventListener('load', function() {
+            var p = iframe.parentElement.querySelector('.gradient-placeholder');
+            if (p) p.classList.add('loaded');
+            scaleIframeThumbs();
+        });
+    });
     });
     </script>
 </body>
