@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hartwell & Associates — Boutique law firm in Chicago specializing in business law, estate planning, and commercial litigation. Award-winning legal counsel for complex matters.">
+    <meta name="theme-color" content="#0a1628">
+    <meta property="og:title" content="Hartwell & Associates — Premier Chicago Law Firm">
+    <meta property="og:description" content="Complex business law, estate planning, and litigation counsel from Chicago's most trusted boutique firm.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hartwellassociates.law">
+    <meta property="og:image" content="https://hartwellassociates.law/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hartwell & Associates — Premier Chicago Law Firm">
+    <meta name="twitter:description" content="Complex business law, estate planning, and litigation counsel.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://hartwellassociates.law">
+
+    <title>Hartwell & Associates — Business Law | Estate Planning | Chicago</title>
+
+    <style>
+        :root {
+            --midnight: #0a1628;
+            --navy: #1e3a5f;
+            --gold: #c9a96e;
+            --light-bg: #f8f8f8;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #f8f8f8;
+            --border-subtle: rgba(201, 169, 110, 0.15);
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            background: var(--light-bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition-fast);
+        }
+
+        header.scrolled {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: -0.8px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition-smooth);
+            opacity: 0.85;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: var(--midnight);
+            padding: 0.7rem 1.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            display: inline-block;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--gold);
+            box-shadow: inset 0 0 20px rgba(201, 169, 110, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+            .logo {
+                font-size: 1.5rem;
+            }
+            .header-content {
+                padding: 1rem 4%;
+            }
+        }
+
+        /* ===== SKIP TO CONTENT ===== */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--gold);
+            color: var(--midnight);
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--midnight) 0%, #0f1f35 50%, #1a3a60 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px;
+            padding: 4rem 5% 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(201, 169, 110, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(30, 58, 95, 0.4) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: rgba(248, 248, 248, 0.9);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .cta-primary {
+            background: var(--gold);
+            color: var(--midnight);
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            display: inline-block;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-primary:hover {
+            background: transparent;
+            color: var(--gold);
+            box-shadow: 0 8px 24px rgba(201, 169, 110, 0.25);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--gold);
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border: 2px solid var(--gold);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            display: inline-block;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-secondary:hover {
+            background: var(--gold);
+            color: var(--midnight);
+        }
+
+        .hero-trust {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border-subtle);
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item .stat {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .trust-item .label {
+            font-size: 0.9rem;
+            color: rgba(248, 248, 248, 0.8);
+            margin-top: 0.5rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 6rem 4% 3rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            .hero-cta-group {
+                gap: 1rem;
+            }
+            .cta-primary, .cta-secondary {
+                padding: 0.8rem 1.8rem;
+                font-size: 0.9rem;
+            }
+            .hero-trust {
+                gap: 1.5rem;
+            }
+        }
+
+        /* ===== SCROLL INDICATOR ===== */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* ===== PRACTICE AREAS SECTION ===== */
+        .practice-areas {
+            background: var(--white);
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .practice-areas h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--midnight);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .practice-card {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--navy));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .practice-card:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            border-color: var(--gold);
+        }
+
+        .practice-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .practice-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold), #d4b896);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--midnight);
+        }
+
+        .practice-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--midnight);
+            margin-bottom: 1rem;
+        }
+
+        .practice-card p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .practice-areas {
+                padding: 4rem 4%;
+            }
+            .practice-areas h2 {
+                font-size: 2rem;
+            }
+            .practice-grid {
+                gap: 1.5rem;
+            }
+        }
+
+        /* ===== CREDENTIALS SECTION ===== */
+        .credentials {
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--navy) 100%);
+            color: var(--text-light);
+            padding: 5rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .credentials::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .credentials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .credentials h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .credential-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            border-radius: 8px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: var(--transition-smooth);
+        }
+
+        .credential-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .credential-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+        }
+
+        .credential-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .credentials {
+                padding: 3rem 4%;
+            }
+            .credentials h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== TEAM SECTION ===== */
+        .team {
+            background: var(--light-bg);
+            padding: 6rem 5%;
+        }
+
+        .team h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--midnight);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .team > p {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .member-image {
+            width: 220px;
+            height: 280px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--gold), #d4b896);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--midnight);
+            opacity: 0.9;
+            transition: var(--transition-smooth);
+        }
+
+        .team-member:hover .member-image {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(201, 169, 110, 0.25);
+        }
+
+        .member-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--midnight);
+            margin-bottom: 0.3rem;
+        }
+
+        .member-title {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .member-bio {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .team {
+                padding: 4rem 4%;
+            }
+            .team h2 {
+                font-size: 2rem;
+            }
+            .team-grid {
+                gap: 2rem;
+            }
+        }
+
+        /* ===== CASE RESULTS SECTION ===== */
+        .case-results {
+            background: var(--white);
+            padding: 6rem 5%;
+        }
+
+        .case-results h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--midnight);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .case-results > p {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-card {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .case-card:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            border-color: var(--gold);
+        }
+
+        .case-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .case-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--midnight);
+            margin-bottom: 1rem;
+        }
+
+        .case-result {
+            background: linear-gradient(135deg, var(--gold), #d4b896);
+            color: var(--midnight);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .case-description {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .case-results {
+                padding: 4rem 4%;
+            }
+            .case-results h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            background: linear-gradient(135deg, var(--midnight) 0%, #0f1f35 50%, var(--navy) 100%);
+            color: var(--text-light);
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonials h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .testimonials > p {
+            text-align: center;
+            color: rgba(248, 248, 248, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 169, 110, 0.25);
+            border-radius: 8px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: var(--transition-smooth);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-company {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials {
+                padding: 4rem 4%;
+            }
+            .testimonials h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== BLOG SECTION ===== */
+        .blog {
+            background: var(--light-bg);
+            padding: 6rem 5%;
+        }
+
+        .blog h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--midnight);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .blog > p {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--gold), #d4b896);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--midnight);
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-date {
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--midnight);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-read-more {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition-smooth);
+            font-size: 0.9rem;
+        }
+
+        .blog-read-more:hover {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 768px) {
+            .blog {
+                padding: 4rem 4%;
+            }
+            .blog h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq {
+            background: var(--white);
+            padding: 6rem 5%;
+        }
+
+        .faq h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--midnight);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .faq > p {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 2rem 0;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--midnight);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-smooth);
+            user-select: none;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            color: var(--gold);
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--gold), #d4b896);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--midnight);
+            font-weight: bold;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            color: #555;
+            line-height: 1.8;
+            margin-top: 1rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+        }
+
+        @media (max-width: 768px) {
+            .faq {
+                padding: 4rem 4%;
+            }
+            .faq h2 {
+                font-size: 2rem;
+            }
+            .faq-question {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--navy) 100%);
+            color: var(--text-light);
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .cta-button-large {
+            background: var(--gold);
+            color: var(--midnight);
+            padding: 1.2rem 3rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border: 2px solid var(--gold);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            display: inline-block;
+            min-height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-button-large:hover {
+            background: transparent;
+            color: var(--gold);
+            box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 4rem 4%;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--midnight);
+            color: rgba(248, 248, 248, 0.7);
+            padding: 4rem 5%;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--text-light);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(248, 248, 248, 0.7);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 3rem 4%;
+            }
+            .footer-content {
+                gap: 2rem;
+            }
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .reveal {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        main {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">Hartwell <span>&</span> Associates</div>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#practice-areas">Practice Areas</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="cta-button">Schedule Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO -->
+        <section class="hero" aria-label="Hero section">
+            <div class="hero-content">
+                <h1>Legal Excellence. Business Results.</h1>
+                <p class="subtitle">Premier business law, estate planning, and litigation counsel for Chicago's most sophisticated clients. Strategic solutions for complex legal challenges.</p>
+
+                <div class="hero-cta-group">
+                    <a href="#contact" class="cta-primary">Schedule Your Free Consultation</a>
+                    <a href="#practice-areas" class="cta-secondary">Learn Our Practice Areas</a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <div class="stat">175+</div>
+                        <div class="label">Cases Won</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="stat">28</div>
+                        <div class="label">Years Combined Experience</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="stat">$850M+</div>
+                        <div class="label">Client Assets Protected</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="stat">98%</div>
+                        <div class="label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">↓</div>
+        </section>
+
+        <!-- PRACTICE AREAS -->
+        <section id="practice-areas" class="practice-areas" aria-label="Practice areas">
+            <h2>Practice Areas of Excellence</h2>
+            <p class="section-subtitle">Comprehensive legal solutions tailored to your business needs and personal circumstances.</p>
+
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <div class="practice-icon">📋</div>
+                    <h3>Business Law</h3>
+                    <p>Comprehensive corporate counsel for formation, contracts, mergers & acquisitions, and ongoing business compliance. We guide companies through every stage of growth.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-icon">🏛️</div>
+                    <h3>Estate Planning</h3>
+                    <p>Strategic wealth preservation through trusts, wills, probate administration, and tax planning. Protect your legacy and ensure your family's financial security.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-icon">⚖️</div>
+                    <h3>Commercial Litigation</h3>
+                    <p>Aggressive representation in complex disputes. From trial to settlement negotiation, we protect your interests with proven litigation expertise.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CREDENTIALS -->
+        <section class="credentials" aria-label="Credentials and recognition">
+            <div class="credentials-content">
+                <h2>Credentials & Recognition</h2>
+
+                <div class="credentials-grid">
+                    <div class="credential-item">
+                        <h3>Illinois Bar Associations</h3>
+                        <p>Licensed and in good standing with the Illinois State Bar Association. Active members of the American Bar Association and Chicago Bar Association.</p>
+                    </div>
+
+                    <div class="credential-item">
+                        <h3>Martindale-Hubbell</h3>
+                        <p>A/V Preeminent Rating — the highest rating awarded by Martindale-Hubbell for legal ability and ethical standards.</p>
+                    </div>
+
+                    <div class="credential-item">
+                        <h3>Best Lawyers in America</h3>
+                        <p>Senior partners recognized as Best Lawyers in Corporate Law and Litigation. Peer-reviewed selection by leading legal professionals.</p>
+                    </div>
+
+                    <div class="credential-item">
+                        <h3>Super Lawyers</h3>
+                        <p>Multiple team members selected to Illinois Super Lawyers list, representing the top 5% of legal practitioners in the state.</p>
+                    </div>
+
+                    <div class="credential-item">
+                        <h3>Specialized Expertise</h3>
+                        <p>Advanced certifications in business law, estate planning, and civil litigation. Continuing legal education and professional development.</p>
+                    </div>
+
+                    <div class="credential-item">
+                        <h3>Industry Leadership</h3>
+                        <p>Published legal commentary, speaking engagements at major conferences, and advisory board service for business organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="team" class="team" aria-label="Team members">
+            <h2>Meet Our Partners</h2>
+            <p>Experienced attorneys dedicated to delivering results.</p>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">👨‍⚖️</div>
+                    <div class="member-name">James Hartwell</div>
+                    <div class="member-title">Founding Partner | Business Law</div>
+                    <div class="member-bio">28+ years representing Fortune 500 companies and growing enterprises. Specializes in M&A, contract negotiation, and corporate governance.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">👩‍⚖️</div>
+                    <div class="member-name">Katherine Chen</div>
+                    <div class="member-title">Senior Partner | Estate Planning</div>
+                    <div class="member-bio">22 years of excellence in wealth preservation and estate administration. Recognized expert in complex tax planning strategies and trust management.</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">👨‍⚖️</div>
+                    <div class="member-name">Michael Rodriguez</div>
+                    <div class="member-title">Senior Partner | Commercial Litigation</div>
+                    <div class="member-bio">24 years in high-stakes litigation. Proven trial record with expertise in contract disputes, IP litigation, and business torts.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE RESULTS -->
+        <section id="results" class="case-results" aria-label="Case results and outcomes">
+            <h2>Case Results That Speak for Themselves</h2>
+            <p>Proven track record delivering outstanding outcomes for our clients.</p>
+
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-label">Business Law</div>
+                    <div class="case-title">Successful $125M Acquisition</div>
+                    <div class="case-result">Client Saved $3.2M in Tax Liability</div>
+                    <div class="case-description">Negotiated and closed complex multi-entity acquisition with sophisticated tax structuring, protecting client interests throughout transaction lifecycle.</div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-label">Commercial Litigation</div>
+                    <div class="case-title">Contract Dispute Victory</div>
+                    <div class="case-result">$8.5M Award Secured</div>
+                    <div class="case-description">Won breach of contract trial against Fortune 100 company. Strategic discovery and compelling trial presentation led to full recovery plus attorney fees.</div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-label">Estate Planning</div>
+                    <div class="case-title">Complex Estate Administration</div>
+                    <div class="case-result">$22M Estate Efficiently Distributed</div>
+                    <div class="case-description">Managed multi-state estate with real estate, business interests, and international assets. Minimized taxes and probate expenses while preserving family harmony.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials" aria-label="Client testimonials">
+            <div class="testimonials-content">
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by Chicago's most demanding business leaders and families.</p>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">"Hartwell & Associates handled our company's acquisition with extraordinary sophistication. Their attention to detail and strategic thinking saved us millions. Highly recommended."</div>
+                        <div class="testimonial-author">David Martinez</div>
+                        <div class="testimonial-company">CEO, Manufacturing Enterprises Inc.</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">"Katherine's estate planning expertise gave us complete peace of mind. She explained everything clearly and created a comprehensive strategy for our family's future."</div>
+                        <div class="testimonial-author">Susan & Robert Chen</div>
+                        <div class="testimonial-company">Business Owners</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="testimonial-text">"When we faced litigation against a much larger competitor, Hartwell & Associates fought relentlessly. Their trial preparation was impeccable. We won decisively."</div>
+                        <div class="testimonial-author">Elizabeth Thornton</div>
+                        <div class="testimonial-company">President, Technology Solutions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG/RESOURCES -->
+        <section class="blog" aria-label="Blog and resources">
+            <h2>Legal Insights & Resources</h2>
+            <p>Stay informed on legal trends affecting your business and family.</p>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">📰</div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 15, 2026</div>
+                        <h3 class="blog-title">Tax Efficiency in Business Sales</h3>
+                        <p class="blog-excerpt">Explore strategies to minimize tax liability when selling your business. Learn about asset vs. stock sales, installment payments, and strategic timing.</p>
+                        <a href="#" class="blog-read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">📋</div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 10, 2026</div>
+                        <h3 class="blog-title">Essential Estate Planning Documents</h3>
+                        <p class="blog-excerpt">A comprehensive guide to wills, trusts, power of attorney, and healthcare directives. Understand what you need and why each document matters.</p>
+                        <a href="#" class="blog-read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">⚖️</div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 5, 2026</div>
+                        <h3 class="blog-title">Contract Negotiation Best Practices</h3>
+                        <p class="blog-excerpt">Key strategies for negotiating favorable contract terms. Learn how to identify risks, allocate liability, and protect your interests.</p>
+                        <a href="#" class="blog-read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" aria-label="Frequently asked questions">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get answers to common legal questions.</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0">
+                        <span>How much does it cost to hire your firm?</span>
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible billing arrangements including hourly rates, fixed fees, and contingency options depending on your matter. Most initial consultations are complimentary. During your consultation, we provide transparent estimates of anticipated costs and discuss payment structures that work best for your situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0">
+                        <span>What is your process for estate planning?</span>
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We begin with a comprehensive discovery meeting to understand your family structure, assets, and goals. We then recommend appropriate documents and strategies, draft all necessary paperwork, and coordinate execution and funding. Regular reviews ensure your plan stays current with tax law changes and life circumstances.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0">
+                        <span>How long will my matter take to resolve?</span>
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Timeline varies significantly depending on the complexity of your matter. Estate planning typically takes 2-4 weeks from initial meeting to finalized documents. Business transactions can range from 4-12 weeks. Litigation timelines depend on case complexity, opposing parties' cooperation, and court schedules. We'll provide realistic projections early in our engagement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0">
+                        <span>Do you represent businesses outside Chicago?</span>
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we represent clients throughout Illinois and can assist with multi-state matters. For clients in other states, we can work with local counsel or provide limited scope representation depending on your needs and the specific legal issues involved.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0">
+                        <span>What makes Hartwell & Associates different?</span>
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We combine deep expertise with genuine client relationships. Our partners maintain active practices and personally manage significant matters—you don't work through associates. We prioritize strategic thinking over billable hours, maintain transparent communication, and deliver results that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section" aria-label="Call to action">
+            <div class="cta-content">
+                <h2>Ready to Work With Chicago's Premier Legal Team?</h2>
+                <p>Schedule your confidential consultation today. Discuss your legal challenges with attorneys who understand your business and your goals.</p>
+                <a href="#contact" class="cta-button-large">Schedule Your Free Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hartwell & Associates</h3>
+                <p>Suite 2800 | 233 N. Michigan Avenue<br>Chicago, Illinois 60601</p>
+                <p><strong>Phone:</strong> (312) 555-0147<br><strong>Email:</strong> contact@hartwellassociates.law</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Practice Areas</h3>
+                <ul>
+                    <li><a href="#practice-areas">Business Law</a></li>
+                    <li><a href="#practice-areas">Estate Planning</a></li>
+                    <li><a href="#practice-areas">Commercial Litigation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Legal Insights</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hartwell & Associates. All rights reserved.</p>
+            <p>This website is for informational purposes only and does not constitute legal advice.</p>
+            <p id="contact">© 2026 Hartwell & Associates Law Firm, Chicago. Contact us today to schedule your consultation.</p>
+        </div>
+    </footer>
+
+    <!-- JSON-LD SCHEMA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Hartwell & Associates",
+        "description": "Boutique law firm in Chicago specializing in business law, estate planning, and commercial litigation.",
+        "url": "https://hartwellassociates.law",
+        "telephone": "(312) 555-0147",
+        "email": "contact@hartwellassociates.law",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Suite 2800, 233 N. Michigan Avenue",
+            "addressLocality": "Chicago",
+            "addressRegion": "Illinois",
+            "postalCode": "60601",
+            "addressCountry": "US"
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "Illinois"
+        },
+        "knowsAbout": ["Business Law", "Estate Planning", "Commercial Litigation"],
+        "sameAs": [
+            "https://linkedin.com/company/hartwell-associates",
+            "https://twitter.com/hartwelllaw"
+        ]
+    }
+    </script>
+
+    <!-- INTERACTIVE ELEMENTS SCRIPT -->
+    <script>
+        // Sticky header on scroll
+        const header = document.querySelector('header');
+        let lastScrollPosition = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            lastScrollPosition = scrollPosition;
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.practice-card, .team-member, .case-card, .testimonial-card, .blog-card, .faq-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    item.classList.toggle('open');
+                }
+            });
+        });
+
+        // Counter animation for statistics
+        function animateCounter(el, target, duration = 2000) {
+            let current = 0;
+            const increment = target / (duration / 16);
+            const formatter = new Intl.NumberFormat('en-US');
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                el.textContent = formatter.format(Math.floor(current));
+            }, 16);
+        }
+
+        // Trigger counter animations when hero trust section is visible
+        const heroTrust = document.querySelector('.hero-trust');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stats = entry.target.querySelectorAll('.stat');
+                    stats.forEach(stat => {
+                        const value = stat.textContent;
+                        const cleanValue = parseInt(value.replace(/\D/g, '')) || 0;
+                        if (cleanValue > 0) {
+                            animateCounter(stat, cleanValue);
+                        }
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (heroTrust) {
+            counterObserver.observe(heroTrust);
+        }
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Accessibility: keyboard navigation for hero CTAs
+        document.querySelectorAll('.cta-button, .cta-primary, .cta-secondary, .cta-button-large').forEach(button => {
+            if (button.getAttribute('href')) {
+                button.setAttribute('role', 'button');
+            }
+        });
+    </script>
+</body>
+</html>
