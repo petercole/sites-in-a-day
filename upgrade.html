@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Upgrade in 24 Hours | SitesInADay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a1a;
+            --bg-secondary: #0f0f2a;
+            --bg-card: #141432;
+            --accent-blue: #4f7df5;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0c0;
+            --gradient: linear-gradient(135deg, #4f7df5 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(79, 125, 245, 0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .pain-point {
+            color: var(--accent-pink);
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(79, 125, 245, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px rgba(79, 125, 245, 0.5);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--bg-secondary);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+            border-radius: 16px;
+            border: 1px solid rgba(79, 125, 245, 0.1);
+        }
+
+        .stats .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Problem Section */
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: var(--bg-card);
+            padding: 2.25rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(79, 125, 245, 0.1);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .problem-card::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ec4899, #8b5cf6, #4f7df5);
+            border-radius: 12px 12px 0 0;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .problem-card:hover {
+            border-color: rgba(79, 125, 245, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .problem-card:hover::before {
+            opacity: 1;
+        }
+
+        .problem-card .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%);
+            border: 1px solid rgba(236, 72, 153, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .problem-card .icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        .problem-card h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-pink);
+        }
+
+        .problem-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Before/After Section */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .comparison-column {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(79, 125, 245, 0.1);
+        }
+
+        .comparison-column.before {
+            border-color: rgba(236, 72, 153, 0.2);
+        }
+
+        .comparison-column.after {
+            border-color: rgba(79, 125, 245, 0.2);
+        }
+
+        .comparison-column h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .comparison-column.before h3 {
+            color: var(--accent-pink);
+        }
+
+        .comparison-column.after h3 {
+            color: var(--accent-blue);
+        }
+
+        .comparison-list {
+            list-style: none;
+        }
+
+        .comparison-list li {
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .comparison-list li:before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-pink);
+            flex-shrink: 0;
+            margin-top: 6px;
+            box-shadow: 0 0 8px rgba(236, 72, 153, 0.4);
+        }
+
+        .comparison-column.after .comparison-list li:before {
+            background: var(--accent-blue);
+            box-shadow: 0 0 8px rgba(79, 125, 245, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* How It Works */
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(79, 125, 245, 0.1);
+            position: relative;
+            counter-increment: step-counter;
+        }
+
+        .step::before {
+            content: counter(step-counter);
+            position: absolute;
+            top: -1rem;
+            left: 2rem;
+            background: var(--gradient);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step {
+            counter-reset: step-counter;
+        }
+
+        .how-it-works {
+            counter-reset: step-counter;
+        }
+
+        .step h3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .step p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(79, 125, 245, 0.1);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, rgba(79, 125, 245, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            border-color: rgba(79, 125, 245, 0.3);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            border-color: rgba(79, 125, 245, 0.3);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .features-list li {
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .features-list li:before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            flex-shrink: 0;
+            box-shadow: 0 0 6px rgba(0, 212, 255, 0.4);
+        }
+
+        .pricing-card .cta-button {
+            width: 100%;
+            display: block;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(79, 125, 245, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--bg-card);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-secondary);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(79, 125, 245, 0.1);
+            text-align: center;
+            color: var(--text-secondary);
+            margin-top: 6rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive â 100% viewport, no overflow */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 16px;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            .container {
+                padding: 0 16px;
+                max-width: 100vw;
+            }
+
+            .hero {
+                margin-top: 110px;
+                padding: 2.5rem 16px;
+            }
+
+            .hero h1 {
+                font-size: 1.65rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 3rem 16px;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .how-it-works {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .comparison-list li {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .faq-question {
+                font-size: 0.9rem;
+            }
+
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .section h2 {
+                font-size: 1.35rem;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1, .hero .subtitle {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .problem-card, .step, .pricing-card {
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .problem-card:nth-child(1) { animation-delay: 0.1s; }
+        .problem-card:nth-child(2) { animation-delay: 0.2s; }
+        .problem-card:nth-child(3) { animation-delay: 0.3s; }
+        .problem-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+
+        .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+        .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+        .pricing-card:nth-child(3) { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SitesInADay</div>
+            <div>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Website Is <span class="pain-point">Costing You Customers</span> â Let's Fix That in 24 Hours</h1>
+            <p class="subtitle">Your old website is hurting your business. We'll rebuild it with modern design, lightning-fast speed, and mobile perfection â all in one day.</p>
+            <a href="https://sitesinaday.com/#pricing" class="cta-button">Upgrade Your Website Today</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <h3>24 Hours</h3>
+                <p>Complete redesign and launch</p>
+            </div>
+            <div class="stat-item">
+                <h3>100% Mobile</h3>
+                <p>Responsive on every device</p>
+            </div>
+            <div class="stat-item">
+                <h3>2 Seconds</h3>
+                <p>Fast page load speed</p>
+            </div>
+            <div class="stat-item">
+                <h3>Zero Downtime</h3>
+                <p>No disruption to your business</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Your Current Website is Holding You Back</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">75% of people judge a business's credibility by its website. A bad site isn't just boring â it's actively driving your customers away.</p>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" stroke="#ec4899" stroke-width="2"/>
+                            <polyline points="12 6 12 12 16 14" stroke="#ec4899" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Slow and Sluggish</h3>
+                    <p>Visitors bounce when pages take 5+ seconds to load. You're losing sales before they even see your offer.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2.5"/>
+                            <line x1="9" y1="18" x2="15" y2="18" stroke-width="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Mobile Nightmare</h3>
+                    <p>Half your traffic is mobile. If your site doesn't look amazing on phones, you're losing customers instantly.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Looks Outdated</h3>
+                    <p>That template from 2015 screams "I don't care about my business." Modern competitors are eating your lunch.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                            <polyline points="16 7 22 7 22 13"/>
+                        </svg>
+                    </div>
+                    <h3>Not Converting</h3>
+                    <p>Visitors come, look, and leave. No clear calls-to-action. No trust signals. No sales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="section">
+        <div class="container">
+            <h2>What You Get With SitesInADay</h2>
+            <div class="comparison">
+                <div class="comparison-column before">
+                    <h3><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(236,72,153,0.15);margin-right:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Your Current Site</h3>
+                    <ul class="comparison-list">
+                        <li>Slow page load (5+ seconds)</li>
+                        <li>Not mobile-friendly</li>
+                        <li>Dated design & layout</li>
+                        <li>No SEO optimization</li>
+                        <li>Broken or outdated features</li>
+                        <li>Looks unprofessional</li>
+                        <li>Low conversion rates</li>
+                    </ul>
+                </div>
+                <div class="comparison-column after">
+                    <h3><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(79,125,245,0.15);margin-right:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4f7df5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Your New SitesInADay Site</h3>
+                    <ul class="comparison-list">
+                        <li>Lightning-fast (under 2 seconds)</li>
+                        <li>Perfect on mobile & desktop</li>
+                        <li>Modern, professional design</li>
+                        <li>Built-in SEO best practices</li>
+                        <li>Clean, reliable technology</li>
+                        <li>Builds instant credibility</li>
+                        <li>Optimized for conversions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <h2>How It Works â 3 Simple Steps</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <h3>Share Your Info</h3>
+                    <p>Send us your current website and tell us what needs to change. We'll review everything and understand your vision.</p>
+                </div>
+                <div class="step">
+                    <h3>We Rebuild</h3>
+                    <p>Our team works around the clock to redesign and rebuild your entire site with modern design, speed, and mobile perfection.</p>
+                </div>
+                <div class="step">
+                    <h3>Review & Go Live</h3>
+                    <p>You review the new site, approve it, and we launch it to your domain. Zero downtime. Same URL. Better everything.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">No hidden fees. No long-term contracts. Just a fast, modern website.</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$297</div>
+                    <div class="price-period">One-time</div>
+                    <ul class="features-list">
+                        <li>Complete site redesign</li>
+                        <li>Mobile-responsive</li>
+                        <li>Basic SEO setup</li>
+                        <li>24-hour turnaround</li>
+                        <li>1 round of revisions</li>
+                    </ul>
+                    <a href="https://sitesinaday.com/#pricing" class="cta-button">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Launch</h3>
+                    <div class="price">$597</div>
+                    <div class="price-period">One-time</div>
+                    <ul class="features-list">
+                        <li>Everything in Starter</li>
+                        <li>Advanced SEO optimization</li>
+                        <li>Conversion rate optimization</li>
+                        <li>Contact forms & lead capture</li>
+                        <li>3 rounds of revisions</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="https://sitesinaday.com/#pricing" class="cta-button">Choose Launch</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Growth</h3>
+                    <div class="price">$997</div>
+                    <div class="price-period">One-time</div>
+                    <ul class="features-list">
+                        <li>Everything in Launch</li>
+                        <li>Advanced animations</li>
+                        <li>Custom integrations</li>
+                        <li>Analytics setup</li>
+                        <li>Unlimited revisions</li>
+                        <li>30 days of support</li>
+                    </ul>
+                    <a href="https://sitesinaday.com/#pricing" class="cta-button">Go Full Growth</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will my domain name change?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. Your domain stays exactly the same. We rebuild your site while keeping your URL intact. Your customers won't notice anything except that your site looks amazing now.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What about my existing content?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We'll migrate any content you want to keep â pages, images, text, etc. You tell us what matters, and we transfer it to your new site. Anything outdated can be removed or completely redesigned.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How is 24 hours even possible?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We've built the process. We start immediately, use modern tools and frameworks, and focus on what matters. No complexity, no waiting. When you order a SitesInADay rebuild, you're getting a dedicated team sprinting to launch your new site fast.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I need changes after launch?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You get revision rounds included (1 in Starter, 3 in Launch, unlimited in Growth). After launch, we provide email support to help with any questions. For future changes, we offer ongoing support packages.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will my site be SEO optimized?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. All SitesInADay sites include SEO fundamentals: fast loading, mobile responsiveness, proper heading structure, meta tags, and clean code. Launch and Growth packages include advanced SEO optimization to help you rank better in search.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need to do anything during the 24 hours?</span>
+                        <span class="faq-toggle">â¼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Just be available for a quick kickoff call at the start to share your current site and your vision. Then we handle everything. You'll review the finished site before we go live.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section" style="background: var(--bg-secondary); border-radius: 12px; margin: 4rem 2rem; text-align: center;">
+        <div class="container">
+            <h2>Stop Losing Customers to Your Old Website</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Your business deserves a website that sells. Let's rebuild it in 24 hours with modern design, blazing speed, and conversions that actually happen.</p>
+            <a href="https://sitesinaday.com/#pricing" class="cta-button">Upgrade Your Website Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SitesInADay. All rights reserved.</p>
+            <p><a href="https://sitesinaday.com">Back to main site</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
