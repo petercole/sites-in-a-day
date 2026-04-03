@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SitesInADay - Nashville Websites Built in 24 Hours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a1a;
+            --bg-secondary: #0f0f2a;
+            --bg-card: #141432;
+            --accent-blue: #4f7df5;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0c0;
+            --gradient-primary: linear-gradient(135deg, #4f7df5 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(79, 125, 245, 0.1);
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(79, 125, 245, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(79, 125, 245, 0.5);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 4rem 0;
+            background: var(--bg-secondary);
+            margin: 4rem 0;
+            border-radius: 20px;
+        }
+
+        .problem h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(79, 125, 245, 0.1);
+            border-top: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #4f7df5, #8b5cf6, #ec4899);
+            border-radius: 15px 15px 0 0;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .problem-card:hover {
+            border-color: rgba(79, 125, 245, 0.3);
+            box-shadow: 0 10px 40px rgba(79, 125, 245, 0.1);
+        }
+
+        .problem-card:hover::before {
+            opacity: 1;
+        }
+
+        .problem-card h3 {
+            color: var(--accent-pink);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .solution h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .solution > p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .step p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .step::after {
+            content: "â";
+            position: absolute;
+            right: -2rem;
+            top: 2rem;
+            font-size: 2rem;
+            color: var(--accent-blue);
+            opacity: 0.5;
+        }
+
+        .step:last-child::after {
+            content: "";
+        }
+
+        @media (max-width: 768px) {
+            .step::after {
+                display: none;
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--bg-secondary);
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .pricing > p {
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid rgba(79, 125, 245, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent-blue);
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(79, 125, 245, 0.2);
+        }
+
+        .pricing-card:hover {
+            border-color: rgba(79, 125, 245, 0.3);
+        }
+
+        .pricing-card.featured:hover {
+            box-shadow: 0 25px 70px rgba(79, 125, 245, 0.3);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: var(--gradient-primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin: 2rem 0;
+            list-style: none;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(79, 125, 245, 0.1);
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li:before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 6px rgba(0, 212, 255, 0.4);
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-card button {
+            width: 100%;
+            padding: 1rem;
+            margin-top: 2rem;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(79, 125, 245, 0.3);
+        }
+
+        .pricing-card button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(79, 125, 245, 0.5);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+            background: var(--bg-secondary);
+            margin: 4rem 0;
+            border-radius: 20px;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: 15px;
+            border: 1px solid rgba(79, 125, 245, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active {
+            border-color: rgba(79, 125, 245, 0.3);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .faq-item:hover .faq-question {
+            background: rgba(79, 125, 245, 0.05);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            transition: transform 0.3s ease;
+            font-weight: 300;
+            width: 30px;
+            text-align: center;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Final Section */
+        .cta-final {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .cta-final p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(79, 125, 245, 0.1);
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Responsive â 100% viewport, no overflow */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                padding: 0 0.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+            }
+
+            .container {
+                padding: 0 16px;
+                max-width: 100vw;
+            }
+
+            section {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .problem-grid,
+            .how-it-works,
+            .stats-grid,
+            .pricing-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .problem h2,
+            .solution h2,
+            .pricing h2,
+            .faq h2,
+            .cta-final h2 {
+                font-size: 1.6rem;
+            }
+
+            .step-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .stats {
+                border-radius: 0;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
+
+            .faq {
+                border-radius: 0;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
+
+            .faq-question {
+                font-size: 0.9rem;
+            }
+
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .problem h2,
+            .solution h2,
+            .pricing h2,
+            .faq h2,
+            .cta-final h2 {
+                font-size: 1.4rem;
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SitesInADay</div>
+                <ul class="nav-links">
+                    <li><a href="#how">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Nashville Customers Are Searching for You Right Now â But They Can't Find You</h1>
+            <p>Every day without a website is a lost customer. We build you a professional website in just 24 hours. No tech skills. No lengthy process. Just results.</p>
+            <a href="#pricing" class="cta-button">Get Your Website Today</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>You're Leaving Money on the Table</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Google Searches</h3>
+                    <p>78% of local searches happen on mobile. When someone searches "restaurants near me" or "hair salon in Nashville," your competitors show up. You don't.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Lost Younger Customers</h3>
+                    <p>Nobody calls first anymore. Customers want to see your hours, photos, reviews, and pricing online before they commit. Without a site, they move on.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Credibility Problem</h3>
+                    <p>A professional website signals legitimacy. No website? Customers assume you're either too small, too old-school, or don't want their business.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Zero Online Visibility</h3>
+                    <p>Your competitors are building brand presence, getting reviews, and capturing local search traffic. You're stuck relying on word of mouth.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Missing the Easy Sale</h3>
+                    <p>By the time a customer decides to hire you, they've usually checked you out online. No site = they pick someone who has one.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Falling Behind</h3>
+                    <p>Every day that passes, competitors are getting more reviews, better SEO rankings, and more customer trust. You're getting left behind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>The <span class="highlight">SitesInADay</span> Solution</h2>
+            <p>We've built a process so simple and fast, your professional website can be live in 24 hours. No coding. No waiting. No excuses.</p>
+
+            <div id="how" class="how-it-works">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Tell Us About Your Business</h3>
+                    <p>Answer a quick 5-minute form about your business, services, hours, and contact info. That's it. We handle the rest.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Build Your Site in 24 Hours</h3>
+                    <p>Our team designs and builds your professional website with gorgeous visuals, mobile optimization, and everything you need to get found.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>You're Live and Getting Found</h3>
+                    <p>Your site goes live, gets indexed by Google, and starts bringing you customers. Update content anytime from your dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">24hrs</div>
+                    <div class="stat-label">Website Built & Live</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">From $297</div>
+                    <div class="stat-label">Affordable for All Businesses</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Mobile Optimized</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Technical Skills Required</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <p>No hidden fees. No setup charges. Pick the plan that fits your business.</p>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$297<span>/one-time</span></div>
+                    <ul class="pricing-features">
+                        <li>5 Pages</li>
+                        <li>Mobile Optimized</li>
+                        <li>Contact Form</li>
+                        <li>Built in 24 Hours</li>
+                        <li>Basic SEO</li>
+                    </ul>
+                    <button class="cta-button">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Launch</h3>
+                    <div class="price">$597<span>/one-time</span></div>
+                    <ul class="pricing-features">
+                        <li>10 Pages</li>
+                        <li>Mobile Optimized</li>
+                        <li>Contact Form & Booking</li>
+                        <li>Built in 24 Hours</li>
+                        <li>SEO Optimized</li>
+                        <li>Google Business Integration</li>
+                        <li>Social Media Links</li>
+                    </ul>
+                    <button class="cta-button">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Growth</h3>
+                    <div class="price">$997<span>/one-time</span></div>
+                    <ul class="pricing-features">
+                        <li>Unlimited Pages</li>
+                        <li>Mobile Optimized</li>
+                        <li>Contact Form & Booking</li>
+                        <li>Built in 24 Hours</li>
+                        <li>Advanced SEO</li>
+                        <li>Google Business Integration</li>
+                        <li>Email Marketing Setup</li>
+                        <li>3 Months Free Updates</li>
+                    </ul>
+                    <button class="cta-button">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>I'm not tech savvy. Can I really handle this?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. You don't need any tech skills. We handle all the technical stuffâdesign, coding, hosting, everything. You just fill out a simple form about your business, and we take it from there. We'll also show you how to update your content anytime.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do you build a website in just 24 hours?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We've refined our process to be super efficient. You fill out our questionnaire with your business info, photos, and content. Our team uses proven templates and design systems to build a professional, customized site in a single day. Rush projects get done fastâno shortcuts on quality.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need to provide photos and written content?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The more you provide, the better your site. But we can work with what you have. Share photos, your business story, services, pricingâwhatever you've got. If you need help writing copy or sourcing photos, we can assist (additional fee may apply).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I don't like the website?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We'll work with you to get it right. If you have feedback after launch, we offer revisions during the first 30 days. Our goal is to make sure you love your new online presence.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will my website show up on Google?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We build every site with SEO best practices so Google can find and rank it. We also set up your Google Business listing so you show up in local searches. Your site will be live and searchable within 24 hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What about hosting and domain?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We handle hosting. If you already own your domain, we can use it. If not, we can help you register one. Everything is included in the priceâno surprise hosting bills or extra fees.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I update my website myself after it's built?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We provide you with a simple dashboard so you can update your hours, photos, services, and contact info anytime you want. No coding required. If you need help, we're here for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Stop Losing Customers to Your Competitors</h2>
+            <p>Your professional Nashville website is just 24 hours away. Let's get you online today.</p>
+            <a href="#pricing" class="cta-button">Get Your Website Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SitesInADay. Building Nashville businesses online.</p>
+            <p><a href="https://sitesinaday.com">Visit Our Main Site</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // CTA buttons that link to pricing
+        document.querySelectorAll('.pricing-card button').forEach(button => {
+            button.addEventListener('click', () => {
+                window.open('https://sitesinaday.com/#pricing', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
