@@ -488,7 +488,55 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .fade-in { opacity: 0; }
-    </style>
+    
+        /* Swirling background animation */
+        .swirl-container { position: absolute; inset: -50%; width: 200%; height: 200%; overflow: visible; z-index: 0; pointer-events: none; }
+        .swirl-blob { position: absolute; border-radius: 50%; filter: blur(60px); mix-blend-mode: screen; will-change: transform; pointer-events: none; }
+        .swirl-blob:nth-child(1) { width: 800px; height: 800px; left: 15%; top: 20%; background: radial-gradient(circle, rgba(79,125,245,0.5) 0%, transparent 65%); animation: swirlA 20s ease-in-out infinite; }
+        .swirl-blob:nth-child(2) { width: 700px; height: 700px; left: 55%; top: 10%; background: radial-gradient(circle, rgba(139,92,246,0.5) 0%, transparent 65%); animation: swirlB 25s ease-in-out infinite -5s; }
+        .swirl-blob:nth-child(3) { width: 650px; height: 650px; left: 75%; top: 55%; background: radial-gradient(circle, rgba(236,72,153,0.45) 0%, transparent 65%); animation: swirlC 22s ease-in-out infinite -10s; }
+        .swirl-blob:nth-child(4) { width: 750px; height: 750px; left: 35%; top: 65%; background: radial-gradient(circle, rgba(0,212,255,0.35) 0%, transparent 65%); animation: swirlD 28s ease-in-out infinite -7s; }
+        .swirl-blob:nth-child(5) { width: 600px; height: 600px; left: 5%; top: 75%; background: radial-gradient(circle, rgba(168,85,247,0.4) 0%, transparent 65%); animation: swirlE 18s ease-in-out infinite -3s; }
+        .swirl-blob:nth-child(6) { width: 500px; height: 500px; left: 85%; top: 30%; background: radial-gradient(circle, rgba(59,130,246,0.35) 0%, transparent 65%); animation: swirlF 24s ease-in-out infinite -12s; }
+
+        @keyframes swirlA {
+            0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
+            20% { transform: translate(180px,-120px) rotate(72deg) scale(1.2); }
+            40% { transform: translate(100px,150px) rotate(144deg) scale(0.85); }
+            60% { transform: translate(-160px,80px) rotate(216deg) scale(1.15); }
+            80% { transform: translate(-80px,-100px) rotate(288deg) scale(0.95); }
+        }
+        @keyframes swirlB {
+            0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
+            25% { transform: translate(-200px,100px) rotate(-90deg) scale(1.25); }
+            50% { transform: translate(-120px,-160px) rotate(-180deg) scale(0.8); }
+            75% { transform: translate(150px,-80px) rotate(-270deg) scale(1.1); }
+        }
+        @keyframes swirlC {
+            0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
+            33% { transform: translate(-180px,-130px) rotate(120deg) scale(1.3); }
+            66% { transform: translate(120px,-80px) rotate(240deg) scale(0.85); }
+        }
+        @keyframes swirlD {
+            0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
+            20% { transform: translate(160px,-180px) rotate(72deg) scale(0.85); }
+            40% { transform: translate(-80px,-120px) rotate(144deg) scale(1.2); }
+            60% { transform: translate(-180px,80px) rotate(216deg) scale(1); }
+            80% { transform: translate(60px,140px) rotate(288deg) scale(0.9); }
+        }
+        @keyframes swirlE {
+            0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
+            25% { transform: translate(200px,-60px) rotate(-90deg) scale(1.15); }
+            50% { transform: translate(140px,140px) rotate(-180deg) scale(0.9); }
+            75% { transform: translate(-80px,100px) rotate(-270deg) scale(1.1); }
+        }
+        @keyframes swirlF {
+            0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
+            33% { transform: translate(-160px,120px) rotate(120deg) scale(1.2); }
+            66% { transform: translate(100px,-140px) rotate(240deg) scale(0.85); }
+        }
+
+        </style>
 </head>
 <body>
 
@@ -516,7 +564,16 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-bg">
+            <div class="swirl-container">
+                <div class="swirl-blob"></div>
+                <div class="swirl-blob"></div>
+                <div class="swirl-blob"></div>
+                <div class="swirl-blob"></div>
+                <div class="swirl-blob"></div>
+                <div class="swirl-blob"></div>
+            </div>
+        </div>
         <div class="hero-content">
             <h1>Your Professional Website.<br>Built &amp; Live in 24 Hours.</h1>
             <p class="hero-subtitle">AI-powered design meets human refinement. From $297.</p>
