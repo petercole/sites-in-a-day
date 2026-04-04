@@ -60,8 +60,15 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--plum);
+            color: var(--cream);
             letter-spacing: 1px;
+            transition: color 0.4s ease;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        nav.scrolled .logo {
+            color: var(--plum);
+            text-shadow: none;
         }
 
         nav ul {
@@ -72,10 +79,16 @@
 
         nav a {
             text-decoration: none;
-            color: var(--charcoal);
+            color: var(--cream);
             font-size: 0.95rem;
             position: relative;
             transition: color 0.3s ease;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        nav.scrolled a {
+            color: var(--charcoal);
+            text-shadow: none;
         }
 
         nav a::after {
@@ -96,8 +109,7 @@
         /* HERO SECTION */
         .hero {
             height: 100vh;
-            background: linear-gradient(135deg, rgba(61, 26, 51, 0.3) 0%, rgba(201, 169, 89, 0.1) 100%),
-                        url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1920&q=80&auto=format') center/cover;
+            background: url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1920&q=80&auto=format') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -110,7 +122,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(255, 248, 240, 0.15);
+            background: linear-gradient(135deg, rgba(61, 26, 51, 0.75) 0%, rgba(61, 26, 51, 0.55) 100%);
             z-index: 1;
         }
 
@@ -125,19 +137,21 @@
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2.5rem, 8vw, 5rem);
-            color: var(--plum);
+            color: var(--cream);
             font-weight: 700;
             margin-bottom: 1rem;
             letter-spacing: 2px;
             line-height: 1.1;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
 
         .hero p {
             font-size: clamp(1rem, 2vw, 1.3rem);
-            color: var(--charcoal);
+            color: rgba(255, 248, 240, 0.9);
             font-weight: 300;
             margin-bottom: 2.5rem;
             letter-spacing: 1px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
         }
 
         .cta-button {
@@ -197,7 +211,7 @@
         .about-image {
             width: 100%;
             height: 500px;
-            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80&auto=format') center/cover;
+            background: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80&auto=format') center/cover;
             border-radius: 2px;
             box-shadow: 0 20px 60px rgba(61, 26, 51, 0.15);
         }
@@ -752,7 +766,7 @@
         <h2 class="section-title fade-up">Latest Arrivals</h2>
         <div class="arrivals-grid">
             <div class="arrival-item fade-up">
-                <img src="https://images.unsplash.com/photo-1595777707802-91d177c547e1?w=400&q=80&auto=format" alt="Arrival 1">
+                <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=400&q=80&auto=format" alt="Arrival 1">
                 <span class="arrival-badge">NEW</span>
             </div>
             <div class="arrival-item fade-up">
@@ -760,11 +774,11 @@
                 <span class="arrival-badge">NEW</span>
             </div>
             <div class="arrival-item fade-up">
-                <img src="https://images.unsplash.com/photo-1566377254129-e6d23cda38b0?w=400&q=80&auto=format" alt="Arrival 3">
+                <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&q=80&auto=format" alt="Arrival 3">
                 <span class="arrival-badge">NEW</span>
             </div>
             <div class="arrival-item fade-up">
-                <img src="https://images.unsplash.com/photo-1598961176345-34f6b3be7a56?w=400&q=80&auto=format" alt="Arrival 4">
+                <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=400&q=80&auto=format" alt="Arrival 4">
                 <span class="arrival-badge">NEW</span>
             </div>
             <div class="arrival-item fade-up">
@@ -772,7 +786,7 @@
                 <span class="arrival-badge">NEW</span>
             </div>
             <div class="arrival-item fade-up">
-                <img src="https://images.unsplash.com/photo-1594903221342-3c896a0c1a36?w=400&q=80&auto=format" alt="Arrival 6">
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cda3a76?w=400&q=80&auto=format" alt="Arrival 6">
                 <span class="arrival-badge">NEW</span>
             </div>
         </div>
