@@ -3,89 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aura Beauty Lounge — Austin's premier luxury salon and spa. Expertly crafted hair, skincare, and wellness services in a tranquil upscale environment.">
-    <meta name="theme-color" content="#0d0d0d">
-    <meta property="og:title" content="Aura Beauty Lounge — Luxury Salon & Spa in Austin">
-    <meta property="og:description" content="Elevate your beauty experience. Expert stylists, premium treatments, and personalized wellness in Austin's most luxurious salon.">
-    <meta property="og:type" content="business.business">
-    <meta property="og:url" content="https://aurabeautylounge.com">
-    <meta property="og:image" content="https://aurabeautylounge.com/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aura Beauty Lounge — Luxury Austin Salon">
-    <meta name="twitter:description" content="Premier salon & spa in Austin. Book your transformation today.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://aurabeautylounge.com">
-
-    <title>Aura Beauty Lounge — Luxury Salon & Spa Austin | Premium Hair & Skincare</title>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      "name": "Aura Beauty Lounge",
-      "description": "Premier luxury salon and spa in Austin, Texas. Expert hair styling, skincare treatments, and wellness services.",
-      "url": "https://aurabeautylounge.com",
-      "telephone": "+1-512-555-0147",
-      "email": "hello@aurabeautylounge.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4521 Barton Springs Road",
-        "addressLocality": "Austin",
-        "addressRegion": "TX",
-        "postalCode": "78704",
-        "addressCountry": "US"
-      },
-      "priceRange": "$$$",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "19:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "10:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "11:00",
-          "closes": "17:00"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "287"
-      },
-      "sameAs": [
-        "https://instagram.com/aurabeautylounge",
-        "https://facebook.com/aurabeautylounge"
-      ]
-    }
-    </script>
+    <title>Aura Beauty Lounge - Luxury Beauty &amp; Wellness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
-
-        :root {
-            --black: #0d0d0d;
-            --brass: #c9a96e;
-            --linen: #f2ede8;
-            --mocha: #6b5b4d;
-            --dark-bg: #1a1a1a;
-            --light-text: #f2ede8;
-            --subtle-border: rgba(201, 169, 110, 0.15);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            --blush: #F2E4DD;
+            --mauve: #6B4C5A;
+            --rose-gold: #B76E79;
+            --white: #FFFFFF;
+            --charcoal: #2A2A2A;
+            --sage: #A8B5A0;
         }
 
         html {
@@ -93,496 +27,129 @@
         }
 
         body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--black);
-            background: var(--linen);
-            line-height: 1.7;
+            font-family: 'Nunito Sans', sans-serif;
+            color: var(--charcoal);
+            line-height: 1.6;
+            background-color: var(--white);
             overflow-x: hidden;
         }
 
-        /* Skip to Content */
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--brass);
-            color: var(--black);
-            padding: 8px;
-            text-decoration: none;
-            z-index: 100;
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--charcoal);
         }
 
-        .skip-to-content:focus {
-            top: 0;
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
         }
 
-        /* Header & Navigation */
-        header {
+        h2 {
+            font-size: 2.8rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 999;
-            background: rgba(13, 13, 13, 0.92);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid var(--subtle-border);
-            transition: var(--transition);
-        }
-
-        header.scrolled {
-            background: rgba(13, 13, 13, 0.98);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 5%;
-            max-width: 1600px;
-            margin: 0 auto;
-            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .logo {
-            font-family: 'DM Serif Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            font-weight: 400;
-            color: var(--light-text);
+            font-weight: 700;
+            color: var(--rose-gold);
             letter-spacing: 2px;
         }
 
-        .nav-links {
+        nav ul {
             display: flex;
+            gap: 3rem;
             list-style: none;
-            gap: 2.5rem;
-            align-items: center;
         }
 
-        .nav-links a {
-            color: var(--light-text);
+        nav a {
             text-decoration: none;
-            font-size: 0.9rem;
+            color: var(--charcoal);
+            font-size: 0.95rem;
             font-weight: 500;
-            letter-spacing: 1px;
-            position: relative;
-            opacity: 0.75;
-            transition: var(--transition);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background: var(--brass);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 1;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .book-btn {
-            background: var(--brass);
-            color: var(--black);
-            padding: 0.8rem 2rem;
-            border-radius: 2px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
+            transition: color 0.3s ease;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .book-btn:hover {
-            background: var(--linen);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(201, 169, 110, 0.25);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 6px;
-        }
-
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: var(--light-text);
-            transition: var(--transition);
+        nav a:hover {
+            color: var(--rose-gold);
         }
 
         /* Hero Section */
         .hero {
-            margin-top: 70px;
             min-height: 100vh;
+            background: linear-gradient(135deg, rgba(107, 76, 90, 0.8) 0%, rgba(183, 110, 121, 0.7) 100%),
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80&auto=format') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            color: var(--white);
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: -40%;
-            right: -40%;
-            width: 150%;
-            height: 150%;
-            background: radial-gradient(circle at 30% 50%, rgba(201, 169, 110, 0.12) 0%, transparent 50%), 
-                        radial-gradient(circle at 70% 30%, rgba(107, 91, 77, 0.08) 0%, transparent 50%);
-            animation: heroFlow 25s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="15" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="80" r="20" fill="rgba(255,255,255,0.03)"/></svg>');
+            animation: float 20s ease-in-out infinite;
         }
 
-        @keyframes heroFlow {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(30px, -30px); }
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 2px),
-                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 2px);
-            pointer-events: none;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
         }
 
         .hero-content {
             position: relative;
-            z-index: 10;
-            max-width: 1000px;
-            padding: 2rem 5%;
-            animation: heroFadeIn 1s ease-out forwards;
+            z-index: 2;
+            animation: fadeUpHero 1s ease-out;
+            max-width: 800px;
         }
 
-        @keyframes heroFadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 400;
-            color: var(--light-text);
-            margin-bottom: 1.5rem;
-            line-height: 1.15;
-            letter-spacing: -0.5px;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.3rem);
-            color: rgba(242, 237, 232, 0.8);
-            margin-bottom: 3rem;
-            font-weight: 300;
-            letter-spacing: 0.8px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            gap: 1.5rem;
-        }
-
-        .cta-primary {
-            background: var(--brass);
-            color: var(--black);
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 2px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .cta-primary:hover {
-            background: var(--linen);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(201, 169, 110, 0.3);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: var(--linen);
-            padding: 1rem 2.5rem;
-            border: 1.5px solid var(--brass);
-            border-radius: 2px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .cta-secondary:hover {
-            background: var(--brass);
-            color: var(--black);
-            transform: translateY(-3px);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 20;
-            animation: scrollBounce 3s infinite;
-        }
-
-        @keyframes scrollBounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(12px); }
-        }
-
-        .scroll-indicator svg {
-            width: 24px;
-            height: 24px;
-            stroke: var(--linen);
-            fill: none;
-            stroke-width: 1.5;
-        }
-
-        /* Trust Section */
-        .trust-section {
-            background: var(--light-text);
-            padding: 3rem 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .trust-item {
-            padding: 0 1rem;
-        }
-
-        .trust-number {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.5rem;
-            color: var(--brass);
-            margin-bottom: 0.5rem;
-        }
-
-        .trust-label {
-            color: var(--black);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 8rem 5%;
-            background: var(--linen);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 4rem;
-        }
-
-        .section-header h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 400;
-            color: var(--black);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        .section-header p {
-            font-size: 1rem;
-            color: var(--mocha);
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid var(--subtle-border);
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            position: relative;
-            transition: var(--transition);
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--brass), transparent);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            border-color: var(--brass);
-            background: rgba(201, 169, 110, 0.05);
-            transform: translateY(-8px);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--brass);
-            border-radius: 4px;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.8rem;
-            color: var(--black);
-        }
-
-        .service-card h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--black);
-            margin-bottom: 0.75rem;
-            letter-spacing: 0.3px;
-        }
-
-        .service-card p {
-            color: var(--mocha);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .service-items {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .service-items li {
-            color: var(--black);
-            font-size: 0.9rem;
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-            font-weight: 400;
-        }
-
-        .service-items li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--brass);
-            font-weight: 700;
-        }
-
-        .price {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.8rem;
-            color: var(--brass);
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .service-btn {
-            width: 100%;
-            background: var(--black);
-            color: var(--light-text);
-            border: 1px solid var(--black);
-            padding: 0.8rem;
-            border-radius: 2px;
-            cursor: pointer;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            transition: var(--transition);
-        }
-
-        .service-btn:hover {
-            background: var(--brass);
-            border-color: var(--brass);
-            color: var(--black);
-        }
-
-        /* Stylists Section */
-        .stylists {
-            padding: 8rem 5%;
-            background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
-            position: relative;
-        }
-
-        .stylists .section-header h2 {
-            color: var(--light-text);
-        }
-
-        .stylists .section-header p {
-            color: rgba(242, 237, 232, 0.75);
-        }
-
-        .stylists-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .stylist-card {
-            text-align: center;
-            animation: fadeUpScroll 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .stylist-card:nth-child(1) { animation-delay: 0.1s; }
-        .stylist-card:nth-child(2) { animation-delay: 0.2s; }
-        .stylist-card:nth-child(3) { animation-delay: 0.3s; }
-        .stylist-card:nth-child(4) { animation-delay: 0.4s; }
-
-        @keyframes fadeUpScroll {
+        @keyframes fadeUpHero {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
@@ -590,816 +157,793 @@
             }
         }
 
-        .stylist-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--brass) 0%, #d4b896 100%);
-            margin: 0 auto 1.5rem;
-            position: relative;
-            border: 2px solid var(--subtle-border);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'DM Serif Display', serif;
-            font-size: 3rem;
-            color: rgba(0, 0, 0, 0.1);
-        }
-
-        .stylist-name {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.4rem;
-            color: var(--light-text);
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-        }
-
-        .stylist-specialty {
-            color: var(--brass);
-            font-size: 0.85rem;
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
             font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .stylist-bio {
-            color: rgba(242, 237, 232, 0.75);
-            font-size: 0.9rem;
-            line-height: 1.6;
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--rose-gold);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--rose-gold);
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(183, 110, 121, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 5%;
+            background: linear-gradient(135deg, var(--white) 0%, var(--blush) 100%);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content {
+            animation: fadeUp 1s ease-out;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about h2 {
+            color: var(--mauve);
             margin-bottom: 1.5rem;
         }
 
-        .stylist-btn {
-            background: var(--brass);
-            color: var(--black);
-            padding: 0.7rem 1.5rem;
-            border: none;
-            border-radius: 2px;
-            cursor: pointer;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            transition: var(--transition);
+        .about p {
+            margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.9;
         }
 
-        .stylist-btn:hover {
-            background: var(--linen);
-            transform: translateY(-2px);
+        .about ul {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .about li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #666;
+        }
+
+        .about li::before {
+            content: '&#10003;';
+            position: absolute;
+            left: 0;
+            color: var(--rose-gold);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 5%;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .services h2 {
+            color: var(--mauve);
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(242, 228, 221, 0.7) 0%, rgba(255, 255, 255, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(183, 110, 121, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(183, 110, 121, 0.2);
+            border-color: var(--rose-gold);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            color: var(--mauve);
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .service-card .cta-button {
+            padding: 0.8rem 2rem;
+            font-size: 0.85rem;
         }
 
         /* Gallery Section */
         .gallery {
             padding: 8rem 5%;
-            background: var(--linen);
+            background: linear-gradient(135deg, var(--blush) 0%, var(--white) 100%);
+        }
+
+        .gallery h2 {
+            text-align: center;
+            color: var(--mauve);
+            margin-bottom: 3rem;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
         .gallery-item {
-            aspect-ratio: 1;
-            border-radius: 6px;
-            background: linear-gradient(135deg, var(--brass) 0%, var(--mocha) 100%);
             position: relative;
+            border-radius: 15px;
             overflow: hidden;
+            height: 350px;
             cursor: pointer;
-            transition: var(--transition);
-            border: 1px solid var(--subtle-border);
+            group: 'gallery';
         }
 
-        .gallery-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
 
-        .gallery-item::after {
-            content: '';
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
             position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 60%);
-            pointer-events: none;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(107, 76, 90, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-text {
+            color: var(--white);
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
         }
 
         /* Testimonials Section */
         .testimonials {
             padding: 8rem 5%;
-            background: var(--black);
+            background: var(--white);
+            text-align: center;
         }
 
-        .testimonials .section-header h2 {
-            color: var(--light-text);
-        }
-
-        .testimonials .section-header p {
-            color: rgba(242, 237, 232, 0.75);
+        .testimonials h2 {
+            color: var(--mauve);
+            margin-bottom: 3rem;
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1400px;
+            gap: 2.5rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .testimonial-card {
-            background: rgba(242, 237, 232, 0.08);
-            border: 1px solid var(--subtle-border);
+            background: linear-gradient(135deg, rgba(242, 228, 221, 0.5) 0%, rgba(168, 181, 160, 0.1) 100%);
             padding: 2.5rem;
-            border-radius: 8px;
-            position: relative;
-            backdrop-filter: blur(12px);
-            transition: var(--transition);
+            border-radius: 15px;
+            border-left: 4px solid var(--rose-gold);
+            animation: fadeUp 0.8s ease-out;
         }
 
-        .testimonial-card:hover {
-            border-color: var(--brass);
-            background: rgba(201, 169, 110, 0.08);
-        }
-
-        .rating {
-            color: var(--brass);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .testimonial-text {
-            color: var(--light-text);
-            font-size: 0.95rem;
-            line-height: 1.7;
+        .testimonial-card p {
+            color: #555;
             margin-bottom: 1.5rem;
             font-style: italic;
-            font-weight: 300;
+            font-size: 0.95rem;
         }
 
         .testimonial-author {
-            color: var(--brass);
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            font-weight: 600;
+            color: var(--mauve);
+            margin-bottom: 0.3rem;
         }
 
-        /* Gift Cards Section */
-        .gift-cards {
-            padding: 8rem 5%;
-            background: linear-gradient(135deg, var(--brass) 0%, #d4b896 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .gift-cards::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 150%;
-            height: 150%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
-            animation: floatAround 20s ease-in-out infinite;
-        }
-
-        @keyframes floatAround {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(-30px, 30px); }
-        }
-
-        .gift-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .gift-content h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            color: var(--black);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            letter-spacing: -0.5px;
-        }
-
-        .gift-content p {
-            color: var(--black);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            line-height: 1.7;
-        }
-
-        .gift-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .gift-option {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2.5rem 2rem;
-            border-radius: 4px;
-            text-align: center;
-            transition: var(--transition);
-            border: 2px solid transparent;
-        }
-
-        .gift-option:hover {
-            border-color: var(--black);
-            transform: translateY(-5px);
-        }
-
-        .gift-amount {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.5rem;
-            color: var(--brass);
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-        }
-
-        .gift-label {
-            color: var(--mocha);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-
-        .gift-btn {
-            background: var(--black);
-            color: var(--light-text);
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 2px;
-            cursor: pointer;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .testimonial-role {
+            color: var(--rose-gold);
             font-size: 0.85rem;
-            transition: var(--transition);
-            width: 100%;
+            font-weight: 500;
         }
 
-        .gift-btn:hover {
-            background: var(--black);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        .stars {
+            color: var(--rose-gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
         /* CTA Section */
         .cta-section {
             padding: 6rem 5%;
-            background: var(--linen);
+            background: linear-gradient(135deg, var(--mauve) 0%, var(--rose-gold) 100%);
+            color: var(--white);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite reverse;
+        }
+
+        .cta-section-content {
+            position: relative;
+            z-index: 2;
         }
 
         .cta-section h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            color: var(--black);
-            margin-bottom: 1rem;
-            font-weight: 400;
-            letter-spacing: -0.5px;
+            color: var(--white);
+            margin-bottom: 1.5rem;
         }
 
         .cta-section p {
-            font-size: 1.05rem;
-            color: var(--mocha);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
             margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
+        }
+
+        .cta-section .cta-button {
+            background: var(--white);
+            color: var(--rose-gold);
+            border-color: var(--white);
+        }
+
+        .cta-section .cta-button:hover {
+            background: transparent;
+            color: var(--white);
         }
 
         /* Footer */
         footer {
-            background: var(--black);
-            color: var(--light-text);
-            padding: 4rem 5%;
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--rose-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--blush);
         }
 
         .footer-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
         }
 
-        .footer-col h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.3rem;
-            color: var(--brass);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-col a {
-            color: rgba(242, 237, 232, 0.75);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
-        .footer-col a:hover {
-            color: var(--brass);
+        .footer-info {
+            margin-bottom: 2rem;
         }
 
         .footer-divider {
-            border-top: 1px solid var(--subtle-border);
-            padding-top: 2rem;
-            text-align: center;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 2rem 0;
+        }
+
+        .footer-credit {
             font-size: 0.85rem;
-            color: rgba(242, 237, 232, 0.6);
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Mobile Navigation */
+        .scroll-animate.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background: rgba(13, 13, 13, 0.98);
-                padding: 2rem 5%;
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            nav {
+                padding: 1rem 3%;
+            }
+
+            nav ul {
                 gap: 1.5rem;
             }
 
-            .nav-links.active {
-                display: flex;
+            nav a {
+                font-size: 0.8rem;
             }
 
-            .hamburger {
-                display: flex;
+            .logo {
+                font-size: 1.3rem;
             }
 
             .hero {
-                min-height: 85vh;
+                margin-top: 70px;
+                min-height: 80vh;
             }
 
             .hero h1 {
-                font-size: clamp(1.8rem, 6vw, 2.8rem);
+                font-size: 2.5rem;
             }
 
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
+            .hero p {
+                font-size: 1rem;
             }
 
             .about {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                padding: 4rem 3%;
+                gap: 2rem;
             }
 
-            .services-grid, .stylists-grid, .gallery-grid, .testimonials-grid {
+            .about-image {
+                height: 350px;
+            }
+
+            .services {
+                padding: 4rem 3%;
+            }
+
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-header h2 {
-                font-size: 2rem !important;
+            .gallery {
+                padding: 4rem 3%;
             }
 
-            .trust-section {
+            .gallery-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+
+            .testimonials {
+                padding: 4rem 3%;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 4rem 3%;
+            }
+
+            footer {
+                padding: 2rem 3%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 0.7rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 0.8rem;
+            }
+
+            .about {
+                padding: 2rem 3%;
+            }
+
+            .services {
+                padding: 2rem 3%;
+            }
+
+            .gallery {
+                padding: 2rem 3%;
+            }
+
+            .testimonials {
+                padding: 2rem 3%;
+            }
+
+            .cta-section {
+                padding: 2rem 3%;
             }
         }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
-
-    <!-- Header & Navigation -->
-    <header>
-        <nav>
-            <div class="logo">AURA</div>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#stylists">Stylists</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#gift">Gift Cards</a></li>
-            </ul>
-            <button class="book-btn" aria-label="Book an appointment">Book Now</button>
-            <div class="hamburger" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">AURA</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" role="banner">
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Elevate Your Essence</h1>
-            <p class="hero-subtitle">Premium salon and spa treatments crafted for the luxury you deserve. Your transformation begins here.</p>
-            <div class="hero-cta">
-                <button class="cta-primary" aria-label="Book an appointment now">Book Now</button>
-                <button class="cta-secondary" aria-label="Explore our services">Explore Services</button>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none">
-                <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
+            <h1>Reveal Your Natural Radiance</h1>
+            <p>Luxury beauty and wellness experiences designed to make you feel extraordinary</p>
+            <a href="#contact" class="cta-button">Book Your Appointment</a>
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section class="trust-section" aria-label="Trust indicators">
-        <div class="trust-item">
-            <div class="trust-number">287</div>
-            <div class="trust-label">5-Star Reviews</div>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image scroll-animate">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format" alt="Skincare Treatment">
         </div>
-        <div class="trust-item">
-            <div class="trust-number">15+</div>
-            <div class="trust-label">Years Excellence</div>
-        </div>
-        <div class="trust-item">
-            <div class="trust-number">8,500+</div>
-            <div class="trust-label">Clients Served</div>
-        </div>
-        <div class="trust-item">
-            <div class="trust-number">4.9/5</div>
-            <div class="trust-label">Google Rating</div>
+        <div class="about-content scroll-animate">
+            <h2>About Aura Beauty Lounge</h2>
+            <p>Welcome to Aura Beauty Lounge, where elegance meets expertise. Our sanctuary is dedicated to unveiling your most radiant self through luxurious treatments and personalized care.</p>
+            <p>With over 15 years of combined experience, our team of certified aestheticians and wellness professionals are passionate about delivering transformative beauty experiences. We use only the finest products and cutting-edge techniques to ensure exceptional results.</p>
+            <ul>
+                <li>Professional, certified therapists</li>
+                <li>Premium quality products</li>
+                <li>Customized treatments for every skin type</li>
+                <li>Relaxing, luxurious ambiance</li>
+                <li>Cutting-edge beauty technology</li>
+            </ul>
+            <a href="#services" class="cta-button">Explore Our Services</a>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <div class="section-header">
-                <h2>Our Signature Services</h2>
-                <p>Luxurious treatments tailored to enhance your natural beauty</p>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Signature Services</h2>
+        <div class="services-grid">
+            <div class="service-card scroll-animate">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format" alt="Facial Treatment">
+                </div>
+                <h3>Facials &amp; Skincare</h3>
+                <p>Rejuvenate your complexion with our curated selection of facials, from hydrating treatments to advanced anti-aging solutions.</p>
+                <a href="#contact" class="cta-button">Learn More</a>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Hair Styling</h3>
-                    <p>Precision cuts, color treatments, and styling by award-winning colorists.</p>
-                    <ul class="service-items">
-                        <li>Precision Cuts</li>
-                        <li>Luxury Color</li>
-                        <li>Styling & Blowouts</li>
-                    </ul>
-                    <div class="price">From $85</div>
-                    <button class="service-btn">Book Appointment</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Facial Treatments</h3>
-                    <p>Advanced skincare using premium products for radiant, glowing skin.</p>
-                    <ul class="service-items">
-                        <li>HydraFacial</li>
-                        <li>Chemical Peels</li>
-                        <li>Anti-Aging</li>
-                    </ul>
-                    <div class="price">From $120</div>
-                    <button class="service-btn">Book Appointment</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💆</div>
-                    <h3>Spa Treatments</h3>
-                    <p>Rejuvenate your body and mind with our holistic wellness therapies.</p>
-                    <ul class="service-items">
-                        <li>Swedish Massage</li>
-                        <li>Deep Tissue</li>
-                        <li>Hot Stone</li>
-                    </ul>
-                    <div class="price">From $110</div>
-                    <button class="service-btn">Book Appointment</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💅</div>
-                    <h3>Nail Services</h3>
-                    <p>Express yourself with our curated nail art and manicure collections.</p>
-                    <ul class="service-items">
-                        <li>Gel Manicure</li>
-                        <li>Pedicure Luxury</li>
-                        <li>Nail Art</li>
-                    </ul>
-                    <div class="price">From $65</div>
-                    <button class="service-btn">Book Appointment</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💄</div>
-                    <h3>Makeup Artistry</h3>
-                    <p>Professional makeup application for events, photoshoots, and everyday.</p>
-                    <ul class="service-items">
-                        <li>Bridal Makeup</li>
-                        <li>Special Events</li>
-                        <li>Lessons</li>
-                    </ul>
-                    <div class="price">From $95</div>
-                    <button class="service-btn">Book Appointment</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧖</div>
-                    <h3>Wellness Packages</h3>
-                    <p>Complete transformation packages combining multiple treatments.</p>
-                    <ul class="service-items">
-                        <li>Day Spa Package</li>
-                        <li>Bridal Package</li>
-                        <li>Custom Bundles</li>
-                    </ul>
-                    <div class="price">From $299</div>
-                    <button class="service-btn">Book Appointment</button>
-                </div>
-            </div>
-        </section>
 
-        <!-- Stylists Section -->
-        <section class="stylists" id="stylists">
-            <div class="section-header">
-                <h2>Meet Our Expert Team</h2>
-                <p>Certified professionals dedicated to your beauty and wellness</p>
+            <div class="service-card scroll-animate">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80&auto=format" alt="Hair Treatment">
+                </div>
+                <h3>Hair &amp; Styling</h3>
+                <p>Transform your look with expert color, cuts, and treatments designed to bring out your best features.</p>
+                <a href="#contact" class="cta-button">Learn More</a>
             </div>
-            <div class="stylists-grid">
-                <div class="stylist-card">
-                    <div class="stylist-image">M</div>
-                    <h3 class="stylist-name">Marcella</h3>
-                    <p class="stylist-specialty">Master Colorist</p>
-                    <p class="stylist-bio">15 years of experience specializing in luxury color correction and creative highlights. Certified in balayage and ombre techniques.</p>
-                    <button class="stylist-btn">Book With Marcella</button>
-                </div>
-                <div class="stylist-card">
-                    <div class="stylist-image">J</div>
-                    <h3 class="stylist-name">Jasmine</h3>
-                    <p class="stylist-specialty">Hair Specialist</p>
-                    <p class="stylist-bio">Expert in precision cuts and styling. Specializes in curly hair care and protective styling. Award-winning stylist.</p>
-                    <button class="stylist-btn">Book With Jasmine</button>
-                </div>
-                <div class="stylist-card">
-                    <div class="stylist-image">S</div>
-                    <h3 class="stylist-name">Sophia</h3>
-                    <p class="stylist-specialty">Spa Therapist</p>
-                    <p class="stylist-bio">Licensed massage therapist and wellness expert. Trained in Swedish, deep tissue, and therapeutic massage. Promotes holistic healing.</p>
-                    <button class="stylist-btn">Book With Sophia</button>
-                </div>
-                <div class="stylist-card">
-                    <div class="stylist-image">A</div>
-                    <h3 class="stylist-name">Adriana</h3>
-                    <p class="stylist-specialty">Esthetician</p>
-                    <p class="stylist-bio">Certified esthetician specializing in advanced skincare. Expertise in facials, peels, and microdermabrasion treatments.</p>
-                    <button class="stylist-btn">Book With Adriana</button>
-                </div>
-            </div>
-        </section>
 
-        <!-- Gallery Section -->
-        <section class="gallery" id="gallery">
-            <div class="section-header">
-                <h2>Visual Inspiration</h2>
-                <p>See the transformations our clients love</p>
+            <div class="service-card scroll-animate">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80&auto=format" alt="Spa Treatment">
+                </div>
+                <h3>Massage &amp; Wellness</h3>
+                <p>Melt away tension with our therapeutic massages, designed to restore balance and promote deep relaxation.</p>
+                <a href="#contact" class="cta-button">Learn More</a>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" role="img" aria-label="Hair transformation gallery item"></div>
-                <div class="gallery-item" role="img" aria-label="Salon interior gallery item"></div>
-                <div class="gallery-item" role="img" aria-label="Facial treatment gallery item"></div>
-                <div class="gallery-item" role="img" aria-label="Spa treatment gallery item"></div>
-                <div class="gallery-item" role="img" aria-label="Makeup artistry gallery item"></div>
-                <div class="gallery-item" role="img" aria-label="Nail art gallery item"></div>
-                <div class="gallery-item" role="img" aria-label="Color correction gallery item"></div>
-                <div class="gallery-item" role="img" aria-label="Styling gallery item"></div>
-            </div>
-        </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials" id="testimonials">
-            <div class="section-header">
-                <h2>Client Stories</h2>
-                <p>Hear from our valued guests about their Aura experience</p>
+            <div class="service-card scroll-animate">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80&auto=format" alt="Nail Care">
+                </div>
+                <h3>Nails &amp; Manicure</h3>
+                <p>Perfect your appearance with our premium nail care services, from classic manicures to avant-garde nail art.</p>
+                <a href="#contact" class="cta-button">Learn More</a>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"Aura transformed my hair completely. The colorists are true artists. I've never felt more confident!"</p>
-                    <div class="testimonial-author">— Emma Richardson</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"The spa experience is absolutely luxurious. From the moment I walked in, I felt completely pampered. Highly recommend!"</p>
-                    <div class="testimonial-author">— Victoria Chen</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"Sophia's massage therapy changed my life. I leave feeling renewed and rejuvenated. She's the best in Austin!"</p>
-                    <div class="testimonial-author">— Michael Torres</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"I've been coming to Aura for 3 years. The team treats me like family. Every visit is exceptional."</p>
-                    <div class="testimonial-author">— Sarah Mitchell</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"My bridal makeup was flawless. Adriana made me feel beautiful and confident on my special day. Worth every penny!"</p>
-                    <div class="testimonial-author">— Jessica Hayes</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"Aura is my sanctuary. The atmosphere is calming, the service is impeccable, and the results are stunning. Perfection!"</p>
-                    <div class="testimonial-author">— Lauren Bennett</div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Gift Cards Section -->
-        <section class="gift-cards" id="gift">
-            <div class="gift-content">
-                <h2>Aura Gift Cards</h2>
-                <p>Give the gift of luxury and self-care. Perfect for any occasion.</p>
-                <div class="gift-cards-grid">
-                    <div class="gift-option">
-                        <div class="gift-amount">$100</div>
-                        <div class="gift-label">Express</div>
-                        <button class="gift-btn">Purchase Now</button>
-                    </div>
-                    <div class="gift-option">
-                        <div class="gift-amount">$250</div>
-                        <div class="gift-label">Indulgence</div>
-                        <button class="gift-btn">Purchase Now</button>
-                    </div>
-                    <div class="gift-option">
-                        <div class="gift-amount">$500</div>
-                        <div class="gift-label">Ultimate</div>
-                        <button class="gift-btn">Purchase Now</button>
-                    </div>
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Our Studio</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item scroll-animate">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80&auto=format" alt="Studio Entrance">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">Luxurious Ambiance</div>
                 </div>
-                <p style="font-size: 0.95rem; color: var(--black); margin-top: 2rem;">Custom amounts available. Gift cards never expire and can be used for any service at Aura Beauty Lounge.</p>
             </div>
-        </section>
 
-        <!-- Final CTA Section -->
-        <section class="cta-section">
-            <h2>Ready for Your Transformation?</h2>
-            <p>Book your appointment today and experience the Aura difference. Your best self is waiting.</p>
-            <button class="cta-primary" style="margin: 0 auto; display: block;" aria-label="Book your appointment">Book Your Appointment</button>
-        </section>
-    </main>
+            <div class="gallery-item scroll-animate">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format" alt="Treatment Room">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">Treatment Rooms</div>
+                </div>
+            </div>
+
+            <div class="gallery-item scroll-animate">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80&auto=format" alt="Wellness Area">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">Relaxation Zone</div>
+                </div>
+            </div>
+
+            <div class="gallery-item scroll-animate">
+                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80&auto=format" alt="Spa Facilities">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">Spa Facilities</div>
+                </div>
+            </div>
+
+            <div class="gallery-item scroll-animate">
+                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80&auto=format" alt="Beauty Corner">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">Beauty Corner</div>
+                </div>
+            </div>
+
+            <div class="gallery-item scroll-animate">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80&auto=format" alt="Premium Setup">
+                <div class="gallery-overlay">
+                    <div class="gallery-text">Premium Setup</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card scroll-animate">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Aura Beauty Lounge is absolutely my sanctuary. The treatments are phenomenal and the atmosphere is so calming. Sarah is an artist!"</p>
+                <div class="testimonial-author">Emma Richardson</div>
+                <div class="testimonial-role">Regular Client</div>
+            </div>
+
+            <div class="testimonial-card scroll-animate">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"I was skeptical at first, but the results speak for themselves. My skin has never looked better. Highly recommend for anyone serious about skincare."</p>
+                <div class="testimonial-author">Marcus Johnson</div>
+                <div class="testimonial-role">Skincare Enthusiast</div>
+            </div>
+
+            <div class="testimonial-card scroll-animate">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"The massage therapy sessions have transformed my wellness routine. The therapists truly understand anatomy and muscle tension. Pure magic!"</p>
+                <div class="testimonial-author">Nicole Chen</div>
+                <div class="testimonial-role">Wellness Advocate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-section-content">
+            <h2>Ready to Reveal Your Radiance?</h2>
+            <p>Book your appointment today and experience the Aura difference. Our team is ready to pamper you.</p>
+            <a href="tel:+1-555-0123" class="cta-button">Call Us Now</a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer role="contentinfo">
+    <footer>
         <div class="footer-content">
-            <div class="footer-col">
-                <h3>About Aura</h3>
-                <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(242, 237, 232, 0.75); margin-bottom: 1rem;">Aura Beauty Lounge is Austin's premier destination for luxury salon and spa services. Combining expert artistry with premium products.</p>
+            <div class="footer-info">
+                <h3 style="color: var(--rose-gold); margin-bottom: 1rem;">Aura Beauty Lounge</h3>
+                <p>&#128205; 123 Luxury Avenue, Beauty District | Phone: (555) 123-4567</p>
+                <p>&#128231; hello@auralounge.com | Mon-Sat: 9am-8pm | Sun: 10am-6pm</p>
             </div>
-            <div class="footer-col">
-                <h3>Hours</h3>
-                <ul>
-                    <li>Mon-Fri: 9am - 7pm</li>
-                    <li>Saturday: 10am - 6pm</li>
-                    <li>Sunday: 11am - 5pm</li>
-                </ul>
+            <div class="footer-divider"></div>
+            <div class="footer-credit">
+                <p>&copy; 2024 Aura Beauty Lounge. All rights reserved.</p>
+                <p>Built by <a href="https://sitesinaday.com" target="_blank">Sites In A Day</a></p>
             </div>
-            <div class="footer-col">
-                <h3>Location</h3>
-                <ul>
-                    <li>4521 Barton Springs Road</li>
-                    <li>Austin, TX 78704</li>
-                    <li><a href="tel:+15125550147">(512) 555-0147</a></li>
-                    <li><a href="mailto:hello@aurabeautylounge.com">hello@aurabeautylounge.com</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Connect</h3>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Book Online</a></li>
-                    <li><a href="#">Gift Cards</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-divider">
-            <p>&copy; 2026 Aura Beauty Lounge. All rights reserved. | <a href="#" style="color: rgba(242, 237, 232, 0.6); text-decoration: none;">Privacy Policy</a></p>
         </div>
     </footer>
 
+    <!-- Scroll Animation Script -->
     <script>
-        // Scroll behavior for header
-        let scrollPos = 0;
-        const header = document.querySelector('header');
+        function handleScroll() {
+            const elements = document.querySelectorAll('.scroll-animate');
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            scrollPos = window.scrollY;
-        });
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight * 0.75;
 
-        // Mobile hamburger menu
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Smooth scroll for CTA buttons
-        document.querySelectorAll('.book-btn, .cta-primary, .service-btn, .stylist-btn, .gift-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const bookingSection = document.getElementById('services');
-                bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeUpScroll 0.6s ease-out forwards';
-                    observer.unobserve(entry.target);
+                if (elementPosition < screenPosition) {
+                    element.classList.add('in-view');
                 }
             });
-        }, observerOptions);
-
-        // Observe service cards and testimonial cards
-        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
-
-        // Counter animation
-        function animateCounter(el, target, duration = 2000) {
-            let current = 0;
-            const increment = target / (duration / 16);
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                el.textContent = Math.floor(current).toLocaleString();
-            }, 16);
         }
 
-        // Trigger counter on scroll
-        const trustSection = document.querySelector('.trust-section');
-        let countersStarted = false;
+        window.addEventListener('scroll', handleScroll);
 
-        const trustObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting && !countersStarted) {
-                countersStarted = true;
-                document.querySelectorAll('.trust-number').forEach((el, idx) => {
-                    const targets = [287, 15, 8500, 4.9];
-                    animateCounter(el, targets[idx], 2000);
-                });
-                trustObserver.unobserve(trustSection);
-            }
-        }, { threshold: 0.5 });
+        // Trigger animation on page load
+        handleScroll();
 
-        trustObserver.observe(trustSection);
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
     </script>
 </body>
 </html>
