@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trusted Home Pro - Premium Home Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <title>Trusted Home Pro - Professional Home Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -19,93 +18,69 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            color: #333;
+            color: #1B2A4A;
             line-height: 1.6;
             overflow-x: hidden;
-        }
-
-        :root {
-            --navy: #1B2A4A;
-            --trust-blue: #2E86AB;
-            --white: #FFFFFF;
-            --light-gray: #F7F8FA;
-            --forest-green: #2D6A4F;
-            --warm-accent: #E8A838;
         }
 
         /* Navigation */
         nav {
             position: fixed;
             top: 0;
-            width: 100%;
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 1000;
+            left: 0;
+            right: 0;
+            background: rgba(27, 42, 74, 0.98);
             padding: 1rem 2rem;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            backdrop-filter: blur(10px);
         }
 
-        .nav-logo {
+        .logo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            color: var(--navy);
+            color: #E8A838;
         }
 
         .nav-phone {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--trust-blue);
-            text-decoration: none;
-        }
-
-        .nav-phone:hover {
-            color: var(--warm-accent);
-        }
-
-        .phone-icon {
-            font-size: 1.3rem;
-        }
-
-        /* Main content margin for fixed nav */
-        main {
-            margin-top: 60px;
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(27, 42, 74, 0.95) 0%, rgba(46, 134, 171, 0.9) 100%), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80&auto=format') center/cover no-repeat;
-            color: var(--white);
-            padding: 120px 2rem 100px;
-            text-align: center;
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80&auto=format') center/cover;
             position: relative;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(27, 42, 74, 0.7), rgba(46, 134, 171, 0.6));
         }
 
         .hero-content {
-            max-width: 800px;
-            animation: fadeUpHero 1s ease-out;
-        }
-
-        @keyframes fadeUpHero {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
         }
 
         .hero h1 {
@@ -117,57 +92,36 @@
         }
 
         .hero p {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.95;
         }
 
         .cta-button {
             display: inline-block;
-            background: var(--warm-accent);
-            color: var(--navy);
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
+            background: #E8A838;
+            color: #1B2A4A;
+            padding: 1rem 2.5rem;
             border: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
-            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .cta-button:hover {
-            background: #FFB84D;
-            transform: translateY(-2px);
+            background: #d99620;
+            transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(232, 168, 56, 0.3);
         }
 
-        /* Trust Badges */
-        .trust-badges {
-            background: var(--light-gray);
-            padding: 3rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            padding: 1.5rem;
-            animation: fadeUp 0.8s ease-out both;
-        }
-
-        .badge:nth-child(1) { animation-delay: 0.1s; }
-        .badge:nth-child(2) { animation-delay: 0.2s; }
-        .badge:nth-child(3) { animation-delay: 0.3s; }
-
-        @keyframes fadeUp {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -175,298 +129,365 @@
             }
         }
 
+        /* Trust Badges Section */
+        .trust-badges {
+            width: 100%;
+            background: #1B2A4A;
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            text-align: center;
+            max-width: 200px;
+        }
+
         .badge-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            width: 60px;
+            height: 60px;
+            background: #2E86AB;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
         }
 
         .badge h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1rem;
         }
 
         .badge p {
-            color: #666;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
-        /* Section Styling */
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Services Section */
+        .services {
+            width: 100%;
+            padding: 5rem 2rem;
+            background: white;
         }
 
-        h2 {
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
             font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #1B2A4A;
         }
 
-        .section-subtitle {
-            color: var(--trust-blue);
-            margin-bottom: 3rem;
+        .section-header p {
+            color: #666;
             font-size: 1.1rem;
         }
 
-        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .service-card {
-            background: var(--white);
-            border-radius: 12px;
+            position: relative;
+            height: 350px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            animation: fadeUp 0.8s ease-out both;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-        .service-card:nth-child(5) { animation-delay: 0.5s; }
-        .service-card:nth-child(6) { animation-delay: 0.6s; }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(46, 134, 171, 0.15);
+            transform: translateY(-5px);
         }
 
-        .service-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(46, 134, 171, 0.7), rgba(45, 106, 79, 0.7));
+            z-index: 2;
         }
 
-        .service-content {
-            padding: 1.5rem;
+        .service-card.plumbing {
+            background: url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80&auto=format') center/cover;
         }
 
-        .service-icon {
-            display: inline-block;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+        .service-card.electrical {
+            background: url('https://images.unsplash.com/photo-1621905167918-48416bd8575a?w=800&q=80&auto=format') center/cover;
+        }
+
+        .service-card.hvac {
+            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format') center/cover;
+        }
+
+        .service-card.roofing {
+            background: url('https://images.unsplash.com/photo-1504917595217-3404ee9c6e65?w=800&q=80&auto=format') center/cover;
+        }
+
+        .service-card.carpentry {
+            background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&auto=format') center/cover;
+        }
+
+        .service-card.painting {
+            background: url('https://images.unsplash.com/photo-1578926078328-123fb412bcf1?w=800&q=80&auto=format') center/cover;
+        }
+
+        .service-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            color: white;
+            z-index: 3;
         }
 
         .service-card h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--navy);
+            font-size: 1.5rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            font-size: 1.3rem;
         }
 
         .service-card p {
-            color: #666;
             font-size: 0.95rem;
-            line-height: 1.5;
+            opacity: 0.95;
         }
 
         /* Why Choose Us Section */
-        .why-choose-us {
-            background: var(--light-gray);
+        .why-choose {
+            width: 100%;
+            background: #F7F8FA;
+            padding: 5rem 2rem;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 2rem;
-            animation: fadeUp 0.8s ease-out both;
-        }
-
-        .stat:nth-child(1) { animation-delay: 0.1s; }
-        .stat:nth-child(2) { animation-delay: 0.2s; }
-        .stat:nth-child(3) { animation-delay: 0.3s; }
-        .stat:nth-child(4) { animation-delay: 0.4s; }
-
-        .stat-number {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--trust-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--navy);
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        /* About Section */
-        .about {
+        .why-choose-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
-        .about-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            animation: fadeUp 0.8s ease-out;
+        .why-choose-image {
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80&auto=format') center/cover;
+            border-radius: 10px;
         }
 
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .why-choose-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
         }
 
-        .about-content {
-            animation: fadeUp 0.8s ease-out 0.2s both;
+        .benefit-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
         }
 
-        .about-content h2 {
-            margin-bottom: 1rem;
+        .benefit-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
         }
 
-        .about-content p {
-            margin-bottom: 1rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .benefits-list {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .benefits-list li {
-            padding: 0.5rem 0 0.5rem 2.5rem;
-            position: relative;
-            color: #555;
-            margin-bottom: 0.8rem;
-        }
-
-        .benefits-list li:before {
-            content: "\2713";
-            position: absolute;
-            left: 0;
-            color: var(--forest-green);
+        .benefit-checkmark {
+            color: #2D6A4F;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
         }
 
-        /* Testimonials */
+        .benefit-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .benefit-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Statistics Bar */
+        .stats-bar {
+            width: 100%;
+            background: #1B2A4A;
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #E8A838;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Testimonials Section */
         .testimonials {
-            background: var(--light-gray);
+            width: 100%;
+            background: white;
+            padding: 5rem 2rem;
         }
 
         .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .testimonial-card {
-            background: var(--white);
+            background: #F7F8FA;
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            animation: fadeUp 0.8s ease-out both;
+            border-radius: 10px;
+            border-left: 4px solid #2E86AB;
+            transition: transform 0.3s ease;
         }
 
-        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
-        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+        }
 
         .stars {
-            color: var(--warm-accent);
-            margin-bottom: 1rem;
+            color: #E8A838;
             font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.2em;
         }
 
         .testimonial-text {
-            color: #555;
-            font-style: italic;
             margin-bottom: 1rem;
-            line-height: 1.7;
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.8;
         }
 
         .testimonial-author {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            color: var(--navy);
+            color: #1B2A4A;
         }
 
-        .testimonial-title {
-            color: var(--trust-blue);
-            font-size: 0.9rem;
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #666;
         }
 
-        /* Service Areas */
+        /* Service Areas Section */
         .service-areas {
-            background: var(--navy);
-            color: var(--white);
+            width: 100%;
+            background: #1B2A4A;
+            padding: 5rem 2rem;
+            color: white;
         }
 
-        .service-areas h2,
-        .service-areas .section-subtitle {
-            color: var(--white);
-        }
-
-        .service-areas .section-subtitle {
-            color: var(--warm-accent);
+        .service-areas h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .areas-grid {
+            max-width: 1000px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
-            margin-top: 2rem;
         }
 
         .area-badge {
-            background: rgba(232, 168, 56, 0.1);
-            border: 2px solid var(--warm-accent);
+            background: rgba(46, 134, 171, 0.3);
+            border: 1px solid #2E86AB;
             padding: 1rem;
-            border-radius: 8px;
             text-align: center;
-            font-weight: 600;
-            animation: fadeUp 0.8s ease-out both;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: default;
         }
 
-        .area-badge:nth-child(1) { animation-delay: 0.1s; }
-        .area-badge:nth-child(2) { animation-delay: 0.2s; }
-        .area-badge:nth-child(3) { animation-delay: 0.3s; }
-        .area-badge:nth-child(4) { animation-delay: 0.4s; }
-        .area-badge:nth-child(5) { animation-delay: 0.5s; }
-        .area-badge:nth-child(6) { animation-delay: 0.6s; }
+        .area-badge:hover {
+            background: rgba(46, 134, 171, 0.5);
+        }
 
-        /* Quote Form */
+        /* Quote Form Section */
         .quote-section {
-            background: linear-gradient(135deg, var(--trust-blue) 0%, var(--navy) 100%);
-            color: var(--white);
-            padding: 4rem 2rem;
+            width: 100%;
+            background: linear-gradient(135deg, #2D6A4F 0%, #2E86AB 100%);
+            padding: 5rem 2rem;
+            color: white;
         }
 
-        .quote-form {
+        .quote-container {
             max-width: 600px;
             margin: 0 auto;
-            animation: fadeUp 0.8s ease-out;
         }
 
-        .quote-form h2 {
-            color: var(--white);
+        .quote-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
             text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .quote-section > p {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
         }
 
         .form-group {
@@ -484,9 +505,10 @@
             width: 100%;
             padding: 0.75rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
+            color: #1B2A4A;
         }
 
         .form-group textarea {
@@ -496,112 +518,111 @@
 
         .form-submit {
             width: 100%;
-            background: var(--warm-accent);
-            color: var(--navy);
+            background: #E8A838;
+            color: #1B2A4A;
             padding: 1rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .form-submit:hover {
-            background: #FFB84D;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(232, 168, 56, 0.3);
+            background: #d99620;
+            transform: scale(1.02);
         }
 
         /* Footer */
         footer {
-            background: var(--navy);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
+            width: 100%;
+            background: #1B2A4A;
+            color: white;
+            padding: 4rem 2rem;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 3rem;
             margin-bottom: 2rem;
-            text-align: left;
         }
 
-        .footer-section h4 {
+        .footer-section h3 {
             font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: var(--warm-accent);
         }
 
         .footer-section p,
         .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
             font-size: 0.95rem;
+            opacity: 0.9;
             line-height: 1.8;
+            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: var(--warm-accent);
-        }
-
-        .footer-divider {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin: 2rem 0;
-            padding-top: 2rem;
+            color: #E8A838;
         }
 
         .footer-bottom {
             text-align: center;
-            color: rgba(255, 255, 255, 0.7);
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         .footer-bottom a {
-            color: var(--warm-accent);
+            color: #E8A838;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
         }
 
         .footer-bottom a:hover {
-            color: #FFB84D;
+            text-decoration: underline;
         }
 
-        /* Responsive Design */
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             nav {
-                flex-wrap: wrap;
-                padding: 1rem;
+                padding: 0.75rem 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
             }
 
-            .nav-logo {
+            .logo {
                 font-size: 1.2rem;
-                width: 100%;
-                margin-bottom: 0.5rem;
             }
 
             .nav-phone {
-                width: 100%;
-                justify-content: center;
-            }
-
-            main {
-                margin-top: 130px;
+                font-size: 0.85rem;
             }
 
             .hero {
-                padding: 80px 1rem 60px;
-                min-height: auto;
+                margin-top: 100px;
             }
 
             .hero h1 {
@@ -609,302 +630,314 @@
             }
 
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
-            .about {
-                grid-template-columns: 1fr;
+            .trust-badges {
+                gap: 1.5rem;
+                padding: 3rem 1rem;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
+            .services {
+                padding: 3rem 1rem;
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            h2 {
+            .section-header h2 {
                 font-size: 1.8rem;
             }
 
-            section {
-                padding: 2rem 1rem;
+            .why-choose-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
-        }
 
-        /* Scroll animations */
-        .scroll-animation {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
+            .why-choose-image {
+                height: 300px;
+            }
 
-        .scroll-animation.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .why-choose-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .testimonials {
+                padding: 3rem 1rem;
+            }
+
+            .service-areas {
+                padding: 3rem 1rem;
+            }
+
+            .service-areas h2 {
+                font-size: 1.5rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .quote-section {
+                padding: 3rem 1rem;
+            }
+
+            .quote-section h2 {
+                font-size: 1.5rem;
+            }
+
+            footer {
+                padding: 3rem 1rem;
+            }
+
+            .footer-content {
+                gap: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="nav-logo">Trusted Home Pro</div>
-        <a href="tel:+1-555-248-9003" class="nav-phone">
-            <span class="phone-icon">📞</span>
-            (555) 248-9003
-        </a>
+        <div class="logo">Trusted Home Pro</div>
+        <div class="nav-phone">Call: (555) 248-9003</div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">Your Home, Expertly Maintained</h1>
-                <p style="font-size: 1.3rem; margin-bottom: 2.5rem; opacity: 0.95;">Premium home services from trusted professionals. Fast, reliable, affordable.</p>
-                <button style="background: var(--warm-accent); color: var(--navy); padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease;">Get Free Quote</button>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Home, Expertly Maintained</h1>
+            <p>Professional home services you can trust. From plumbing to roofing, we've got your home covered.</p>
+            <button class="cta-button" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'})">Get Your Free Quote</button>
+        </div>
+    </section>
 
-        <!-- Trust Badges -->
-        <section style="background: var(--navy); color: var(--white); padding: 3rem 2rem; text-align: center;">
-            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="animation: fadeUp 0.8s ease-out 0.1s both;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#11088;</div>
-                    <strong>500+ 5-Star Reviews</strong>
-                    <p style="font-size: 0.95rem; opacity: 0.9;">Trusted by homeowners across the region</p>
-                </div>
-                <div style="animation: fadeUp 0.8s ease-out 0.2s both;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#10003;</div>
-                    <strong>Fully Licensed &amp; Insured</strong>
-                    <p style="font-size: 0.95rem; opacity: 0.9;">All work covered by comprehensive insurance</p>
-                </div>
-                <div style="animation: fadeUp 0.8s ease-out 0.3s both;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#128737;&#65039;</div>
-                    <strong>Money-Back Guarantee</strong>
-                    <p style="font-size: 0.95rem; opacity: 0.9;">100% satisfaction guaranteed on every job</p>
-                </div>
-            </div>
-        </section>
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="badge">
+            <div class="badge-icon">✓</div>
+            <h3>500+ 5-Star Reviews</h3>
+            <p>Trusted by thousands of homeowners</p>
+        </div>
+        <div class="badge">
+            <div class="badge-icon">✓</div>
+            <h3>Fully Licensed & Insured</h3>
+            <p>Complete peace of mind</p>
+        </div>
+        <div class="badge">
+            <div class="badge-icon">✓</div>
+            <h3>Money-Back Guarantee</h3>
+            <p>Satisfaction guaranteed or your money back</p>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section style="padding: 5rem 2rem; max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; text-align: center; margin-bottom: 3rem; color: var(--navy);">Our Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                <!-- Plumbing -->
-                <div class="service-card" style="animation-delay: 0.1s;">
-                    <div style="background: linear-gradient(135deg, rgba(46, 134, 171, 0.9) 0%, rgba(27, 42, 74, 0.9) 100%), url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80&auto=format') center/cover no-repeat; height: 250px; border-radius: 8px 8px 0 0; margin: -2rem -2rem 2rem -2rem;"></div>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem;">Plumbing Services</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Expert plumbing solutions for leaks, repairs, installations, and maintenance. Available 24/7 for emergencies.</p>
-                    <a href="#quote" style="color: var(--trust-blue); font-weight: 600; text-decoration: none;">Learn More &#8594;</a>
-                </div>
-
-                <!-- Electrical -->
-                <div class="service-card" style="animation-delay: 0.2s;">
-                    <div style="background: linear-gradient(135deg, rgba(46, 134, 171, 0.9) 0%, rgba(27, 42, 74, 0.9) 100%), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80&auto=format') center/cover no-repeat; height: 250px; border-radius: 8px 8px 0 0; margin: -2rem -2rem 2rem -2rem;"></div>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem;">Electrical Work</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Licensed electricians for rewiring, panel upgrades, safety inspections, and new installations.</p>
-                    <a href="#quote" style="color: var(--trust-blue); font-weight: 600; text-decoration: none;">Learn More &#8594;</a>
-                </div>
-
-                <!-- HVAC -->
-                <div class="service-card" style="animation-delay: 0.3s;">
-                    <div style="background: linear-gradient(135deg, rgba(46, 134, 171, 0.9) 0%, rgba(27, 42, 74, 0.9) 100%), url('https://images.unsplash.com/photo-1585518419759-86d9f0ff8dfe?w=600&q=80&auto=format') center/cover no-repeat; height: 250px; border-radius: 8px 8px 0 0; margin: -2rem -2rem 2rem -2rem;"></div>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem;">HVAC Services</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Heating and cooling maintenance, repair, and installation. Keep your home comfortable year-round.</p>
-                    <a href="#quote" style="color: var(--trust-blue); font-weight: 600; text-decoration: none;">Learn More &#8594;</a>
-                </div>
-
-                <!-- Roofing -->
-                <div class="service-card" style="animation-delay: 0.4s;">
-                    <div style="background: linear-gradient(135deg, rgba(46, 134, 171, 0.9) 0%, rgba(27, 42, 74, 0.9) 100%), url('https://images.unsplash.com/photo-1562883676-8c6fbf064050?w=600&q=80&auto=format') center/cover no-repeat; height: 250px; border-radius: 8px 8px 0 0; margin: -2rem -2rem 2rem -2rem;"></div>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem;">Roofing</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Roof inspections, repairs, replacements, and maintenance. Protect your home's most important asset.</p>
-                    <a href="#quote" style="color: var(--trust-blue); font-weight: 600; text-decoration: none;">Learn More &#8594;</a>
-                </div>
-
-                <!-- Carpentry -->
-                <div class="service-card" style="animation-delay: 0.5s;">
-                    <div style="background: linear-gradient(135deg, rgba(46, 134, 171, 0.9) 0%, rgba(27, 42, 74, 0.9) 100%), url('https://images.unsplash.com/photo-1531682969207-c3e264e3d181?w=600&q=80&auto=format') center/cover no-repeat; height: 250px; border-radius: 8px 8px 0 0; margin: -2rem -2rem 2rem -2rem;"></div>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem;">Carpentry &amp; Repairs</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Custom woodwork, decking, cabinetry, and structural repairs. Quality craftsmanship guaranteed.</p>
-                    <a href="#quote" style="color: var(--trust-blue); font-weight: 600; text-decoration: none;">Learn More &#8594;</a>
-                </div>
-
-                <!-- Painting -->
-                <div class="service-card" style="animation-delay: 0.6s;">
-                    <div style="background: linear-gradient(135deg, rgba(46, 134, 171, 0.9) 0%, rgba(27, 42, 74, 0.9) 100%), url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80&auto=format') center/cover no-repeat; height: 250px; border-radius: 8px 8px 0 0; margin: -2rem -2rem 2rem -2rem;"></div>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 0.8rem;">Interior &amp; Exterior Painting</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Professional painting services with premium materials. Transform your space with expert finishing.</p>
-                    <a href="#quote" style="color: var(--trust-blue); font-weight: 600; text-decoration: none;">Learn More &#8594;</a>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Professional solutions for all your home needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card plumbing fade-in">
+                <div class="service-card-content">
+                    <h3>Plumbing</h3>
+                    <p>From leaky faucets to full system overhauls, we handle it all with expertise.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- About/Why Choose Us -->
-        <section style="background: var(--light-gray); padding: 5rem 2rem;">
-            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div style="animation: fadeUp 0.8s ease-out;">
-                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=500&q=80&auto=format" alt="Professional team at work" style="border-radius: 12px; width: 100%; height: auto;">
-                </div>
-                <div style="animation: fadeUp 0.8s ease-out 0.2s both;">
-                    <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--navy); margin-bottom: 1.5rem;">Why Choose Trusted Home Pro?</h2>
-                    <p style="color: #666; margin-bottom: 1.5rem; font-size: 1.05rem;">With over 15 years of experience, we've built our reputation on quality workmanship, reliable service, and customer satisfaction.</p>
-                    <ul class="benefits-list">
-                        <li>Expert, licensed, and insured technicians</li>
-                        <li>Transparent pricing with no hidden fees</li>
-                        <li>Same-day emergency service available</li>
-                        <li>100% satisfaction guarantee on all work</li>
-                        <li>Free estimates and consultations</li>
-                        <li>Eco-friendly and sustainable solutions</li>
-                    </ul>
+            <div class="service-card electrical fade-in">
+                <div class="service-card-content">
+                    <h3>Electrical</h3>
+                    <p>Safe and reliable electrical work for your home's power and lighting needs.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Statistics -->
-        <section style="background: var(--navy); color: var(--white); padding: 4rem 2rem; text-align: center;">
-            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
-                <div>
-                    <div style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem;">2,500+</div>
-                    <p style="font-size: 1.1rem;">Homes Served</p>
-                </div>
-                <div>
-                    <div style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem;">15+</div>
-                    <p style="font-size: 1.1rem;">Years in Business</p>
-                </div>
-                <div>
-                    <div style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem;">98%</div>
-                    <p style="font-size: 1.1rem;">Customer Satisfaction</p>
-                </div>
-                <div>
-                    <div style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem;">24/7</div>
-                    <p style="font-size: 1.1rem;">Emergency Service</p>
+            <div class="service-card hvac fade-in">
+                <div class="service-card-content">
+                    <h3>HVAC</h3>
+                    <p>Keep your home comfortable year-round with our heating and cooling services.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="testimonials">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;">
-                <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; text-align: center; margin-bottom: 3rem; color: var(--navy);">What Our Clients Say</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <p class="testimonial-text">"Trusted Home Pro fixed our plumbing emergency at 11 PM on a Sunday. Professional, quick, and fair pricing. Highly recommend!"</p>
-                        <p style="font-weight: 600; color: var(--navy); margin-top: 1.5rem;">- Sarah Mitchell</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <p class="testimonial-text">"The electrical work was completed on time and within budget. The team was courteous and explained everything clearly."</p>
-                        <p style="font-weight: 600; color: var(--navy); margin-top: 1.5rem;">- James Chen</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <p class="testimonial-text">"Our new roof looks incredible. The craftsmanship is excellent and they cleaned up everything thoroughly. Worth every penny!"</p>
-                        <p style="font-weight: 600; color: var(--navy); margin-top: 1.5rem;">- Margaret Johnson</p>
-                    </div>
+            <div class="service-card roofing fade-in">
+                <div class="service-card-content">
+                    <h3>Roofing</h3>
+                    <p>Professional roof installation, repair, and maintenance to protect your home.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Service Areas -->
-        <section style="background: var(--navy); color: var(--white); padding: 4rem 2rem;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem; text-align: center;">Service Areas</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">Downtown</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">Westside</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">Eastside</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">Northshore</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">Riverside</div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; text-align: center;">Suburbs</div>
+            <div class="service-card carpentry fade-in">
+                <div class="service-card-content">
+                    <h3>Carpentry</h3>
+                    <p>Custom woodwork, repairs, and renovations crafted to perfection.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Quote Form Section -->
-        <section id="quote" style="background: linear-gradient(135deg, var(--forest-green) 0%, var(--trust-blue) 100%); padding: 5rem 2rem; color: var(--white);">
-            <div style="max-width: 600px; margin: 0 auto;">
-                <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 800; margin-bottom: 1rem; text-align: center;">Get Your Free Quote</h2>
-                <p style="text-align: center; margin-bottom: 2.5rem; opacity: 0.95;">Tell us about your project and we'll get back to you within 24 hours with a detailed estimate.</p>
-                <form id="quoteForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <input type="text" placeholder="Your Name" required style="padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif;">
-                    <input type="email" placeholder="Your Email" required style="padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif;">
-                    <input type="tel" placeholder="Your Phone" required style="padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif;">
-                    <select required style="padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif; color: #999;">
-                        <option value="">Select a Service</option>
-                        <option value="plumbing">Plumbing Services</option>
-                        <option value="electrical">Electrical Work</option>
-                        <option value="hvac">HVAC Services</option>
-                        <option value="roofing">Roofing</option>
-                        <option value="carpentry">Carpentry &amp; Repairs</option>
-                        <option value="painting">Painting</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <textarea placeholder="Describe your project..." rows="4" required style="padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
-                    <button type="submit" style="background: var(--warm-accent); color: var(--navy); padding: 1.2rem; font-size: 1.1rem; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; font-family: 'Montserrat', sans-serif;">Get Your Free Quote</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer style="background: var(--navy); color: var(--white); padding: 4rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto 2rem;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem;">Trusted Home Pro</h3>
-                    <p style="opacity: 0.8;">Premium home services you can rely on. Licensed, insured, and dedicated to customer satisfaction.</p>
-                </div>
-                <div>
-                    <h4 style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;">Services</h4>
-                    <ul style="list-style: none; opacity: 0.8;">
-                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--white); text-decoration: none;">Plumbing</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--white); text-decoration: none;">Electrical</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--white); text-decoration: none;">HVAC</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: var(--white); text-decoration: none;">Roofing</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem;">Contact</h4>
-                    <ul style="list-style: none; opacity: 0.8;">
-                        <li style="margin-bottom: 0.5rem;">&#128222; <a href="tel:+1-555-248-9003" style="color: var(--white); text-decoration: none;">(555) 248-9003</a></li>
-                        <li style="margin-bottom: 0.5rem;">&#128231; <a href="mailto:info@trustedhomepro.com" style="color: var(--white); text-decoration: none;">info@trustedhomepro.com</a></li>
-                        <li style="margin-bottom: 0.5rem;">&#128339; Available 24/7</li>
-                    </ul>
+            <div class="service-card painting fade-in">
+                <div class="service-card-content">
+                    <h3>Painting</h3>
+                    <p>Interior and exterior painting with premium finishes and attention to detail.</p>
                 </div>
             </div>
         </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; text-align: center; opacity: 0.8;">
-            <p>&copy; 2024 Trusted Home Pro. All rights reserved. | <a href="#" style="color: var(--white); text-decoration: none;">Privacy Policy</a></p>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="section-header" style="margin-bottom: 3rem;">
+            <h2>Why Choose Trusted Home Pro</h2>
+        </div>
+        <div class="why-choose-container">
+            <div class="why-choose-image fade-in"></div>
+            <div class="benefit-list">
+                <div class="benefit-item fade-in">
+                    <div class="benefit-checkmark">✓</div>
+                    <div>
+                        <h3>Experienced Professionals</h3>
+                        <p>15+ years of proven service excellence in home maintenance and repair.</p>
+                    </div>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-checkmark">✓</div>
+                    <div>
+                        <h3>24/7 Emergency Service</h3>
+                        <p>Available around the clock for urgent repairs and emergency situations.</p>
+                    </div>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-checkmark">✓</div>
+                    <div>
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden fees. Upfront quotes and honest communication every step of the way.</p>
+                    </div>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-checkmark">✓</div>
+                    <div>
+                        <h3>Fully Licensed & Insured</h3>
+                        <p>All work meets code and carries comprehensive insurance protection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat fade-in">
+                <div class="stat-number">2,500+</div>
+                <div class="stat-label">Homes Served</div>
+            </div>
+            <div class="stat fade-in">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat fade-in">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="stat fade-in">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Emergency Service</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Customer Testimonials</h2>
+            <p>See what our satisfied customers have to say</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-text">"Trusted Home Pro arrived on time and fixed our plumbing issue quickly. The technician was professional and left everything clean. Highly recommend!"</p>
+                <div class="testimonial-author">Sarah Mitchell</div>
+                <div class="testimonial-role">Homeowner, Downtown</div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-text">"I've used them for multiple services over the past two years. Consistent quality, fair pricing, and friendly staff. They're my go-to home service company."</p>
+                <div class="testimonial-author">James Rodriguez</div>
+                <div class="testimonial-role">Business Owner, Midtown</div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-text">"Our electrical panel needed updating and they handled it perfectly. The whole team was transparent about costs and completed the work ahead of schedule."</p>
+                <div class="testimonial-author">Emily Chen</div>
+                <div class="testimonial-role">Homeowner, Westside</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+        <h2>Service Areas</h2>
+        <div class="areas-grid">
+            <div class="area-badge">Downtown</div>
+            <div class="area-badge">Midtown</div>
+            <div class="area-badge">Westside</div>
+            <div class="area-badge">Eastwood</div>
+            <div class="area-badge">North Ridge</div>
+            <div class="area-badge">South Valley</div>
+            <div class="area-badge">Riverside</div>
+            <div class="area-badge">Lakeview</div>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section class="quote-section" id="quote-form">
+        <div class="quote-container">
+            <h2>Get Your Free Quote</h2>
+            <p>Tell us about your project and we'll provide a free estimate</p>
+            <form onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <input type="text" id="service" name="service" placeholder="e.g., Plumbing repair, HVAC maintenance" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Details</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Request Free Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Trusted Home Pro</h3>
+                <p>Your trusted partner for professional home maintenance and repair services.</p>
+                <p>Call: (555) 248-9003</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <p>Plumbing<br>Electrical<br>HVAC<br>Roofing<br>Carpentry<br>Painting</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: Emergency Service Only<br><br>Emergency Service: 24/7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Trusted Home Pro. All rights reserved. | Built by <a href="https://sitesinaday.com">Sites In A Day</a></p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Form handling
-        const quoteForm = document.getElementById('quoteForm');
-        if (quoteForm) {
-            quoteForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your inquiry! We will contact you within 24 hours to provide your free quote.');
-                quoteForm.reset();
-            });
-        }
-
-        // Scroll animation observer
+        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -920,12 +953,20 @@
             });
         }, observerOptions);
 
-        // Observe elements with fadeUp animation
-        document.querySelectorAll('[style*="animation: fadeUp"]').forEach(el => {
+        document.querySelectorAll('.fade-in').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
             observer.observe(el);
         });
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thank you, ${name}! We'll contact you soon with your free quote.`);
+            event.target.reset();
+        }
     </script>
 </body>
 </html>
