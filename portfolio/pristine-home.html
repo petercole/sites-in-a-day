@@ -3,28 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pristine Home Co. - Premium home cleaning service delivering luxury cleanliness. Licensed, eco-friendly, and trusted by 2,500+ homeowners.">
-    <meta name="theme-color" content="#fafaf8">
-    <meta property="og:title" content="Pristine Home Co. - Premium Home Cleaning">
-    <meta property="og:description" content="Experience the luxury of a pristinely clean home. Eco-friendly, professional cleaning service.">
-    <meta property="og:type" content="business.business">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://pristinehomeco.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Pristine Home Co. - Premium Home Cleaning Service</title>
-    <style>
-        :root {
-            --white: #fafaf8;
-            --sage: #7d8c6e;
-            --taupe: #c4b5a0;
-            --forest: #2d3a2e;
-            --gold: #d4a857;
-            --light-gray: #f5f3f0;
-            --dark-gray: #4a4a48;
-        }
+    <title>Pristine Home Co. | Luxury Interior Design Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -36,250 +18,396 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
-            color: var(--forest);
-            background-color: var(--white);
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAF8;
+            color: #1A1A1A;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Typography */
-        h1, h2, h3 {
-            font-family: 'DM Serif Display', serif;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            color: var(--forest);
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 0.75rem;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: var(--dark-gray);
-            line-height: 1.8;
-        }
-
         /* Navigation */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 2rem;
-            background-color: var(--white);
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(125, 140, 110, 0.1);
+            background: rgba(250, 250, 248, 0.95);
             backdrop-filter: blur(10px);
-            background-color: rgba(250, 250, 248, 0.95);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            padding: 1.2rem 2rem;
         }
 
-        .logo {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--forest);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
             display: flex;
-            gap: 3rem;
-            list-style: none;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--forest);
-            font-size: 0.95rem;
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--sage);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .cta-nav {
-            background-color: var(--sage);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
+        nav .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
             font-weight: 600;
+            letter-spacing: 1px;
+            color: #1A1A1A;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1A1A1A;
             font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: #C4A77D;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-content {
+            animation: fadeUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #1A1A1A;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #5a5a5a;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #C4A77D;
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
         }
 
-        .cta-nav:hover {
-            background-color: var(--forest);
+        .cta-button:hover {
+            background-color: #1A1A1A;
             transform: translateY(-2px);
         }
 
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 0.4rem;
+        .hero-image {
+            position: relative;
+            height: 600px;
+            animation: fadeUp 1s ease-out 0.2s both;
         }
 
-        .menu-toggle span {
-            width: 25px;
-            height: 2px;
-            background-color: var(--forest);
-            border-radius: 2px;
-            transition: all 0.3s ease;
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* Hero Section */
-        .hero {
-            margin-top: 70px;
-            min-height: 90vh;
-            background: linear-gradient(135deg, #fafaf8 0%, #f0f3ed 50%, #e8ebe5 100%);
+        /* About Section */
+        .about {
+            padding: 8rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 500px;
+            overflow: hidden;
+            animation: fadeUp 1s ease-out;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content {
+            animation: fadeUp 1s ease-out 0.2s both;
+        }
+
+        .about-content h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1A1A1A;
+            line-height: 1.3;
+        }
+
+        .about-content p {
+            color: #5a5a5a;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .design-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value {
+            padding: 1.5rem;
+            border-left: 3px solid #C4A77D;
+        }
+
+        .value h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #1A1A1A;
+        }
+
+        .value p {
+            font-size: 0.95rem;
+            color: #6a6a6a;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 8rem 2rem;
+            background-color: #FAFAF8;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+            text-align: center;
+            color: #1A1A1A;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .portfolio-item {
             position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 2rem;
+            aspect-ratio: 1;
+            animation: fadeUp 1s ease-out;
         }
 
-        .hero::before {
-            content: '';
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-label {
             position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(125, 140, 110, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 10%;
-            left: 5%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(212, 168, 87, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite reverse;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 900px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            color: var(--forest);
-            margin-bottom: 2rem;
-            line-height: 1.1;
-        }
-
-        .hero p {
+            bottom: 2rem;
+            left: 2rem;
+            background: rgba(26, 26, 26, 0.85);
+            color: white;
+            padding: 1rem 1.5rem;
+            font-family: 'DM Serif Display', serif;
             font-size: 1.3rem;
-            color: var(--dark-gray);
-            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Process Section */
+        .process {
+            padding: 8rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            animation: fadeUp 1s ease-out;
+        }
+
+        .step-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            color: #C4A77D;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .process-step h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1A1A1A;
+        }
+
+        .process-step p {
+            color: #6a6a6a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #FAFAF8 0%, #f5f3f0 100%);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border: 1px solid rgba(196, 167, 125, 0.3);
+            animation: fadeUp 1s ease-out;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #5a5a5a;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            color: #1A1A1A;
+            font-size: 1rem;
+        }
+
+        .testimonial-role {
+            color: #8B9E82;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        /* CTA Section */
+        .consultation-cta {
+            padding: 8rem 2rem;
+            background: #1A1A1A;
+            color: white;
+            text-align: center;
+        }
+
+        .consultation-cta h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .consultation-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: #e0e0e0;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-            font-size: 0.95rem;
-            color: var(--sage);
-            font-weight: 500;
-        }
-
-        .trust-badges span::before {
-            content: '✓ ';
-            color: var(--gold);
-            margin-right: 0.5rem;
-        }
-
-        .btn {
+        .cta-button-light {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background-color: var(--sage);
-            color: var(--white);
+            background-color: #C4A77D;
+            color: #1A1A1A;
             text-decoration: none;
-            border-radius: 50px;
+            font-size: 0.95rem;
             font-weight: 600;
-            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(125, 140, 110, 0.15);
         }
 
-        .btn:hover {
-            background-color: var(--forest);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(125, 140, 110, 0.25);
+        .cta-button-light:hover {
+            background-color: #E8D5C4;
         }
 
-        .btn-white {
-            background-color: var(--white);
-            color: var(--forest);
-            border: 2px solid var(--sage);
+        /* Footer */
+        footer {
+            background: #0d0d0d;
+            color: #a0a0a0;
+            padding: 3rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
         }
 
-        .btn-white:hover {
-            background-color: var(--sage);
-            color: var(--white);
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #C4A77D;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #E8D5C4;
         }
 
         /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) translateX(0px); }
-            25% { transform: translateY(-20px) translateX(10px); }
-            50% { transform: translateY(-40px) translateX(0px); }
-            75% { transform: translateY(-20px) translateX(-10px); }
-        }
-
         @keyframes fadeUp {
             from {
                 opacity: 0;
@@ -291,1228 +419,282 @@
             }
         }
 
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
-        }
-
-        .fade-in {
-            animation: fadeUp 0.8s ease-out forwards;
+        /* Scroll Animation Observer */
+        .fade-in-on-scroll {
             opacity: 0;
+            transform: translateY(30px);
         }
 
-        /* Services Section */
-        .services {
-            padding: 6rem 2rem;
-            background-color: var(--white);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-header h2 {
-            margin-bottom: 1.5rem;
-        }
-
-        .section-header p {
-            font-size: 1.15rem;
-            color: var(--dark-gray);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: linear-gradient(135deg, rgba(245, 243, 240, 0.8) 0%, rgba(232, 235, 229, 0.6) 100%);
-            padding: 2.5rem;
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            border: 1px solid rgba(125, 140, 110, 0.1);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--sage) 0%, var(--gold) 100%);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(125, 140, 110, 0.15);
-            background: linear-gradient(135deg, rgba(245, 243, 240, 1) 0%, rgba(232, 235, 229, 0.8) 100%);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--sage), var(--gold));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-
-        .service-card h3 {
-            margin-bottom: 1rem;
-            color: var(--forest);
-        }
-
-        .service-card p {
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark-gray);
-        }
-
-        .service-price {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.2rem;
-            color: var(--sage);
-            font-weight: 600;
-        }
-
-        /* Why Choose Us */
-        .why-choose-us {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, #f0f3ed 0%, #e8ebe5 100%);
-        }
-
-        .why-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .feature-blocks {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .feature-block {
-            display: flex;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background-color: var(--white);
-            border-radius: 12px;
-            border-left: 4px solid var(--sage);
-            transition: all 0.3s ease;
-        }
-
-        .feature-block:hover {
-            box-shadow: 0 10px 30px rgba(125, 140, 110, 0.1);
-            transform: translateX(5px);
-        }
-
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(125, 140, 110, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 1.5rem;
-        }
-
-        .feature-text h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-text p {
-            font-size: 0.95rem;
-            color: var(--dark-gray);
-        }
-
-        .decorative-circles {
-            position: relative;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-        }
-
-        .circle-1 {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(125, 140, 110, 0.15) 0%, transparent 70%);
-            top: 0;
-            left: 0;
-        }
-
-        .circle-2 {
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(196, 181, 160, 0.2) 0%, transparent 70%);
-            top: 100px;
-            right: 0;
-        }
-
-        .circle-3 {
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(212, 168, 87, 0.1) 0%, transparent 70%);
-            bottom: 0;
-            left: 50px;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            padding: 6rem 2rem;
-            background-color: var(--white);
-        }
-
-        .steps-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            position: relative;
-        }
-
-        .step-circle {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--sage), var(--gold));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-family: 'DM Serif Display', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 10px 30px rgba(125, 140, 110, 0.2);
-        }
-
-        .step h3 {
-            margin-bottom: 0.75rem;
-            font-size: 1.2rem;
-        }
-
-        .step p {
-            font-size: 0.9rem;
-            color: var(--dark-gray);
-        }
-
-        .step::after {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--sage) 0%, transparent 100%);
-        }
-
-        .step:last-child::after {
-            display: none;
-        }
-
-        /* Pricing */
-        .pricing {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, #f0f3ed 0%, #e8ebe5 100%);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background-color: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 2px solid rgba(125, 140, 110, 0.1);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pricing-card.featured {
-            border: 2px solid var(--gold);
-            transform: scale(1.05);
-            box-shadow: 0 20px 50px rgba(212, 168, 87, 0.2);
-        }
-
-        .pricing-card:hover:not(.featured) {
-            box-shadow: 0 15px 40px rgba(125, 140, 110, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .price-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-tag {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2rem;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-tag span {
-            font-size: 1rem;
-            color: var(--dark-gray);
-        }
-
-        .price-description {
-            font-size: 0.9rem;
-            color: var(--dark-gray);
-            margin-bottom: 2rem;
-        }
-
-        .features-list {
-            list-style: none;
-            margin-bottom: 2rem;
-            flex-grow: 1;
-        }
-
-        .features-list li {
-            padding: 0.75rem 0;
-            display: flex;
-            align-items: center;
-            font-size: 0.95rem;
-            color: var(--dark-gray);
-            border-bottom: 1px solid rgba(125, 140, 110, 0.1);
-        }
-
-        .features-list li::before {
-            content: '✓';
-            color: var(--sage);
-            font-weight: bold;
-            margin-right: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .pricing-card .btn {
-            width: 100%;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        /* Trust Section */
-        .trust {
-            padding: 6rem 2rem;
-            background-color: var(--white);
-        }
-
-        .trust-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto 4rem;
-            text-align: center;
-        }
-
-        .stat {
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-family: 'DM Serif Display', serif;
-            font-size: 3rem;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: var(--forest);
-            font-weight: 500;
-        }
-
-        .seen-in {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .seen-in h3 {
-            margin-bottom: 2rem;
-            color: var(--dark-gray);
-        }
-
-        .logos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 2rem;
-        }
-
-        .logo-placeholder {
-            background-color: #f0f0ed;
-            height: 60px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark-gray);
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgba(125, 140, 110, 0.1);
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, #f0f3ed 0%, #e8ebe5 100%);
-        }
-
-        .testimonials-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background-color: var(--white);
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(125, 140, 110, 0.1);
-        }
-
-        .quote-mark {
-            font-family: 'DM Serif Display', serif;
-            font-size: 4rem;
-            color: var(--gold);
-            opacity: 0.5;
-            margin-bottom: 1rem;
-            line-height: 1;
-        }
-
-        .testimonial-text {
-            font-size: 1.2rem;
-            color: var(--forest);
-            margin-bottom: 2rem;
-            font-style: italic;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--forest);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .stars {
-            color: var(--gold);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Booking CTA */
-        .booking-cta {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--sage) 0%, var(--forest) 100%);
-            color: var(--white);
-        }
-
-        .booking-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .booking-text h2 {
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .booking-text p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-        }
-
-        .booking-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group select {
-            padding: 0.875rem 1.25rem;
-            border: none;
-            border-radius: 8px;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            background-color: rgba(255, 255, 255, 0.95);
-            color: var(--forest);
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
-            background-color: var(--white);
-        }
-
-        .form-group input::placeholder {
-            color: rgba(45, 58, 46, 0.5);
-        }
-
-        .booking-form .btn {
-            background-color: var(--gold);
-            color: var(--forest);
-            padding: 1rem;
-            border-radius: 8px;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-
-        .booking-form .btn:hover {
-            background-color: #c4964a;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--forest);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 4rem 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto 3rem;
-        }
-
-        .footer-section h4 {
-            color: var(--white);
-            font-family: 'DM Serif Display', serif;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            font-size: 1.2rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 1rem;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--gold);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            background-color: var(--sage);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
+        .fade-in-on-scroll.visible {
+            animation: fadeUp 0.8s ease-out forwards;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .hero {
-                margin-top: 70px;
-                min-height: auto;
-                padding: 3rem 1.5rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .trust-badges {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
-            .nav-links.active {
-                display: flex;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background-color: var(--white);
-                padding: 2rem;
-                gap: 1rem;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .why-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .decorative-circles {
-                height: 250px;
-            }
-
-            .steps-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .step::after {
-                display: none;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-
-            .booking-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .booking-text h2 {
-                font-size: 1.8rem;
-            }
-
-            .trust-stats {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .testimonial-text {
-                font-size: 1rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .services {
-                padding: 4rem 1.5rem;
-            }
-
-            .why-choose-us {
-                padding: 4rem 1.5rem;
-            }
-
-            .how-it-works {
-                padding: 4rem 1.5rem;
-            }
-
-            .pricing {
-                padding: 4rem 1.5rem;
-            }
-
-            .trust {
-                padding: 4rem 1.5rem;
-            }
-
-            .testimonials {
-                padding: 4rem 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
             nav {
                 padding: 1rem;
             }
 
-            .logo {
-                font-size: 1.2rem;
+            nav ul {
+                gap: 1rem;
             }
 
-            .cta-nav {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.8rem;
+            nav a {
+                font-size: 0.75rem;
             }
 
-            .btn {
-                padding: 0.8rem 1.8rem;
-                font-size: 0.9rem;
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 3rem 1rem;
+                margin-top: 60px;
+                gap: 2rem;
             }
 
-            .service-card {
-                padding: 1.5rem;
+            .hero h1 {
+                font-size: 2.2rem;
             }
 
-            .stat-number {
+            .hero-image {
+                height: 400px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                padding: 4rem 1rem;
+            }
+
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .design-values {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .consultation-cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-image {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-number {
                 font-size: 2rem;
             }
 
-            .feature-block {
-                padding: 1rem;
+            .about-content h2 {
+                font-size: 1.5rem;
             }
 
-            .testimonial-card {
-                padding: 1.5rem;
+            .consultation-cta h2 {
+                font-size: 1.5rem;
             }
 
-            .booking-cta {
-                padding: 3rem 1.5rem;
+            .consultation-cta p {
+                font-size: 0.95rem;
             }
-        }
-
-        /* Intersection Observer - Fade in on scroll */
-        .fade-in-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Form validation */
-        .form-group input:invalid:not(:placeholder-shown),
-        .form-group select:invalid:not(:placeholder-shown) {
-            border: 2px solid #d32f2f;
-        }
-
-        .form-group input:valid:not(:placeholder-shown),
-        .form-group select:valid:not(:placeholder-shown) {
-            border: 2px solid var(--sage);
-        }
-
-        /* Loading animation */
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-        }
-
-        .loading {
-            animation: pulse 1.5s ease-in-out infinite;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo">Pristine Home Co.</a>
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#how">Process</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-        </ul>
-        <button class="cta-nav" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Get a Quote</button>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="container">
+            <div class="logo">PRISTINE HOME CO.</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" id="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
-            <h1>A Cleaner Home, a Calmer Mind</h1>
-            <p>Experience luxury cleaning with premium service, eco-friendly products, and attention to detail that transforms your space.</p>
-            <div class="trust-badges">
-                <span>Licensed & Insured</span>
-                <span>Eco-Friendly Products</span>
-                <span>Satisfaction Guaranteed</span>
-            </div>
-            <button class="btn" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Get a Free Quote</button>
+            <h1>Design That Feels Like Home</h1>
+            <p>At Pristine Home Co., we believe exceptional interior design should seamlessly blend beauty, functionality, and the essence of who you are. Each project is a carefully crafted narrative of refined aesthetics and thoughtful living.</p>
+            <a href="#contact" class="cta-button">Schedule a Consultation</a>
         </div>
-    </header>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80&auto=format" alt="Luxury interior design">
+        </div>
+    </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-header">
-            <h2>Our Premium Services</h2>
-            <p>Tailored cleaning solutions for every home and lifestyle</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format" alt="Modern living room">
         </div>
-        <div class="services-grid">
-            <div class="service-card fade-in-on-scroll">
-                <div class="service-icon">🏠</div>
-                <h3>Regular Cleaning</h3>
-                <p>Weekly or bi-weekly maintenance to keep your home consistently pristine and fresh.</p>
-                <div class="service-price">Starting from <strong>$180</strong></div>
-            </div>
-            <div class="service-card fade-in-on-scroll">
-                <div class="service-icon">✨</div>
-                <h3>Deep Clean</h3>
-                <p>Comprehensive cleaning that reaches every corner, inside cabinets, baseboards, and more.</p>
-                <div class="service-price">Starting from <strong>$350</strong></div>
-            </div>
-            <div class="service-card fade-in-on-scroll">
-                <div class="service-icon">🔑</div>
-                <h3>Move-In/Out</h3>
-                <p>Complete turnover cleaning for moving days. Your new space arrives spotless and ready.</p>
-                <div class="service-price">Starting from <strong>$420</strong></div>
-            </div>
-            <div class="service-card fade-in-on-scroll">
-                <div class="service-icon">🏗️</div>
-                <h3>Post-Construction</h3>
-                <p>Specialized cleanup after renovations, removing dust and debris from every surface.</p>
-                <div class="service-price">Starting from <strong>$500</strong></div>
+        <div class="about-content">
+            <h2>Our Design Philosophy</h2>
+            <p>We specialize in transforming spaces into sanctuaries that reflect your personal style and enhance your daily life. With over a decade of experience across residential and commercial projects, our approach combines timeless design principles with contemporary innovation.</p>
+            <p>Every project begins with understanding you—your lifestyle, your aspirations, and the feeling you want your home to evoke. We then craft cohesive, sophisticated environments that balance aesthetics with practicality.</p>
+
+            <div class="design-values">
+                <div class="value">
+                    <h3>Thoughtful Design</h3>
+                    <p>Each element serves a purpose while contributing to the overall narrative of your space.</p>
+                </div>
+                <div class="value">
+                    <h3>Quality Materials</h3>
+                    <p>We source exceptional finishes and furnishings that endure and enhance with time.</p>
+                </div>
+                <div class="value">
+                    <h3>Personalization</h3>
+                    <p>Your taste and lifestyle guide every decision we make for your home.</p>
+                </div>
+                <div class="value">
+                    <h3>Sustainability</h3>
+                    <p>We prioritize eco-conscious choices without compromising on elegance or longevity.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us" id="why-us">
-        <div class="section-header" style="margin-bottom: 3rem;">
-            <h2>Why Choose Pristine Home Co.</h2>
-            <p>We're not just a cleaning service—we're your partner in creating a sanctuary</p>
-        </div>
-        <div class="why-content">
-            <div class="feature-blocks">
-                <div class="feature-block fade-in-on-scroll">
-                    <div class="feature-icon">🌿</div>
-                    <div class="feature-text">
-                        <h3>Eco-Friendly First</h3>
-                        <p>We use only sustainable, non-toxic products that are safe for your family and the planet.</p>
-                    </div>
-                </div>
-                <div class="feature-block fade-in-on-scroll">
-                    <div class="feature-icon">🔐</div>
-                    <div class="feature-text">
-                        <h3>Background-Checked Team</h3>
-                        <p>Every team member is vetted, insured, and trained to highest professional standards.</p>
-                    </div>
-                </div>
-                <div class="feature-block fade-in-on-scroll">
-                    <div class="feature-icon">📅</div>
-                    <div class="feature-text">
-                        <h3>Flexible Scheduling</h3>
-                        <p>Choose your preferred days and times. We work around your schedule, not the other way.</p>
-                    </div>
-                </div>
-                <div class="feature-block fade-in-on-scroll">
-                    <div class="feature-icon">✓</div>
-                    <div class="feature-text">
-                        <h3>100% Guarantee</h3>
-                        <p>Not satisfied? We'll return and make it right—no questions, no extra charge.</p>
-                    </div>
-                </div>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item fade-in-on-scroll">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80&auto=format" alt="Modern living space">
+                <div class="portfolio-label">Modern Living</div>
             </div>
-            <div class="decorative-circles">
-                <div class="circle circle-1"></div>
-                <div class="circle circle-2"></div>
-                <div class="circle circle-3"></div>
+            <div class="portfolio-item fade-in-on-scroll">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format" alt="Luxury kitchen">
+                <div class="portfolio-label">Culinary Elegance</div>
+            </div>
+            <div class="portfolio-item fade-in-on-scroll">
+                <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&q=80&auto=format" alt="Serene bedroom">
+                <div class="portfolio-label">Tranquil Retreat</div>
+            </div>
+            <div class="portfolio-item fade-in-on-scroll">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format" alt="Exterior design">
+                <div class="portfolio-label">Outdoor Living</div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works" id="how">
-        <div class="section-header">
-            <h2>How It Works</h2>
-            <p>Four simple steps to a pristine home</p>
-        </div>
-        <div class="steps-container">
-            <div class="step fade-in-on-scroll">
-                <div class="step-circle">1</div>
-                <h3>Book Online</h3>
-                <p>Choose your service, date, and time in just two minutes</p>
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <h2 class="section-title">Our Design Process</h2>
+        <div class="process-grid">
+            <div class="process-step fade-in-on-scroll">
+                <div class="step-number">01</div>
+                <h3>Consultation</h3>
+                <p>We begin by understanding your vision, lifestyle, and design preferences through detailed conversations about your needs and inspirations.</p>
             </div>
-            <div class="step fade-in-on-scroll">
-                <div class="step-circle">2</div>
-                <h3>We Match You</h3>
-                <p>We assign experienced cleaners suited to your home's needs</p>
+            <div class="process-step fade-in-on-scroll">
+                <div class="step-number">02</div>
+                <h3>Concept Development</h3>
+                <p>Our team creates mood boards, spatial plans, and design concepts that embody your vision in a cohesive, sophisticated direction.</p>
             </div>
-            <div class="step fade-in-on-scroll">
-                <div class="step-circle">3</div>
-                <h3>We Clean</h3>
-                <p>Our team arrives on time and delivers meticulous, thorough cleaning</p>
+            <div class="process-step fade-in-on-scroll">
+                <div class="step-number">03</div>
+                <h3>Sourcing & Planning</h3>
+                <p>We curate and source premium furnishings, finishes, and decor while managing timelines, budgets, and vendor relationships meticulously.</p>
             </div>
-            <div class="step fade-in-on-scroll">
-                <div class="step-circle">4</div>
-                <h3>You Relax</h3>
-                <p>Enjoy your pristine home and schedule your next appointment</p>
+            <div class="process-step fade-in-on-scroll">
+                <div class="step-number">04</div>
+                <h3>Installation & Styling</h3>
+                <p>Our team orchestrates the final installation and styling, ensuring every detail is perfectly executed for a stunning finished space.</p>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="section-header">
-            <h2>Simple, Transparent Pricing</h2>
-            <p>Choose the plan that works for your home and budget</p>
-        </div>
-        <div class="pricing-grid">
-            <div class="pricing-card fade-in-on-scroll">
-                <div class="price-header">
-                    <h3>Essentials</h3>
-                    <div class="price-tag">$180<span>/visit</span></div>
-                    <p class="price-description">Perfect for maintenance</p>
-                </div>
-                <ul class="features-list">
-                    <li>Vacuum & sweep all areas</li>
-                    <li>Dust all surfaces</li>
-                    <li>Bathroom cleaning</li>
-                    <li>Kitchen wiping</li>
-                    <li>Trash removal</li>
-                </ul>
-                <button class="btn">Book Now</button>
-            </div>
-            <div class="pricing-card featured fade-in-on-scroll">
-                <div class="price-header">
-                    <h3>Premium</h3>
-                    <div class="price-tag">$280<span>/visit</span></div>
-                    <p class="price-description">Most popular choice</p>
-                </div>
-                <ul class="features-list">
-                    <li>Everything in Essentials</li>
-                    <li>Deep cabinet cleaning</li>
-                    <li>Baseboards & corners</li>
-                    <li>Appliance exteriors</li>
-                    <li>Mirror & window cleaning</li>
-                    <li>Floor polishing</li>
-                </ul>
-                <button class="btn">Book Now</button>
-            </div>
-            <div class="pricing-card fade-in-on-scroll">
-                <div class="price-header">
-                    <h3>Luxury</h3>
-                    <div class="price-tag">$420<span>/visit</span></div>
-                    <p class="price-description">Complete transformation</p>
-                </div>
-                <ul class="features-list">
-                    <li>Everything in Premium</li>
-                    <li>Inside appliances & oven</li>
-                    <li>Interior window sills</li>
-                    <li>Light fixture cleaning</li>
-                    <li>Ceiling fan blades</li>
-                    <li>Door frames & handles</li>
-                    <li>Laundry service</li>
-                </ul>
-                <button class="btn">Book Now</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section -->
-    <section class="trust" id="trust">
-        <div class="trust-stats">
-            <div class="stat fade-in-on-scroll">
-                <div class="stat-number" data-target="2500">0</div>
-                <div class="stat-label">Homes Cleaned</div>
-            </div>
-            <div class="stat fade-in-on-scroll">
-                <div class="stat-number" data-target="15000">0</div>
-                <div class="stat-label">Five-Star Reviews</div>
-            </div>
-            <div class="stat fade-in-on-scroll">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Eco-Friendly Products</div>
-            </div>
-        </div>
-        <div class="seen-in fade-in-on-scroll">
-            <h3>As Seen In</h3>
-            <div class="logos-grid">
-                <div class="logo-placeholder">Home & Design</div>
-                <div class="logo-placeholder">Clean Living Mag</div>
-                <div class="logo-placeholder">Modern Home</div>
-                <div class="logo-placeholder">Luxury Living</div>
-                <div class="logo-placeholder">Green Today</div>
-                <div class="logo-placeholder">Home Care Journal</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
-        <div class="section-header">
-            <h2>What Our Clients Say</h2>
-            <p>Real reviews from real homeowners</p>
-        </div>
-        <div class="testimonials-container">
+        <h2 class="section-title">Client Stories</h2>
+        <div class="testimonials-grid">
             <div class="testimonial-card fade-in-on-scroll">
-                <div class="quote-mark">"</div>
-                <p class="testimonial-text">Pristine Home Co. transformed our entire experience with home cleaning. The attention to detail is incredible, and I love knowing they use eco-friendly products around my kids.</p>
+                <p class="testimonial-text">"Pristine Home Co. transformed our space into something we didn't even know was possible. Every detail speaks to who we are—it feels completely ours."</p>
                 <p class="testimonial-author">Sarah Mitchell</p>
-                <div class="stars">★ ★ ★ ★ ★</div>
+                <p class="testimonial-role">Penthouse, Downtown</p>
+            </div>
+            <div class="testimonial-card fade-in-on-scroll">
+                <p class="testimonial-text">"The professionalism, attention to detail, and creative vision were exceptional. They listened carefully and exceeded our expectations in every way."</p>
+                <p class="testimonial-author">James & Elena Rodriguez</p>
+                <p class="testimonial-role">Contemporary Home, Suburbs</p>
+            </div>
+            <div class="testimonial-card fade-in-on-scroll">
+                <p class="testimonial-text">"Working with them was effortless. They managed every aspect of the project while keeping us involved and excited throughout the journey."</p>
+                <p class="testimonial-author">Michael Chen</p>
+                <p class="testimonial-role">Corporate Office, Commercial</p>
             </div>
         </div>
     </section>
 
-    <!-- Booking CTA -->
-    <section class="booking-cta" id="booking">
-        <div class="booking-content">
-            <div class="booking-text">
-                <h2>Ready for a Pristine Home?</h2>
-                <p>Get your free quote in just 2 minutes. Our team will contact you within 24 hours to confirm your appointment.</p>
-            </div>
-            <form class="booking-form" onsubmit="handleBookingForm(event)">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Smith" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Type</label>
-                    <select id="service" name="service" required>
-                        <option value="">Select a service</option>
-                        <option value="regular">Regular Cleaning</option>
-                        <option value="deep">Deep Clean</option>
-                        <option value="movein">Move-In/Out</option>
-                        <option value="construction">Post-Construction</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <button type="submit" class="btn">Schedule My Cleaning</button>
-            </form>
-        </div>
+    <!-- Consultation CTA Section -->
+    <section class="consultation-cta" id="contact">
+        <h2>Let's Create Something Beautiful</h2>
+        <p>Ready to transform your space into a reflection of your personal style? Schedule a free design consultation with our team and let's discuss your vision for the perfect home.</p>
+        <button class="cta-button-light">Book Your Consultation</button>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Pristine Home Co.</h4>
-                <p>Transforming homes into sanctuaries since 2018.</p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon" aria-label="Facebook">f</a>
-                    <a href="#" class="social-icon" aria-label="Instagram">📷</a>
-                    <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#how">How It Works</a></li>
-                    <li><a href="#testimonials">Reviews</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Service Areas</h4>
-                <ul>
-                    <li><a href="#">Downtown District</a></li>
-                    <li><a href="#">Riverside Homes</a></li>
-                    <li><a href="#">Westside Heights</a></li>
-                    <li><a href="#">Parkside Community</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><a href="tel:+15551234567">(555) 123-4567</a></li>
-                    <li><a href="mailto:hello@pristinehomeco.com">hello@pristinehomeco.com</a></li>
-                    <li><a href="#">Available 24/7</a></li>
-                    <li><a href="#">Licensed & Insured</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pristine Home Co. All rights reserved. | <a href="#" style="color: var(--gold);">Privacy Policy</a> | <a href="#" style="color: var(--gold);">Terms of Service</a></p>
-        </div>
+        <p>&copy; 2026 Pristine Home Co. All rights reserved.</p>
+        <p>Built by <a href="https://sitesinaday.com" target="_blank">Sites In A Day</a></p>
     </footer>
 
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Pristine Home Co.",
-        "image": "https://pristinehomeco.com/og-image.jpg",
-        "description": "Premium home cleaning service with eco-friendly products, licensed & insured team, and 100% satisfaction guarantee.",
-        "url": "https://pristinehomeco.com",
-        "telephone": "+15551234567",
-        "email": "hello@pristinehomeco.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "US",
-            "addressRegion": "State"
-        },
-        "priceRange": "$180 - $420",
-        "areaServed": {
-            "@type": "City",
-            "name": "Metropolitan Area"
-        },
-        "sameAs": [
-            "https://www.facebook.com/pristinehomeco",
-            "https://www.instagram.com/pristinehomeco"
-        ],
-        "serviceType": "Home Cleaning Service",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "15000",
-            "bestRating": "5",
-            "worstRating": "1"
-        }
-    }
-    </script>
-
     <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Close menu when link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
+        // Smooth scroll navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -1521,97 +703,14 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
-            observer.observe(el);
+        document.querySelectorAll('.fade-in-on-scroll').forEach(element => {
+            observer.observe(element);
         });
 
-        // Animate numbers on scroll
-        function animateNumbers() {
-            const stats = document.querySelectorAll('.stat-number[data-target]');
-            stats.forEach(stat => {
-                const target = parseInt(stat.dataset.target);
-                const duration = 2000;
-                const start = Date.now();
-
-                const animate = () => {
-                    const elapsed = Date.now() - start;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const current = Math.floor(target * progress);
-                    stat.textContent = current.toLocaleString();
-
-                    if (progress < 1) {
-                        requestAnimationFrame(animate);
-                    }
-                };
-
-                // Trigger animation when element comes into view
-                const statObserver = new IntersectionObserver((entries) => {
-                    if (entries[0].isIntersecting && stat.textContent === '0') {
-                        animate();
-                        statObserver.unobserve(entries[0].target);
-                    }
-                });
-                statObserver.observe(stat);
-            });
-        }
-
-        animateNumbers();
-
-        // Form submission handler
-        function handleBookingForm(event) {
-            event.preventDefault();
-
-            const form = event.target;
-            const name = form.querySelector('#name').value;
-            const email = form.querySelector('#email').value;
-            const phone = form.querySelector('#phone').value;
-            const service = form.querySelector('#service').value;
-            const date = form.querySelector('#date').value;
-
-            // Show success message
-            const submitBtn = form.querySelector('.btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = '✓ Booking Request Sent!';
-            submitBtn.style.backgroundColor = 'var(--gold)';
-
-            // Reset form
-            form.reset();
-
-            // Restore button
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.backgroundColor = '';
-            }, 3000);
-
-            // In a real application, this would send data to a server
-            console.log('Booking submitted:', { name, email, phone, service, date });
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                nav.style.boxShadow = 'none';
-            }
+        // Stagger animations for multiple elements
+        const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+        fadeElements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
         });
     </script>
 </body>
