@@ -15,12 +15,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         :root {
-            --bg-primary: #0a0a1a; --bg-secondary: #0f0f2a; --bg-card: #141432; --bg-card-hover: #1a1a3e;
+            --bg-primary: #0a0a1a; --bg-secondary: #0f0f2a; --bg-card: #1a1a42; --bg-card-hover: #1a1a3e;
             --accent-blue: #4f7df5; --accent-cyan: #00d4ff; --accent-purple: #8b5cf6; --accent-pink: #ec4899;
             --gradient-primary: linear-gradient(135deg, #4f7df5 0%, #8b5cf6 50%, #ec4899 100%);
             --gradient-hero: linear-gradient(135deg, #1a0533 0%, #0a1628 30%, #0d0d2b 60%, #1a0533 100%);
             --text-primary: #ffffff; --text-secondary: #a0a0c0; --text-muted: #6b6b8a;
-            --border-color: rgba(255,255,255,0.08);
+            --border-color: rgba(255,255,255,0.12);
             --glow-blue: rgba(79, 125, 245, 0.3); --glow-purple: rgba(139, 92, 246, 0.3);
         }
         body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
@@ -96,7 +96,7 @@
         }
         @media (max-width: 480px) { .skills-grid { grid-template-columns: 1fr; } .hero-stats { gap: 1.5rem; } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-in { opacity: 0; }
+        .fade-in { opacity: 1; }
     </style>
 </head>
 <body>
