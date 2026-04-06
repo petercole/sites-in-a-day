@@ -18,7 +18,7 @@
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
 
         :root {
             --bg-primary: #0a0a1a;
@@ -44,7 +44,7 @@
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
-            /* overflow-x moved to html for scroll-behavior compat */
+            overflow-x: hidden;
         }
 
         /* âââââ NAVIGATION âââââ */
@@ -924,6 +924,19 @@
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+
+        // Smooth scroll for all anchor nav links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.pushState(null, '', '#' + targetId);
+                }
+            });
+        });
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => mobileMenu.classList.remove('active'));
         });
