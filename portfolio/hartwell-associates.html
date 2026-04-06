@@ -329,8 +329,13 @@
 
         .team-image {
             height: 320px;
-            background-size: cover;
-            background-position: center;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .team-info {
@@ -393,6 +398,14 @@
             color: #0F1B2D;
             font-weight: 600;
             font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-description {
+            color: #666666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 0.5rem;
         }
 
         /* ===== TESTIMONIALS ===== */
@@ -621,6 +634,23 @@
             color: #D4B26A;
         }
 
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             nav {
@@ -761,8 +791,8 @@
             <h1>Trusted Counsel. Proven Results.</h1>
             <p>Hartwell & Associates delivers strategic legal expertise and consulting solutions for complex business challenges. Protecting your interests with 30+ years of excellence.</p>
             <div class="hero-buttons">
-                <button class="primary-btn">Schedule Consultation</button>
-                <button class="secondary-btn">Learn More</button>
+                <button class="btn-primary">Schedule Consultation</button>
+                <button class="btn-secondary">Learn More</button>
             </div>
         </div>
     </section>
@@ -814,15 +844,13 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-container">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80&auto=format" alt="Professional business meeting">
-            </div>
+            <div class="about-image"></div>
             <div class="about-content">
                 <h2>The Hartwell Difference</h2>
                 <p>Since our founding in 1994, Hartwell & Associates has been the trusted legal and consulting partner for businesses navigating complex challenges. Our commitment to excellence, strategic thinking, and client success has defined our reputation.</p>
                 <p>We combine deep legal expertise with business acumen to deliver solutions that protect your interests and advance your objectives. Our team of experienced attorneys and consultants work collaboratively to understand your unique needs and craft tailored strategies.</p>
 
-                <div class="stats">
+                <div class="about-stats">
                     <div class="stat">
                         <div class="stat-number">30+</div>
                         <div class="stat-label">Years of Excellence</div>
@@ -844,140 +872,166 @@
 
     <!-- Team Section -->
     <section class="team" id="team">
+        <div class="team-container">
         <h2 class="section-title">Meet Our Team</h2>
         <p class="section-subtitle">Experienced attorneys and consultants dedicated to your success</p>
 
         <div class="team-grid">
-            <div class="team-member fade-in">
+            <div class="team-card fade-in">
                 <div class="team-image">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&auto=format" alt="James Hartwell">
                 </div>
                 <div class="team-info">
                     <h3>James Hartwell</h3>
-                    <div class="team-role">Founder & Managing Partner</div>
+                    <div class="team-title">Founder & Managing Partner</div>
                     <p>With 30+ years of experience in corporate and commercial law, James founded Hartwell & Associates on principles of excellence and client focus.</p>
                 </div>
             </div>
 
-            <div class="team-member fade-in">
+            <div class="team-card fade-in">
                 <div class="team-image">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format" alt="Sarah Mitchell">
                 </div>
                 <div class="team-info">
                     <h3>Sarah Mitchell</h3>
-                    <div class="team-role">Senior Attorney, Litigation</div>
+                    <div class="team-title">Senior Attorney, Litigation</div>
                     <p>Sarah brings 18 years of litigation expertise with a track record of successfully representing clients in complex disputes and trials.</p>
                 </div>
             </div>
 
-            <div class="team-member fade-in">
+            <div class="team-card fade-in">
                 <div class="team-image">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format" alt="Michael Chen">
                 </div>
                 <div class="team-info">
                     <h3>Michael Chen</h3>
-                    <div class="team-role">Business Consultant</div>
+                    <div class="team-title">Business Consultant</div>
                     <p>Michael specializes in strategic business consulting and risk management, helping organizations optimize operations and navigate growth.</p>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Case Results -->
-    <section class="case-results" id="results">
+    <section class="results" id="results">
+        <div class="results-container">
         <h2 class="section-title">Notable Results</h2>
         <p class="section-subtitle">Proven success across industries and practice areas</p>
 
         <div class="results-grid">
-            <div class="result-card fade-in">
-                <div class="result-amount">$47M</div>
-                <div class="result-title">Successful Acquisition</div>
+            <div class="result-item fade-in">
+                <div class="result-number">$47M</div>
+                <div class="result-label">Successful Acquisition</div>
                 <div class="result-description">Led comprehensive due diligence and negotiation for major technology sector acquisition, protecting client interests through complex financing structures.</div>
             </div>
 
-            <div class="result-card fade-in">
-                <div class="result-amount">$12.5M</div>
-                <div class="result-title">Litigation Victory</div>
+            <div class="result-item fade-in">
+                <div class="result-number">$12.5M</div>
+                <div class="result-label">Litigation Victory</div>
                 <div class="result-description">Won significant damages award in contract dispute case, setting favorable precedent for industry participants.</div>
             </div>
 
-            <div class="result-card fade-in">
-                <div class="result-amount">$8.3M</div>
-                <div class="result-title">Settlement Negotiation</div>
+            <div class="result-item fade-in">
+                <div class="result-number">$8.3M</div>
+                <div class="result-label">Settlement Negotiation</div>
                 <div class="result-description">Negotiated favorable settlement in complex employment litigation, protecting company reputation and bottom line.</div>
             </div>
 
-            <div class="result-card fade-in">
-                <div class="result-amount">100%</div>
-                <div class="result-title">IP Portfolio Protection</div>
+            <div class="result-item fade-in">
+                <div class="result-number">100%</div>
+                <div class="result-label">IP Portfolio Protection</div>
                 <div class="result-description">Successfully registered and defended comprehensive patent portfolio, generating significant licensing revenue for client.</div>
             </div>
 
-            <div class="result-card fade-in">
-                <div class="result-amount">$15M+</div>
-                <div class="result-title">Real Estate Portfolio</div>
+            <div class="result-item fade-in">
+                <div class="result-number">$15M+</div>
+                <div class="result-label">Real Estate Portfolio</div>
                 <div class="result-description">Managed multi-property commercial real estate transactions with $15M+ aggregate value, ensuring favorable lease terms.</div>
             </div>
 
-            <div class="result-card fade-in">
-                <div class="result-amount">95%</div>
-                <div class="result-title">Compliance Optimization</div>
+            <div class="result-item fade-in">
+                <div class="result-number">95%</div>
+                <div class="result-label">Compliance Optimization</div>
                 <div class="result-description">Implemented regulatory compliance program, reducing risk exposure and improving operational efficiency across organization.</div>
             </div>
+        </div>
         </div>
     </section>
 
     <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
         <h2 class="section-title">Client Testimonials</h2>
         <p class="section-subtitle">What our clients say about Hartwell & Associates</p>
 
         <div class="testimonials-grid">
-            <div class="testimonial fade-in">
+            <div class="testimonial-card fade-in">
                 <div class="stars">★★★★★</div>
                 <div class="testimonial-text">"Hartwell & Associates provided exceptional counsel during our acquisition. Their strategic insights and attention to detail made all the difference in securing favorable terms."</div>
                 <div class="testimonial-author">Jennifer Park</div>
                 <div class="testimonial-role">CEO, TechCore Solutions</div>
             </div>
 
-            <div class="testimonial fade-in">
+            <div class="testimonial-card fade-in">
                 <div class="stars">★★★★★</div>
                 <div class="testimonial-text">"We've worked with Hartwell for over a decade. Their proactive approach to legal strategy has protected our interests and enabled confident business growth."</div>
                 <div class="testimonial-author">David Morrison</div>
                 <div class="testimonial-role">COO, Morrison Manufacturing</div>
             </div>
 
-            <div class="testimonial fade-in">
+            <div class="testimonial-card fade-in">
                 <div class="stars">★★★★★</div>
                 <div class="testimonial-text">"Outstanding litigation team. They handled our complex dispute with professionalism, expertise, and remarkable results. Highly recommended."</div>
                 <div class="testimonial-author">Rachel Thompson</div>
                 <div class="testimonial-role">General Counsel, FinanceHub Inc.</div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2>Ready to Discuss Your Legal Needs?</h2>
-        <p>Let Hartwell & Associates provide the expert counsel and strategic guidance your business deserves. Schedule your free consultation today.</p>
-
-        <div class="contact-buttons">
-            <button class="contact-btn">Schedule Free Consultation</button>
-            <button class="contact-btn">Contact Us Today</button>
-        </div>
-
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-label">PHONE</div>
-                <div class="contact-detail">(555) 123-4567</div>
+        <div class="contact-container">
+            <div>
+                <h2>Ready to Discuss Your Legal Needs?</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How Can We Help?</label>
+                        <textarea id="message" placeholder="Tell us about your legal needs..."></textarea>
+                    </div>
+                    <button type="button" class="contact-submit">Schedule Free Consultation</button>
+                </form>
             </div>
-            <div class="contact-item">
-                <div class="contact-label">EMAIL</div>
-                <div class="contact-detail">counsel@hartwell.legal</div>
-            </div>
-            <div class="contact-item">
-                <div class="contact-label">OFFICE</div>
-                <div class="contact-detail">New York, NY</div>
+            <div class="contact-info">
+                <div class="info-block">
+                    <h3>Phone</h3>
+                    <p><a href="tel:5551234567">(555) 123-4567</a></p>
+                </div>
+                <div class="info-block">
+                    <h3>Email</h3>
+                    <p><a href="mailto:counsel@hartwell.legal">counsel@hartwell.legal</a></p>
+                </div>
+                <div class="info-block">
+                    <h3>Office</h3>
+                    <p>123 Legal Avenue, Suite 500<br>New York, NY 10001</p>
+                </div>
+                <div class="info-block">
+                    <h3>Hours</h3>
+                    <p>Monday - Friday: 8:30 AM - 6:00 PM<br>Saturday: By Appointment</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1019,7 +1073,7 @@
         });
 
         // Button click handlers
-        document.querySelectorAll('.primary-btn, .contact-btn, .cta-button').forEach(btn => {
+        document.querySelectorAll('.btn-primary, .contact-submit, .cta-button').forEach(btn => {
             btn.addEventListener('click', function() {
                 alert('Thank you for your interest! In a real website, this would open a consultation booking form.');
             });
