@@ -932,7 +932,7 @@
                 const target = document.getElementById(targetId);
                 if (target) {
                     e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
                     history.pushState(null, '', '#' + targetId);
                 }
             });
