@@ -38,7 +38,6 @@
             --glow-blue: rgba(79, 125, 245, 0.3);
             --glow-purple: rgba(139, 92, 246, 0.3);
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg-primary);
@@ -47,7 +46,7 @@
             overflow-x: hidden;
         }
 
-        /* âââââ NAVIGATION âââââ */
+        /* NAVIGATION */
         nav {
             position: fixed; top: 0; left: 0; right: 0;
             background: rgba(10, 10, 26, 0.85);
@@ -94,8 +93,7 @@
             text-decoration: none; color: var(--text-secondary); font-weight: 500;
             padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);
         }
-
-        /* âââââ HERO âââââ */
+        /* HERO */
         .hero {
             margin-top: 64px;
             min-height: 85vh;
@@ -136,8 +134,7 @@
             border: 2px solid rgba(255,255,255,0.25); cursor: pointer; transition: all 0.3s;
         }
         .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
-
-        /* âââââ TRUST BAR âââââ */
+        /* TRUST BAR */
         .trust-bar {
             background: var(--bg-secondary); border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
@@ -158,14 +155,14 @@
         .trust-icon svg { width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; }
         .trust-label { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); }
 
-        /* âââââ SECTIONS COMMON âââââ */
+        /* SECTIONS COMMON */
         .section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
         .section-title {
             font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; text-align: center;
             margin-bottom: 3.5rem; letter-spacing: -0.5px;
         }
 
-        /* âââââ HOW IT WORKS âââââ */
+        /* HOW IT WORKS */
         .steps-container {
             display: flex; align-items: flex-start; justify-content: center; gap: 0;
             position: relative; max-width: 900px; margin: 0 auto;
@@ -187,8 +184,7 @@
             border-top: 2px dashed var(--accent-blue); opacity: 0.4;
         }
         .step:last-child .step-line { display: none; }
-
-        /* âââââ PORTFOLIO âââââ */
+        /* PORTFOLIO */
         .portfolio-section { background: var(--bg-secondary); padding: 5rem 2rem; }
         .portfolio-grid {
             display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
@@ -232,8 +228,7 @@
             color: var(--accent-cyan); text-decoration: none;
         }
         .portfolio-link:hover { text-decoration: underline; }
-
-        /* âââââ SITE MOCKUPS âââââ */
+        /* SITE MOCKUPS */
         .site-mockup {
             width: 100%; height: 100%; background: #0d1117; display: flex;
             flex-direction: column; overflow: hidden;
@@ -263,8 +258,7 @@
         .mock-body { padding: 4px 6px 6px; }
         .mock-cols { display: flex; gap: 3px; }
         .mock-box { flex: 1; height: 14px; border-radius: 2px; background: rgba(255,255,255,0.06); }
-
-        /* âââââ PRICING âââââ */
+        /* PRICING */
         .pricing-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
             max-width: 950px; margin: 0 auto; align-items: start;
@@ -316,8 +310,7 @@
             background: transparent; color: var(--text-primary); border: 2px solid var(--border-color);
         }
         .price-btn.outline:hover { border-color: var(--accent-purple); background: rgba(139, 92, 246, 0.05); }
-
-        /* âââââ PROMISE + FAQ âââââ */
+        /* PROMISE + FAQ */
         .promise-section { background: var(--bg-secondary); padding: 5rem 2rem; }
         .promise-inner { max-width: 1200px; margin: 0 auto; }
         .promise-stats {
@@ -356,8 +349,7 @@
             padding: 0 1.25rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;
         }
         .faq-item.active .faq-answer { max-height: 300px; padding: 0 1.25rem 1.25rem; }
-
-        /* âââââ ORDER FORM (right side of promise) âââââ */
+        /* ORDER FORM */
         .order-form-card {
             background: var(--bg-card); border: 1px solid var(--border-color);
             border-radius: 16px; padding: 2rem;
@@ -410,8 +402,7 @@
         }
         .form-submit.loading .spinner { display: block; }
         .form-submit.loading span { display: none; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .form-message {
+        @keyframes spin { to { transform: rotate(360deg); } }        .form-message {
             margin-top: 1rem; padding: 0.85rem; border-radius: 8px; font-size: 0.85rem;
             display: none; text-align: center;
         }
@@ -419,7 +410,7 @@
         .form-message.success { background: rgba(16, 185, 129, 0.15); color: #34d399; }
         .form-message.error { background: rgba(239, 68, 68, 0.15); color: #f87171; }
 
-        /* âââââ ORDER FORM SECTION âââââ */
+        /* ORDER FORM SECTION */
         .order-section {
             padding: 5rem 2rem; background: var(--bg-primary);
         }
@@ -433,7 +424,7 @@
             .form-row { grid-template-columns: 1fr; }
         }
 
-        /* âââââ FINAL CTA âââââ */
+        /* FINAL CTA */
         .final-cta {
             padding: 5rem 2rem; text-align: center;
             background: linear-gradient(180deg, var(--bg-primary) 0%, #1a0533 50%, var(--bg-primary) 100%);
@@ -445,7 +436,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* âââââ FOOTER âââââ */
+        /* FOOTER */
         footer {
             padding: 2.5rem 2rem; text-align: center; font-size: 0.85rem;
             color: var(--text-muted); border-top: 1px solid var(--border-color);
@@ -454,12 +445,11 @@
         footer a:hover { text-decoration: underline; }
         footer p { margin-bottom: 0.5rem; }
 
-        /* âââââ FLOATING CTA (mobile) âââââ */
+        /* FLOATING CTA (mobile) */
         .floating-cta {
             display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999;
         }
-
-        /* âââââ RESPONSIVE âââââ */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
             .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
@@ -482,7 +472,7 @@
             .trust-bar-inner { grid-template-columns: 1fr 1fr; }
         }
 
-        /* âââââ ANIMATIONS âââââ */
+        /* ANIMATIONS */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -498,7 +488,6 @@
         .swirl-blob:nth-child(4) { width: 750px; height: 750px; left: 35%; top: 65%; background: radial-gradient(circle, rgba(0,212,255,0.35) 0%, transparent 65%); animation: swirlD 14s ease-in-out infinite -7s; }
         .swirl-blob:nth-child(5) { width: 600px; height: 600px; left: 5%; top: 75%; background: radial-gradient(circle, rgba(168,85,247,0.4) 0%, transparent 65%); animation: swirlE 9s ease-in-out infinite -3s; }
         .swirl-blob:nth-child(6) { width: 500px; height: 500px; left: 85%; top: 30%; background: radial-gradient(circle, rgba(59,130,246,0.35) 0%, transparent 65%); animation: swirlF 12s ease-in-out infinite -12s; }
-
         @keyframes swirlA {
             0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); }
             20% { transform: translate(180px,-120px) rotate(72deg) scale(1.2); }
@@ -539,7 +528,6 @@
         </style>
 </head>
 <body>
-
     <!-- NAV -->
     <nav>
         <div class="nav-container">
@@ -549,7 +537,7 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#order" class="nav-cta">Start Your Site</a></li>
+                <li><a href="#pricing" class="nav-cta">Start Your Site</a></li>
             </ul>
             <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
         </div>
@@ -559,7 +547,7 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#order" class="nav-cta" style="text-align:center;margin-top:0.5rem;">Start Your Site</a>
+        <a href="#pricing" class="nav-cta" style="text-align:center;margin-top:0.5rem;">Start Your Site</a>
     </div>
 
     <!-- HERO -->
@@ -583,7 +571,6 @@
             </div>
         </div>
     </section>
-
     <!-- TRUST BAR -->
     <div class="trust-bar">
         <div class="trust-bar-inner">
@@ -598,8 +585,7 @@
                     <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10"/></svg>
                 </div>
                 <span class="trust-label">Money-Back Guarantee</span>
-            </div>
-            <div class="trust-item">
+            </div>            <div class="trust-item">
                 <div class="trust-icon">
                     <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                 </div>
@@ -615,29 +601,7 @@
     </div>
 
     <!-- HOW IT WORKS -->
-    <section class="section" id="how">
-        <h2 class="section-title">How It Works</h2>
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-num">1</div>
-                <div class="step-line"></div>
-                <h3>Tell Us What You Need</h3>
-                <p>Fill out our quick form with your business details, style preferences, and goals. It takes less than 5 minutes.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <div class="step-line"></div>
-                <h3>We Build Your Site</h3>
-                <p>Our team designs and develops your custom website from scratch — no templates, no shortcuts.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <div class="step-line"></div>
-                <h3>Review &amp; Launch</h3>
-                <p>You review your site, request any changes, and we push it live — all within 24 hours.</p>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- PORTFOLIO -->
     <section class="portfolio-section" id="portfolio">
@@ -666,8 +630,7 @@
                     <div class="portfolio-desc">Curated vintage fashion</div>
                     <a href="/portfolio/velvet-vintage" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
-            </div>
-            <div class="portfolio-card" onclick="window.open('/portfolio/trusted-home-pro','_blank')">
+            </div>            <div class="portfolio-card" onclick="window.open('/portfolio/trusted-home-pro','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a1628, #1a2d4e)"></div>
                     <iframe src="/portfolio/trusted-home-pro" loading="lazy" title="Trusted Home Pro" sandbox="allow-same-origin" tabindex="-1"></iframe>
@@ -714,8 +677,7 @@
                     <div class="portfolio-desc">Interior design studio</div>
                     <a href="/portfolio/pristine-home" target="_blank" class="portfolio-link">View Live Demo →</a>
                 </div>
-            </div>
-            <div class="portfolio-card" onclick="window.open('/portfolio/hartwell-associates','_blank')">
+            </div>            <div class="portfolio-card" onclick="window.open('/portfolio/hartwell-associates','_blank')">
                 <div class="portfolio-thumb">
                     <div class="gradient-placeholder" style="background:linear-gradient(135deg, #0a1a2e, #1b2d4e)"></div>
                     <iframe src="/portfolio/hartwell-associates" loading="lazy" title="Hartwell & Associates" sandbox="allow-same-origin" tabindex="-1"></iframe>
@@ -755,7 +717,7 @@
                     <li>Mobile responsive design</li>
                     <li>Basic SEO setup</li>
                 </ul>
-                <a href="#order" class="price-btn outline">Select Plan</a>
+                <a href="https://jpqeqjrrgyrkilonrhmx.supabase.co/functions/v1/create-checkout?package=297" class="price-btn outline">Get Started &rarr;</a>
             </div>
             <div class="price-card featured">
                 <div class="popular-badge">Most Popular</div>
@@ -768,9 +730,8 @@
                     <li>Google Business setup</li>
                     <li>3 revision rounds</li>
                 </ul>
-                <a href="#order" class="price-btn primary">Select Plan</a>
-            </div>
-            <div class="price-card">
+                <a href="https://jpqeqjrrgyrkilonrhmx.supabase.co/functions/v1/create-checkout?package=597" class="price-btn primary">Get Started &rarr;</a>
+            </div>            <div class="price-card">
                 <div class="price-tier">Growth</div>
                 <div class="price-amount">$997</div>
                 <div class="price-freq">one-time</div>
@@ -780,7 +741,7 @@
                     <li>Social media templates</li>
                     <li>On-key support</li>
                 </ul>
-                <a href="#order" class="price-btn outline">Select Plan</a>
+                <a href="https://jpqeqjrrgyrkilonrhmx.supabase.co/functions/v1/create-checkout?package=997" class="price-btn outline">Get Started &rarr;</a>
             </div>
         </div>
     </section>
@@ -823,8 +784,7 @@
                             <div class="faq-toggle">+</div>
                         </div>
                         <div class="faq-answer">Our AI accelerates the design and development process by generating a foundation in hours. Our expert team then refines, optimizes, and launches it. You get a professional site without the typical weeks-long timeline.</div>
-                    </div>
-                    <div class="faq-item">
+                    </div>                    <div class="faq-item">
                         <div class="faq-question">
                             <span>Can I edit my site after launch?</span>
                             <div class="faq-toggle">+</div>
@@ -850,63 +810,13 @@
         </div>
     </section>
 
-    <!-- ORDER FORM -->
-    <section class="order-section" id="order">
-        <h2 class="section-title">Get Started Today</h2>
-        <div class="order-form-wrapper">
-            <div class="order-form-card">
-                <form id="orderForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="John Smith" required>
-                            <div class="form-error"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@business.com" required>
-                            <div class="form-error"></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-                            <div class="form-error"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="businessName">Business Name</label>
-                            <input type="text" id="businessName" name="businessName" placeholder="Your Business" required>
-                            <div class="form-error"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="packageSelect">Package</label>
-                        <select id="packageSelect" name="package" required>
-                            <option value="">Select a package...</option>
-                            <option value="297">Starter - $297</option>
-                            <option value="597">Launch (Most Popular) - $597</option>
-                            <option value="997">Growth - $997</option>
-                        </select>
-                        <div class="form-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="businessDescription">Tell Us About Your Business</label>
-                        <textarea id="businessDescription" name="businessDescription" placeholder="What does your business do? What are your goals for the website?" required></textarea>
-                        <div class="form-error"></div>
-                    </div>
-                    <button type="submit" class="form-submit">
-                        <div class="spinner"></div>
-                        <span>Start My Website &rarr;</span>
-                    </button>
-                    <div class="form-message"></div>
-                </form>
-            </div>
-        </div>
+    <!-- FINAL CTA -->
+    <section class="order-section" id="order" style="text-align:center;padding:4rem 2rem;">
+        <h2 class="section-title">Ready to Get Started?</h2>
+        <p style="color:var(--text-secondary);font-size:1.1rem;max-width:600px;margin:0 auto 2rem;line-height:1.7;">Pick your package, pay securely with Stripe, and tell us about your business. We start building within the hour.</p>
+        <a href="#pricing" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">Choose Your Package &rarr;</a>
     </section>
 
-    <!-- FINAL CTA -->
-    
 
     <!-- FOOTER -->
     <footer>
@@ -916,27 +826,13 @@
 
     <!-- FLOATING CTA (mobile) -->
     <div class="floating-cta" id="floatingCta">
-        <a href="#order" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.5rem;">Start Your Site &rarr;</a>
+        <a href="#pricing" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.5rem;">Start Your Site &rarr;</a>
     </div>
-
     <script>
         // Mobile Menu
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('active'));
-
-        // Smooth scroll for all anchor nav links
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const targetId = link.getAttribute('href').slice(1);
-                const target = document.getElementById(targetId);
-                if (target) {
-                    e.preventDefault();
-                    window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
-                    history.pushState(null, '', '#' + targetId);
-                }
-            });
-        });
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => mobileMenu.classList.remove('active'));
         });
@@ -961,100 +857,7 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Pricing buttons auto-select package
-        document.querySelectorAll('.price-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const card = btn.closest('.price-card');
-                const tier = card.querySelector('.price-tier').textContent;
-                const map = { 'Starter': '297', 'Launch': '597', 'Growth': '997' };
-                setTimeout(() => {
-                    const sel = document.getElementById('packageSelect');
-                    if (sel && map[tier]) sel.value = map[tier];
-                }, 300);
-            });
-        });
-
-        // Form Handling
-        const form = document.getElementById('orderForm');
-        const formMessage = form.querySelector('.form-message');
-        const submitButton = form.querySelector('.form-submit');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            formMessage.classList.remove('show', 'success', 'error');
-
-            const requiredFields = ['fullName', 'email', 'businessName', 'packageSelect', 'businessDescription'];
-            let isValid = true;
-
-            requiredFields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                const errorDiv = field.parentElement.querySelector('.form-error');
-                if (!field.value.trim()) {
-                    field.classList.add('error');
-                    errorDiv.textContent = 'This field is required';
-                    errorDiv.classList.add('show');
-                    isValid = false;
-                } else {
-                    field.classList.remove('error');
-                    errorDiv.classList.remove('show');
-                    if (fieldId === 'email') {
-                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        if (!emailRegex.test(field.value)) {
-                            field.classList.add('error');
-                            errorDiv.textContent = 'Please enter a valid email';
-                            errorDiv.classList.add('show');
-                            isValid = false;
-                        }
-                    }
-                }
-            });
-
-            if (!isValid) return;
-
-            submitButton.disabled = true;
-            submitButton.classList.add('loading');
-
-            const packageMap = {'297': 'Starter ($297)', '597': 'Launch ($597)', '997': 'Growth ($997)'};
-            const pkgValue = document.getElementById('packageSelect').value;
-            const formData = {
-                full_name: document.getElementById('fullName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value || null,
-                business_name: document.getElementById('businessName').value,
-                package: packageMap[pkgValue] || pkgValue,
-                description: document.getElementById('businessDescription').value,
-                status: 'new',
-                source: 'website',
-                amount_cents: parseInt(pkgValue) * 100
-            };
-
-            try {
-                const response = await fetch('https://jpqeqjrrgyrkilonrhmx.supabase.co/functions/v1/intake', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const result = await response.json();
-                if (!response.ok || !result.success) throw new Error(result.error || 'Submission failed');
-
-                formMessage.innerHTML = '<strong>You\'re in!</strong> We received your request for the ' + (packageMap[pkgValue] || 'selected') + ' package. Check your email \u2014 we\'ve sent your proposal with next steps!';
-                formMessage.classList.add('show', 'success');
-                form.reset();
-            } catch (error) {
-                const mailtoBody = encodeURIComponent(
-                    `New Order:\n\nName: ${formData.full_name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nBusiness: ${formData.business_name}\nPackage: ${formData.package}\n\nDescription:\n${formData.description}`
-                );
-                window.location.href = `mailto:hello@sitesinaday.com?subject=New%20Sites%20In%20A%20Day%20Order%20from%20${encodeURIComponent(formData.full_name)}&body=${mailtoBody}`;
-                formMessage.textContent = 'Opening your email client... If it doesn\'t open, please email us at hello@sitesinaday.com';
-                formMessage.classList.add('show', 'success');
-            }
-
-            submitButton.disabled = false;
-            submitButton.classList.remove('loading');
-        });
+        // Pricing buttons - no JS needed, they link directly to Stripe Checkout
 
         // Floating CTA on scroll (mobile)
         window.addEventListener('scroll', () => {
