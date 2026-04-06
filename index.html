@@ -18,7 +18,7 @@
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
 
         :root {
             --bg-primary: #0a0a1a;
@@ -44,7 +44,7 @@
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
-            overflow-x: hidden;
+            /* overflow-x moved to html for scroll-behavior compat */
         }
 
         /* âââââ NAVIGATION âââââ */
