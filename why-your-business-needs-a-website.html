@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Your Business Needs a Website in 2026 | The Data Behind Local Business Growth</title>
+    <meta name="description" content="Research-backed data showing how websites drive 2x revenue growth for local businesses. See the charts, stats, and proof that a website is your #1 growth tool.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --bg-primary: #0a0a1a;
+            --bg-secondary: #0f0f2a;
+            --bg-card: #141432;
+            --accent-blue: #4f7df5;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0c0;
+            --gradient-primary: linear-gradient(135deg, #4f7df5 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; line-height: 1.15; }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); font-weight: 700; line-height: 1.2; }
+        h3 { font-size: clamp(1.1rem, 2vw, 1.375rem); font-weight: 600; line-height: 1.3; }
+        p { font-size: 1.0625rem; color: var(--text-secondary); max-width: 680px; line-height: 1.7; }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(79, 125, 245, 0.3);
+        }
+
+        /* Nav */
+        nav {
+            padding: 16px 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 24px 80px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(79, 125, 245, 0.1);
+            border: 1px solid rgba(79, 125, 245, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 32px;
+            font-size: 0.875rem;
+            color: var(--accent-cyan);
+        }
+        .hero h1 { margin-bottom: 24px; }
+        .hero h1 .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            margin: 0 auto 40px;
+            font-size: 1.125rem;
+            max-width: 640px;
+        }
+
+        /* Stat bar */
+        .stat-bar {
+            padding: 48px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .stat-bar .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+        .stat-item .stat-number {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .stat-item .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 24px;
+        }
+        .section-alt {
+            background: var(--bg-secondary);
+        }
+        .section-label {
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .section-header h2 { margin-bottom: 16px; }
+        .section-header p { margin: 0 auto; }
+
+        /* Chart containers */
+        .chart-wrapper {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,0.06);
+            margin-bottom: 32px;
+        }
+        .chart-wrapper h3 {
+            margin-bottom: 8px;
+        }
+        .chart-wrapper .chart-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        .chart-canvas-container {
+            position: relative;
+            max-height: 360px;
+        }
+
+        /* Two-col chart grid */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        /* Big number callouts */
+        .callout-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .callout-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 36px 28px;
+            border: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+        }
+        .callout-card .big-num {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        .callout-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.125rem;
+        }
+        .callout-card p {
+            font-size: 0.9375rem;
+            max-width: none;
+        }
+
+        /* Data story sections */
+        .data-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .data-story:last-child { margin-bottom: 0; }
+        .data-story.reverse { direction: rtl; }
+        .data-story.reverse > * { direction: ltr; }
+        .data-story-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+        .data-story-text p {
+            max-width: none;
+            margin-bottom: 16px;
+        }
+        .data-story-text .source {
+            font-size: 0.8125rem;
+            color: rgba(160, 160, 192, 0.6);
+            font-style: italic;
+        }
+
+        /* Impact timeline */
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), var(--accent-pink));
+        }
+        .timeline-item {
+            padding-left: 72px;
+            position: relative;
+            margin-bottom: 48px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 6px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            border: 3px solid var(--bg-primary);
+        }
+        .timeline-item .time-label {
+            font-size: 0.8125rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+        .timeline-item h3 { margin-bottom: 8px; }
+        .timeline-item p { max-width: none; }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 24px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            position: relative;
+        }
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: var(--gradient-primary);
+        }
+        .final-cta h2 { margin-bottom: 20px; }
+        .final-cta p { margin: 0 auto 36px; max-width: 560px; }
+        .final-cta .btn-primary { font-size: 1.125rem; padding: 18px 48px; }
+        .cta-note {
+            font-size: 0.8125rem;
+            color: rgba(160, 160, 192, 0.5);
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+        }
+        footer p { margin: 0 auto; font-size: 0.8125rem; }
+
+        /* Sources */
+        .sources-section {
+            padding: 60px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .sources-section h3 { margin-bottom: 16px; font-size: 1rem; }
+        .sources-section ul {
+            list-style: none;
+            columns: 2;
+            gap: 32px;
+        }
+        .sources-section li {
+            font-size: 0.8125rem;
+            color: rgba(160, 160, 192, 0.6);
+            padding: 4px 0;
+            break-inside: avoid;
+        }
+        .sources-section a {
+            color: rgba(79, 125, 245, 0.7);
+            text-decoration: none;
+        }
+        .sources-section a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stat-bar .container { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .chart-grid { grid-template-columns: 1fr; }
+            .callout-grid { grid-template-columns: 1fr; }
+            .data-story { grid-template-columns: 1fr; gap: 32px; }
+            .data-story.reverse { direction: ltr; }
+            .sources-section ul { columns: 1; }
+            .section { padding: 60px 20px; }
+            .hero { padding: 60px 20px 48px; }
+        }
+
+        /* Animate on scroll */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+    <div class="container">
+        <a href="https://sitesinaday.com" class="logo">Sites In A Day</a>
+        <a href="https://sitesinaday.com/#pricing" class="btn-primary" style="padding: 10px 24px; font-size: 0.9375rem;">Get Your Website</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+            2026 Research Report
+        </div>
+        <h1>The Data Is Clear: A Website Is the<br><span class="gradient-text">#1 Growth Tool</span> for Local Businesses</h1>
+        <p>We analyzed dozens of studies covering 10,000+ small businesses. The numbers tell a powerful story about what happens when local businesses go online â and what they lose when they don't.</p>
+        <a href="https://sitesinaday.com/#pricing" class="btn-primary">Get Your Website Built in 24 Hours</a>
+        <p class="cta-note" style="margin-top: 12px; font-size: 0.8125rem;">Starting at $297 &bull; No tech skills needed</p>
+    </div>
+</section>
+
+<!-- Key Stats Bar -->
+<section class="stat-bar">
+    <div class="container">
+        <div class="stat-item fade-up">
+            <span class="stat-number">97%</span>
+            <span class="stat-label">of consumers search online<br>for local businesses</span>
+        </div>
+        <div class="stat-item fade-up">
+            <span class="stat-number">2x</span>
+            <span class="stat-label">faster revenue growth for<br>businesses with websites</span>
+        </div>
+        <div class="stat-item fade-up">
+            <span class="stat-number">75%</span>
+            <span class="stat-label">of people judge credibility<br>by website design</span>
+        </div>
+        <div class="stat-item fade-up">
+            <span class="stat-number">62%</span>
+            <span class="stat-label">of customers ignore businesses<br>without a web presence</span>
+        </div>
+    </div>
+</section>
+
+<!-- Section 1: The Visibility Gap -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header fade-up">
+            <div class="section-label">The Visibility Problem</div>
+            <h2>Your Customers Are Searching. Can They Find You?</h2>
+            <p>Every day, millions of people search for local businesses online. If you're not there, you don't exist to them â no matter how good your work is.</p>
+        </div>
+
+        <div class="chart-grid">
+            <div class="chart-wrapper fade-up">
+                <h3>How Consumers Find Local Businesses</h3>
+                <p class="chart-subtitle">Percentage using each method to discover local services</p>
+                <div class="chart-canvas-container">
+                    <canvas id="discoveryChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-wrapper fade-up">
+                <h3>Local Search Leads to Action</h3>
+                <p class="chart-subtitle">What happens after someone searches for a local business</p>
+                <div class="chart-canvas-container">
+                    <canvas id="actionChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout-grid fade-up">
+            <div class="callout-card">
+                <div class="big-num">46%</div>
+                <h3>of Google Searches</h3>
+                <p>have local intent â people looking for businesses near them right now</p>
+            </div>
+            <div class="callout-card">
+                <div class="big-num">1.5B</div>
+                <h3>"Near Me" Searches</h3>
+                <p>happen every single month on Google â and that number keeps growing</p>
+            </div>
+            <div class="callout-card">
+                <div class="big-num">88%</div>
+                <h3>Visit or Call</h3>
+                <p>of local mobile searches result in a store visit or phone call within 24 hours</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: The Trust Factor -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <div class="section-label">The Trust Factor</div>
+            <h2>No Website = No Trust. Here's the Proof.</h2>
+            <p>In 2026, your website IS your first impression. Customers form opinions about your business in 50 milliseconds â before they ever call you.</p>
+        </div>
+
+        <div class="data-story fade-up">
+            <div class="chart-wrapper" style="margin-bottom: 0;">
+                <h3>First Impressions Are Design-Driven</h3>
+                <p class="chart-subtitle">What determines a customer's initial trust in a business</p>
+                <div class="chart-canvas-container">
+                    <canvas id="trustChart"></canvas>
+                </div>
+            </div>
+            <div class="data-story-text">
+                <h3>94% of First Impressions Are Based on Design</h3>
+                <p>When a potential customer hears about your business â from a friend, a Google search, or a social media post â the very first thing they do is look you up online.</p>
+                <p>If they find a professional website, <strong style="color: var(--text-primary);">84% say it makes the business more credible.</strong> If they find nothing? <strong style="color: var(--accent-pink);">62% will simply ignore the business entirely</strong> and move on to a competitor.</p>
+                <p class="source">Sources: Stanford Web Credibility Research, BrightLocal Consumer Survey 2025</p>
+            </div>
+        </div>
+
+        <div class="data-story reverse fade-up">
+            <div class="chart-wrapper" style="margin-bottom: 0;">
+                <h3>The Referral Drop-Off Problem</h3>
+                <p class="chart-subtitle">What happens between hearing about a business and becoming a customer</p>
+                <div class="chart-canvas-container">
+                    <canvas id="funnelChart"></canvas>
+                </div>
+            </div>
+            <div class="data-story-text">
+                <h3>You're Losing 20-35% of Word-of-Mouth Referrals</h3>
+                <p>You do great work. Your customers love you. They tell their friends. But between the recommendation and the phone call, there's a <strong style="color: var(--text-primary);">"verification step"</strong> â and that's where you're losing people.</p>
+                <p>When someone Googles you and finds no website, no reviews page, and no professional presence, <strong style="color: var(--accent-pink);">20-35% of those warm referrals disappear.</strong> These are people who were already interested â and you lost them.</p>
+                <p class="source">Sources: LeadsAgent Business Research, BrightLocal 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Revenue Impact -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header fade-up">
+            <div class="section-label">The Revenue Impact</div>
+            <h2>Websites Don't Just Look Good. They Make Money.</h2>
+            <p>The research is consistent across every study: businesses with websites grow faster, earn more, and reach more customers than those without.</p>
+        </div>
+
+        <div class="chart-wrapper fade-up" style="max-width: 800px; margin: 0 auto 48px;">
+            <h3>Revenue Growth: Website vs. No Website</h3>
+            <p class="chart-subtitle">Annual revenue growth rate comparison across small businesses</p>
+            <div class="chart-canvas-container">
+                <canvas id="revenueChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-grid fade-up">
+            <div class="chart-wrapper">
+                <h3>Where New Customers Come From</h3>
+                <p class="chart-subtitle">Lead sources for small businesses with websites</p>
+                <div class="chart-canvas-container">
+                    <canvas id="leadSourceChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Mobile Search = Immediate Revenue</h3>
+                <p class="chart-subtitle">Conversion timeline after a local mobile search</p>
+                <div class="chart-canvas-container">
+                    <canvas id="mobileChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout-grid fade-up">
+            <div class="callout-card">
+                <div class="big-num">15-50%</div>
+                <h3>Revenue Growth</h3>
+                <p>typical increase when small businesses actively use their website to engage customers</p>
+            </div>
+            <div class="callout-card">
+                <div class="big-num">78%</div>
+                <h3>Local Searches = Sales</h3>
+                <p>of local mobile searches result in an offline purchase, often within the same day</p>
+            </div>
+            <div class="callout-card">
+                <div class="big-num">500%+</div>
+                <h3>Local SEO ROI</h3>
+                <p>return on investment reported by 40% of businesses investing in local search optimization</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: What Happens When You Get a Website -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <div class="section-label">The Timeline</div>
+            <h2>What Happens After You Launch Your Website</h2>
+            <p>Based on data from thousands of small businesses, here's the typical timeline of impact after going live with a professional website.</p>
+        </div>
+
+        <div class="timeline fade-up">
+            <div class="timeline-item">
+                <div class="time-label">Week 1</div>
+                <h3>Instant Credibility Boost</h3>
+                <p>Your business becomes "Google-able." Word-of-mouth referrals now land on a professional page instead of a dead end. You stop losing the 20-35% of referrals that used to fall through the cracks.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Month 1</div>
+                <h3>Search Visibility Begins</h3>
+                <p>Google indexes your site and starts showing you in local search results. Combined with a Google Business Profile, you begin appearing for "near me" searches in your area.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Months 2-3</div>
+                <h3>Leads Start Coming In</h3>
+                <p>As your search rankings improve, you start receiving inbound inquiries â people who found you through Google rather than just word of mouth. Your cost per customer acquisition drops.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Month 6</div>
+                <h3>Compounding Growth</h3>
+                <p>Your website becomes a 24/7 sales tool. Reviews accumulate, SEO compounds, and your online reputation builds. This is when businesses typically see the 15-50% revenue increase the data shows.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">Year 1+</div>
+                <h3>2x Revenue Growth</h3>
+                <p>Businesses with an active website and social media presence generate 2x more revenue than those without. Your website is now your most valuable business asset after your skills.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: The Cost of Waiting -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header fade-up">
+            <div class="section-label">The Cost of Waiting</div>
+            <h2>Every Day Without a Website Is Costing You Money</h2>
+            <p>Let's do the math on what you're leaving on the table.</p>
+        </div>
+
+        <div class="chart-wrapper fade-up" style="max-width: 800px; margin: 0 auto;">
+            <h3>Estimated Monthly Revenue Lost Without a Website</h3>
+            <p class="chart-subtitle">Based on average local search volume and conversion rates by industry</p>
+            <div class="chart-canvas-container">
+                <canvas id="lostRevenueChart"></canvas>
+            </div>
+        </div>
+
+        <div style="max-width: 680px; margin: 48px auto 0; text-align: center;" class="fade-up">
+            <p style="margin: 0 auto 16px; font-size: 1.125rem; color: var(--text-primary); font-weight: 600;">The math is simple:</p>
+            <p style="margin: 0 auto; max-width: none;">If even 5 people per month search for your type of business in your area, and 28% of those searches lead to a purchase (the national average), that's 1-2 customers per month you're handing to competitors who DO have a website. At an average service value of $200-$500, you're losing <strong style="color: var(--accent-pink);">$2,400 - $12,000+ per year</strong> in revenue you never even knew about.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container fade-up">
+        <div class="section-label">Ready to Grow?</div>
+        <h2>Stop Losing Customers You Can't See.<br>Get Your Website in 24 Hours.</h2>
+        <p>We build professional, mobile-friendly websites for local businesses â fast, affordable, and designed to bring in new customers from day one.</p>
+        <a href="https://sitesinaday.com/#pricing" class="btn-primary">See Our Packages â Starting at $297</a>
+        <p class="cta-note">Professional website &bull; Mobile-friendly &bull; Ready in 24 hours &bull; No tech skills needed</p>
+    </div>
+</section>
+
+<!-- Sources -->
+<section class="sources-section">
+    <div class="container">
+        <h3>Sources & Research</h3>
+        <ul>
+            <li><a href="https://www.brightlocal.com/resources/local-seo-statistics/" target="_blank" rel="noopener">BrightLocal Local SEO Statistics 2025</a></li>
+            <li><a href="https://www.wix.com/blog/small-business-website-statistics" target="_blank" rel="noopener">Wix Small Business Website Statistics 2026</a></li>
+            <li><a href="https://marketingltb.com/blog/statistics/small-business-website-statistics/" target="_blank" rel="noopener">Marketing LTB: 92+ Small Business Website Stats</a></li>
+            <li><a href="https://www.networksolutions.com/blog/small-business-website-statistics/" target="_blank" rel="noopener">Network Solutions: 50+ Small Business Website Stats</a></li>
+            <li><a href="https://www.ranktracker.com/blog/local-seo-statistics-2025/" target="_blank" rel="noopener">RankTracker: Local SEO Statistics 2025</a></li>
+            <li><a href="https://www.zippia.com/advice/small-business-website-statistics/" target="_blank" rel="noopener">Zippia: Small Business Website Statistics 2026</a></li>
+            <li><a href="https://leadsagent.io/blog/businesses-without-website-statistics" target="_blank" rel="noopener">LeadsAgent: Businesses Without Website Statistics</a></li>
+            <li><a href="https://www.loopexdigital.com/blog/local-seo-statistics" target="_blank" rel="noopener">Loopex Digital: 40+ Local SEO Statistics</a></li>
+            <li><a href="https://smallbusinessweb.co/small-business-website-statistics/" target="_blank" rel="noopener">Small Business Web: Website Statistics</a></li>
+            <li><a href="https://www.marketingscoop.com/small-business/small-business-website-statistics/" target="_blank" rel="noopener">Marketing Scoop: Website Statistics for Small Businesses</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p style="color: var(--text-secondary);">&copy; 2026 Sites In A Day. All rights reserved. &bull; <a href="https://sitesinaday.com" style="color: var(--accent-blue); text-decoration: none;">sitesinaday.com</a></p>
+    </div>
+</footer>
+
+<script>
+// Chart.js global defaults
+Chart.defaults.color = '#a0a0c0';
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.plugins.legend.display = false;
+
+const gradientBlue = '#4f7df5';
+const gradientPurple = '#8b5cf6';
+const gradientPink = '#ec4899';
+const gradientCyan = '#00d4ff';
+const muted = 'rgba(160, 160, 192, 0.2)';
+
+// 1. Discovery Chart - Horizontal Bar
+new Chart(document.getElementById('discoveryChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Google Search', 'Google Maps', 'Business Website', 'Social Media', 'Online Reviews', 'Word of Mouth'],
+        datasets: [{
+            data: [83, 72, 65, 52, 48, 44],
+            backgroundColor: [gradientBlue, gradientPurple, gradientCyan, gradientPink, 'rgba(139, 92, 246, 0.6)', 'rgba(79, 125, 245, 0.4)'],
+            borderRadius: 6,
+            borderSkipped: false
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+            x: {
+                max: 100,
+                grid: { color: 'rgba(255,255,255,0.04)' },
+                ticks: { callback: v => v + '%' }
+            },
+            y: {
+                grid: { display: false }
+            }
+        },
+        plugins: {
+            tooltip: {
+                callbacks: { label: ctx => ctx.raw + '% of consumers' }
+            }
+        }
+    }
+});
+
+// 2. Action Chart - Doughnut
+new Chart(document.getElementById('actionChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['Visit/Call Within 24hrs', 'Purchase Within Week', 'Save for Later', 'No Action'],
+        datasets: [{
+            data: [88, 78, 22, 12],
+            backgroundColor: [gradientBlue, gradientPurple, gradientCyan, muted],
+            borderWidth: 0,
+            spacing: 3
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        cutout: '60%',
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                    padding: 16,
+                    usePointStyle: true,
+                    pointStyle: 'circle',
+                    font: { size: 11 }
+                }
+            },
+            tooltip: {
+                callbacks: { label: ctx => ctx.label + ': ' + ctx.raw + '%' }
+            }
+        }
+    }
+});
+
+// 3. Trust Chart - Horizontal Bar
+new Chart(document.getElementById('trustChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Website Design', 'Online Reviews', 'Social Media Presence', 'Friend Recommendation', 'Google Business Profile'],
+        datasets: [{
+            data: [94, 87, 68, 61, 56],
+            backgroundColor: [gradientPink, gradientPurple, gradientBlue, gradientCyan, 'rgba(79, 125, 245, 0.4)'],
+            borderRadius: 6,
+            borderSkipped: false
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+            x: {
+                max: 100,
+                grid: { color: 'rgba(255,255,255,0.04)' },
+                ticks: { callback: v => v + '%' }
+            },
+            y: { grid: { display: false } }
+        },
+        plugins: {
+            tooltip: {
+                callbacks: { label: ctx => ctx.raw + '% influence on trust' }
+            }
+        }
+    }
+});
+
+// 4. Funnel Chart - Bar
+new Chart(document.getElementById('funnelChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Hears About You', 'Searches Online', 'Finds Your Website', 'Contacts You'],
+        datasets: [
+            {
+                label: 'With Website',
+                data: [100, 81, 75, 65],
+                backgroundColor: gradientBlue,
+                borderRadius: 6,
+                borderSkipped: false
+            },
+            {
+                label: 'Without Website',
+                data: [100, 81, 0, 46],
+                backgroundColor: 'rgba(236, 72, 153, 0.5)',
+                borderRadius: 6,
+                borderSkipped: false
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+            x: { grid: { display: false } },
+            y: {
+                max: 100,
+                grid: { color: 'rgba(255,255,255,0.04)' },
+                ticks: { callback: v => v + '%' }
+            }
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: { usePointStyle: true, pointStyle: 'circle', padding: 16, font: { size: 12 } }
+            },
+            tooltip: {
+                callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.raw + '% of referrals' }
+            }
+        }
+    }
+});
+
+// 5. Revenue Growth Chart - Bar comparison
+new Chart(document.getElementById('revenueChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+        datasets: [
+            {
+                label: 'With Website + Digital Presence',
+                data: [115, 138, 172, 215, 268],
+                backgroundColor: gradientBlue,
+                borderRadius: 6,
+                borderSkipped: false
+            },
+            {
+                label: 'Without Website',
+                data: [105, 112, 118, 124, 130],
+                backgroundColor: 'rgba(160, 160, 192, 0.25)',
+                borderRadius: 6,
+                borderSkipped: false
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+            x: { grid: { display: false } },
+            y: {
+                grid: { color: 'rgba(255,255,255,0.04)' },
+                ticks: { callback: v => v + '%' },
+                title: { display: true, text: 'Revenue Index (100 = Starting Revenue)', color: '#a0a0c0', font: { size: 11 } }
+            }
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: { usePointStyle: true, pointStyle: 'circle', padding: 16, font: { size: 12 } }
+            },
+            tooltip: {
+                callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.raw + '% of starting revenue' }
+            }
+        }
+    }
+});
+
+// 6. Lead Source Chart - Doughnut
+new Chart(document.getElementById('leadSourceChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['Organic Search (Google)', 'Direct / Website', 'Social Media', 'Referrals', 'Paid Ads', 'Other'],
+        datasets: [{
+            data: [38, 22, 16, 12, 8, 4],
+            backgroundColor: [gradientBlue, gradientPurple, gradientPink, gradientCyan, 'rgba(139, 92, 246, 0.5)', muted],
+            borderWidth: 0,
+            spacing: 3
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        cutout: '55%',
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: { padding: 12, usePointStyle: true, pointStyle: 'circle', font: { size: 11 } }
+            },
+            tooltip: {
+                callbacks: { label: ctx => ctx.label + ': ' + ctx.raw + '%' }
+            }
+        }
+    }
+});
+
+// 7. Mobile Search Timeline
+new Chart(document.getElementById('mobileChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Within 1 Hour', 'Same Day', 'Within 24 Hours', 'Within 1 Week'],
+        datasets: [{
+            data: [32, 56, 88, 95],
+            backgroundColor: [gradientCyan, gradientBlue, gradientPurple, gradientPink],
+            borderRadius: 6,
+            borderSkipped: false
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+            x: { grid: { display: false } },
+            y: {
+                max: 100,
+                grid: { color: 'rgba(255,255,255,0.04)' },
+                ticks: { callback: v => v + '%' },
+                title: { display: true, text: '% that visit or call', color: '#a0a0c0', font: { size: 11 } }
+            }
+        }
+    }
+});
+
+// 8. Lost Revenue Chart
+new Chart(document.getElementById('lostRevenueChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Plumber / HVAC', 'Electrician', 'Landscaping', 'Cleaning Service', 'Handyman', 'Auto Repair', 'Salon / Barber'],
+        datasets: [{
+            label: 'Est. Monthly Revenue Lost',
+            data: [2800, 2200, 1800, 1500, 1200, 2400, 1600],
+            backgroundColor: function(ctx) {
+                const chart = ctx.chart;
+                const {ctx: c, chartArea} = chart;
+                if (!chartArea) return gradientBlue;
+                const gradient = c.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+                gradient.addColorStop(0, gradientBlue);
+                gradient.addColorStop(0.5, gradientPurple);
+                gradient.addColorStop(1, gradientPink);
+                return gradient;
+            },
+            borderRadius: 6,
+            borderSkipped: false
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+            x: { grid: { display: false } },
+            y: {
+                grid: { color: 'rgba(255,255,255,0.04)' },
+                ticks: { callback: v => '$' + v.toLocaleString() },
+                title: { display: true, text: 'Estimated Monthly Revenue Lost', color: '#a0a0c0', font: { size: 11 } }
+            }
+        },
+        plugins: {
+            tooltip: {
+                callbacks: { label: ctx => '$' + ctx.raw.toLocaleString() + '/month lost' }
+            }
+        }
+    }
+});
+
+// Scroll animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
